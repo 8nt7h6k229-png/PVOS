@@ -1,0 +1,15 @@
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\bin\Debug\net8.0\PVOS.Layout.deps.json
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\bin\Debug\net8.0\PVOS.Layout.dll
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\bin\Debug\net8.0\PVOS.Layout.pdb
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\bin\Debug\net8.0\PVOS.Core.dll
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\bin\Debug\net8.0\PVOS.Core.pdb
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\obj\Debug\net8.0\PVOS.Layout.csproj.AssemblyReference.cache
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\obj\Debug\net8.0\PVOS.Layout.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\obj\Debug\net8.0\PVOS.Layout.AssemblyInfoInputs.cache
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\obj\Debug\net8.0\PVOS.Layout.AssemblyInfo.cs
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\obj\Debug\net8.0\PVOS.Layout.csproj.CoreCompileInputs.cache
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\obj\Debug\net8.0\PVOS.Lay.2DE39527.Up2Date
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\obj\Debug\net8.0\PVOS.Layout.dll
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\obj\Debug\net8.0\refint\PVOS.Layout.dll
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\obj\Debug\net8.0\PVOS.Layout.pdb
+C:\Users\LJ\Downloads\PVOS_Implementation_002\PVOS_Implementation_002\src\PVOS.Layout\obj\Debug\net8.0\ref\PVOS.Layout.dll
