@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+<title id="title">PVOS Demo-001 deterministic placement result</title>
+<desc id="desc">A 6000 by 4000 millimetre roof and selected partition containing ten ordered photovoltaic panels, totaling 5.000 kilowatt-peak with no placement warnings.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D4A72C"/></marker></defs>
+<rect width="1400" height="900" fill="#F4F7F6"/>
+<text x="72" y="62" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0F766E" text-anchor="start">PVOS  /  DEMO-001</text>
+<text x="72" y="108" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" fill="#16302B" text-anchor="start">Deterministic placement, made visible</text>
+<text x="72" y="141" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400" fill="#657773" text-anchor="start">The approved ENG-001 result — no optimization, no manual panel editing.</text>
+<rect x="72" y="196" width="812" height="500" rx="18" fill="#FFFFFF" stroke="#CBD7D4"/>
+<text x="96" y="228" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#657773" text-anchor="start">LAYOUT PLAN</text>
+<polygon points="145.00,668.00 811.00,668.00 811.00,224.00 145.00,224.00" fill="#E8F0EE" stroke="#263E3A" stroke-width="5"/>
+<polygon points="145.00,668.00 811.00,668.00 811.00,224.00 145.00,224.00" fill="none" stroke="#0F766E" stroke-width="2" stroke-dasharray="9 7"/>
+<polygon points="167.20,645.80 278.20,645.80 278.20,479.30 167.20,479.30" fill="#1D9A8A" stroke="#0A625B" stroke-width="2"/>
+<text x="222.7" y="567.55" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">P01</text>
+<polygon points="289.30,645.80 400.30,645.80 400.30,479.30 289.30,479.30" fill="#1D9A8A" stroke="#0A625B" stroke-width="2"/>
+<text x="344.8" y="567.55" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">P02</text>
+<polygon points="411.40,645.80 522.40,645.80 522.40,479.30 411.40,479.30" fill="#1D9A8A" stroke="#0A625B" stroke-width="2"/>
+<text x="466.9" y="567.55" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">P03</text>
+<polygon points="533.50,645.80 644.50,645.80 644.50,479.30 533.50,479.30" fill="#1D9A8A" stroke="#0A625B" stroke-width="2"/>
+<text x="589.0" y="567.55" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">P04</text>
+<polygon points="655.60,645.80 766.60,645.80 766.60,479.30 655.60,479.30" fill="#1D9A8A" stroke="#0A625B" stroke-width="2"/>
+<text x="711.1" y="567.55" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">P05</text>
+<polygon points="167.20,468.20 278.20,468.20 278.20,301.70 167.20,301.70" fill="#1D9A8A" stroke="#0A625B" stroke-width="2"/>
+<text x="222.7" y="389.95" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">P06</text>
+<polygon points="289.30,468.20 400.30,468.20 400.30,301.70 289.30,301.70" fill="#1D9A8A" stroke="#0A625B" stroke-width="2"/>
+<text x="344.8" y="389.95" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">P07</text>
+<polygon points="411.40,468.20 522.40,468.20 522.40,301.70 411.40,301.70" fill="#1D9A8A" stroke="#0A625B" stroke-width="2"/>
+<text x="466.9" y="389.95" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">P08</text>
+<polygon points="533.50,468.20 644.50,468.20 644.50,301.70 533.50,301.70" fill="#1D9A8A" stroke="#0A625B" stroke-width="2"/>
+<text x="589.0" y="389.95" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">P09</text>
+<polygon points="655.60,468.20 766.60,468.20 766.60,301.70 655.60,301.70" fill="#1D9A8A" stroke="#0A625B" stroke-width="2"/>
+<text x="711.1" y="389.95" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">P10</text>
+<line x1="145.0" y1="668.0" x2="219.0" y2="668.0" stroke="#D4A72C" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="145.0" y1="668.0" x2="145.0" y2="594.0" stroke="#D4A72C" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="227.0" y="673.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#D4A72C" text-anchor="start">+X</text>
+<text x="137.0" y="586.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#D4A72C" text-anchor="middle">+Y</text>
+<text x="153.0" y="687.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#657773" text-anchor="start">Local Axis · 0°</text>
+<text x="478.0" y="686" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#657773" text-anchor="middle">6,000 mm</text>
+<text x="86" y="446.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#657773" text-anchor="start">4,000 mm</text>
+<rect x="924" y="196" width="404" height="500" rx="18" fill="#FFFFFF" stroke="#CBD7D4"/>
+<text x="952" y="228" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#657773" text-anchor="start">APPROVED RESULT</text>
+<text x="952" y="286" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="750" fill="#16302B" text-anchor="start">10</text>
+<text x="952" y="313" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" fill="#657773" text-anchor="start">accepted panels</text>
+<line x1="952" y1="342" x2="1300" y2="342" stroke="#CBD7D4"/>
+<text x="952" y="399" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="750" fill="#16302B" text-anchor="start">5.000</text>
+<text x="1082" y="399" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#0F766E" text-anchor="start">kWp</text>
+<text x="952" y="425" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" fill="#657773" text-anchor="start">installed nameplate capacity</text>
+<line x1="952" y1="454" x2="1300" y2="454" stroke="#CBD7D4"/>
+<text x="952" y="500" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#16302B" text-anchor="start">Warnings</text>
+<rect x="952" y="520" width="348" height="52" rx="12" fill="#E7F5EF"/>
+<text x="972" y="553" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#13795B" text-anchor="start">None</text>
+<text x="952" y="613" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#657773" text-anchor="start">Selected partition</text>
+<text x="1300" y="613" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#16302B" text-anchor="end">PART-001</text>
+<text x="952" y="645" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#657773" text-anchor="start">Panel ordering</text>
+<text x="1300" y="645" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#16302B" text-anchor="end">P1 → P10</text>
+<text x="952" y="677" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#657773" text-anchor="start">Status</text>
+<text x="1300" y="677" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#13795B" text-anchor="end">Accepted</text>
+<line x1="72" y1="738" x2="1328" y2="738" stroke="#CBD7D4"/>
+<rect x="72" y="766" width="18" height="18" fill="#E8F0EE" stroke="#263E3A" stroke-width="3"/>
+<text x="100" y="780" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#16302B" text-anchor="start">Roof boundary</text>
+<rect x="245" y="766" width="18" height="18" fill="none" stroke="#0F766E" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="273" y="780" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#16302B" text-anchor="start">Selected partition (same extent)</text>
+<rect x="522" y="766" width="18" height="18" fill="#1D9A8A" stroke="#0A625B"/>
+<text x="550" y="780" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#16302B" text-anchor="start">Accepted panel</text>
+<line x1="708" y1="775" x2="738" y2="775" stroke="#D4A72C" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="748" y="780" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#16302B" text-anchor="start">Local Axis</text>
+<text x="72" y="840" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#16302B" text-anchor="start">Roof Polygon</text>
+<text x="226" y="840" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0F766E" text-anchor="start">→</text>
+<text x="266" y="840" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#16302B" text-anchor="start">Accepted Panels</text>
+<text x="431" y="840" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0F766E" text-anchor="start">→</text>
+<text x="471" y="840" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#16302B" text-anchor="start">Count 10</text>
+<text x="572" y="840" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0F766E" text-anchor="start">→</text>
+<text x="612" y="840" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#16302B" text-anchor="start">5.000 kWp</text>
+<text x="729" y="840" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0F766E" text-anchor="start">→</text>
+<text x="769" y="840" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#16302B" text-anchor="start">Warnings: none</text>
+<text x="1328" y="840" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#657773" text-anchor="end">Generated from ENG-001 · LAYOUT-REQ-001</text>
+</svg>
