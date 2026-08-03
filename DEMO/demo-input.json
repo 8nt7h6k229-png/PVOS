@@ -1,0 +1,65 @@
+{
+  "placementRequestId": "LAYOUT-REQ-001",
+  "coordinateSystemId": "GLOBAL",
+  "linearUnit": "mm",
+  "roof": {
+    "id": "ROOF-001",
+    "boundary": [
+      {
+        "x": 0.0,
+        "y": 0.0
+      },
+      {
+        "x": 6000.0,
+        "y": 0.0
+      },
+      {
+        "x": 6000.0,
+        "y": 4000.0
+      },
+      {
+        "x": 0.0,
+        "y": 4000.0
+      }
+    ]
+  },
+  "selectedPartition": {
+    "id": "PART-001",
+    "boundary": [
+      {
+        "x": 0.0,
+        "y": 0.0
+      },
+      {
+        "x": 6000.0,
+        "y": 0.0
+      },
+      {
+        "x": 6000.0,
+        "y": 4000.0
+      },
+      {
+        "x": 0.0,
+        "y": 4000.0
+      }
+    ]
+  },
+  "localAxis": {
+    "id": "AXS-001",
+    "origin": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "rotationDegrees": 0.0
+  },
+  "module": {
+    "id": "MOD-001",
+    "physicalWidthMm": 1000.0,
+    "physicalLengthMm": 1500.0,
+    "orientation": "WidthAlongLocalX",
+    "columnGapMm": 100.0,
+    "rowGapMm": 100.0,
+    "edgeMarginMm": 200.0,
+    "ratedPowerWp": 500.0
+  }
+}
