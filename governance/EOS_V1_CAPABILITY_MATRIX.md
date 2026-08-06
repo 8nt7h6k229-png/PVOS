@@ -51,7 +51,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | EOS-001 | Governance Information Architecture | Governance | PM | Completed |
 | EOS-002 | Governance File Registration | Governance | PM | Completed |
 | EOS-003 | Governance Rule Registration | Governance | PM | Completed |
-| EOS-004 | Architecture Decision Registration | Decision | PM | In Progress |
+| EOS-004 | Architecture Decision Registration | Decision | PM | Completed |
 | EOS-005 | Handover Content Standard | Handover | PM | In Progress |
 | EOS-006 | Handover Version Control | Handover | PM | In Progress |
 | EOS-007 | Handover Lifecycle Control | Handover | PM | In Progress |
@@ -129,7 +129,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-001; EOS-012 |
 | Related Governance Documents | `ARCHITECTURE_DECISION_REGISTRY.md`; `PM/ARCHITECTURE_INDEX.md` |
 | Verification Method | Confirm unique decision references, valid status, evidence linkage, and authoritative record location. |
-| Current Status | In Progress |
+| Current Status | Completed |
 
 ### EOS-005 — Handover Content Standard
 
@@ -353,7 +353,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | EOS-001 |  |  | X |  |
 | EOS-002 |  |  | X |  |
 | EOS-003 |  |  | X |  |
-| EOS-004 |  | X |  |  |
+| EOS-004 |  |  | X |  |
 | EOS-005 |  | X |  |  |
 | EOS-006 |  | X |  |  |
 | EOS-007 |  | X |  |  |
@@ -378,6 +378,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | GitHub Issue #32 | EOS-016 | `EXECUTION_QUEUE_GOVERNANCE.md` and aligned governance documents | READY_FOR_PM_REVIEW |
 | GitHub Issue #33 | EOS-016 | `PM_GITHUB_ISSUE_BUILDER.md`, implementation, tests, and Queue demonstration | READY_FOR_PM_REVIEW |
 | GitHub Issue #36 | EOS-002, EOS-015 | Governance asset registry, GIA mapping, and GitHub repository persistence | READY_FOR_PM_REVIEW |
+| GitHub Issue #37 | EOS-004 | Qualified historical ADR index with explicit provenance and unresolved gaps | READY_FOR_PM_REVIEW |
 
 Coverage indicates which work order established or advances a capability. It does not replace capability verification or daily closing.
 
