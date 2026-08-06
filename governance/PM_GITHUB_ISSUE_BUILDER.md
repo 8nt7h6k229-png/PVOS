@@ -107,6 +107,7 @@ Validation is atomic; publication is not. A GitHub API failure after publication
 
 ## Related Documents
 
+- [Planning Package Governance](PLANNING_PACKAGE_GOVERNANCE.md)
 - [Execution Queue Governance](EXECUTION_QUEUE_GOVERNANCE.md)
 - [Governance Information Architecture](GOVERNANCE_INFORMATION_ARCHITECTURE.md)
 - [EOS v1.0 Capability Matrix](EOS_V1_CAPABILITY_MATRIX.md)

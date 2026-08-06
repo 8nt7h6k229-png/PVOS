@@ -57,7 +57,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | EOS-007 | Handover Lifecycle Control | Handover | PM | Completed |
 | EOS-008 | Current AIStudioCore Handover | Handover | PM | Completed |
 | EOS-009 | Workspace Registration | Workspace | PM | In Progress |
-| EOS-010 | Planning Package Governance | Planning | PM | Not Started |
+| EOS-010 | Planning Package Governance | Planning | PM | Completed |
 | EOS-011 | Work Order Governance | Work Orders | PM | Not Started |
 | EOS-012 | Evidence Governance | Evidence | PM | Not Started |
 | EOS-013 | Engineering Knowledge Governance | Engineering Knowledge | Engineering | Not Started |
@@ -223,9 +223,9 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Inputs | Current handover; approved objectives; blueprint references; decisions; evidence; constraints. |
 | Outputs | Approved Daily Planning Package and candidates for PM-authorized GitHub Issues. |
 | Dependencies | EOS-001; EOS-008; EOS-012; EOS-014 |
-| Related Governance Documents | `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_RULES_REGISTRY.md`; `AISTUDIOCORE_HANDOVER.md` |
+| Related Governance Documents | `PLANNING_PACKAGE_GOVERNANCE.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_RULES_REGISTRY.md`; `AISTUDIOCORE_HANDOVER.md` |
 | Verification Method | Validate required planning inputs, owner approval, priorities, dependencies, and readiness references. |
-| Current Status | Not Started |
+| Current Status | Completed |
 
 ### EOS-011 — Work Order Governance
 
@@ -359,7 +359,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | EOS-007 |  |  | X |  |
 | EOS-008 |  |  | X |  |
 | EOS-009 |  | X |  |  |
-| EOS-010 | X |  |  |  |
+| EOS-010 |  |  | X |  |
 | EOS-011 | X |  |  |  |
 | EOS-012 | X |  |  |  |
 | EOS-013 | X |  |  |  |
@@ -380,6 +380,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | GitHub Issue #36 | EOS-002, EOS-015 | Governance asset registry, GIA mapping, and GitHub repository persistence | READY_FOR_PM_REVIEW |
 | GitHub Issue #37 | EOS-004 | Qualified historical ADR index with explicit provenance and unresolved gaps | READY_FOR_PM_REVIEW |
 | GitHub Issue #38 | EOS-005, EOS-006, EOS-007, EOS-008 | Completed handover contract, version policy, lifecycle, and current working record | READY_FOR_PM_REVIEW |
+| GitHub Issue #39 | EOS-010 | Formal Planning Package authority, contract, validation gate, and daily success criteria | READY_FOR_PM_REVIEW |
 
 Coverage indicates which work order established or advances a capability. It does not replace capability verification or daily closing.
 

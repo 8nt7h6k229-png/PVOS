@@ -45,7 +45,7 @@ An information domain, domain boundary, ownership assignment, relationship, or g
 - **Owner:** PM
 - **Inputs:** Approved objectives, current handover, blueprint references, decisions, evidence, and constraints.
 - **Outputs:** Approved planning packages and authorized work candidates.
-- **Related Documents:** [AIStudioCore Handover](AISTUDIOCORE_HANDOVER.md); [Product Backlog](../PRODUCT/PRODUCT_BACKLOG.md); [Product Release Plan](../PRODUCT/PRODUCT_RELEASE_PLAN.md).
+- **Related Documents:** [Planning Package Governance](PLANNING_PACKAGE_GOVERNANCE.md); [AIStudioCore Handover](AISTUDIOCORE_HANDOVER.md); [Product Backlog](../PRODUCT/PRODUCT_BACKLOG.md); [Product Release Plan](../PRODUCT/PRODUCT_RELEASE_PLAN.md).
 - **Out of Scope:** Work execution, product-baseline modification, and completion declarations.
 
 ### Blueprint
@@ -158,6 +158,7 @@ Execution is authorized only through a PM-authorized GitHub Issue; authorization
 | `EOS_V1_CAPABILITY_MATRIX.md` | Governance |
 | `EXECUTION_QUEUE_GOVERNANCE.md` | Work Orders |
 | `PM_GITHUB_ISSUE_BUILDER.md` | Work Orders |
+| `PLANNING_PACKAGE_GOVERNANCE.md` | Planning |
 | `GOVERNANCE_FILE_REGISTRY.md` | Governance |
 | `GOVERNANCE_RULES_REGISTRY.md` | Governance |
 | `ARCHITECTURE_DECISION_REGISTRY.md` | Decision |
