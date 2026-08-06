@@ -1,0 +1,33 @@
+{
+  "package_id": "DPP-2026-08-06-EOS-017-DEMO",
+  "repository": "8nt7h6k229-png/PVOS",
+  "status": "QUEUE_READY",
+  "issues": [
+    {
+      "issue_id": "EOS-017-DEMO-01",
+      "title": "DEMO — EOS-017 Queue Builder — Entry 1",
+      "capability_ids": [
+        "EOS-016"
+      ],
+      "dependencies": [],
+      "body": "## Source\nDPP-2026-08-06-EOS-017-DEMO — APPROVED — 2026-08-06 — Approved by Owner Directive via GitHub Issue #33\n\n## Queue Identity\n- Issue ID: EOS-017-DEMO-01\n- Queue Status: READY\n- Order: 1\n\n## Capability\n- EOS-016\n\n## Objective\nDemonstrate creation of the first ordered Execution Queue Issue.\n\n## Dependencies\n- None\n\n## Scope\n- Validate required fields and render one demonstration Issue\n\n## Out of Scope\n- Product, Blueprint, Operating Cycle, and workspace changes\n\n## Deliverables\n- First demonstration GitHub Issue\n\n## Acceptance Criteria\n- Issue contains every mandatory execution section\n\n## Required Evidence\n- Created Issue number and URL\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 34,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/34",
+      "reused": true
+    },
+    {
+      "issue_id": "EOS-017-DEMO-02",
+      "title": "DEMO — EOS-017 Queue Builder — Entry 2",
+      "capability_ids": [
+        "EOS-016"
+      ],
+      "dependencies": [
+        "EOS-017-DEMO-01"
+      ],
+      "body": "## Source\nDPP-2026-08-06-EOS-017-DEMO — APPROVED — 2026-08-06 — Approved by Owner Directive via GitHub Issue #33\n\n## Queue Identity\n- Issue ID: EOS-017-DEMO-02\n- Queue Status: READY\n- Order: 2\n\n## Capability\n- EOS-016\n\n## Objective\nDemonstrate ordered dependency resolution in the Execution Queue.\n\n## Dependencies\n- EOS-017-DEMO-01 — #34\n\n## Scope\n- Create a second demonstration Issue linked to the first queue entry\n\n## Out of Scope\n- Execution of either demonstration Issue\n\n## Deliverables\n- Second demonstration GitHub Issue with resolved dependency\n\n## Acceptance Criteria\n- Dependency identifies the first demonstration Issue number\n\n## Required Evidence\n- Created Issue number, URL, and dependency text\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 35,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/35",
+      "reused": false
+    }
+  ]
+}

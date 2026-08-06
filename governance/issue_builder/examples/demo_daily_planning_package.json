@@ -1,0 +1,61 @@
+{
+  "package_id": "DPP-2026-08-06-EOS-017-DEMO",
+  "date": "2026-08-06",
+  "status": "APPROVED",
+  "approved_by": "Owner Directive via GitHub Issue #33",
+  "repository": "8nt7h6k229-png/PVOS",
+  "issues": [
+    {
+      "issue_id": "EOS-017-DEMO-01",
+      "title": "DEMO — EOS-017 Queue Builder — Entry 1",
+      "capability_ids": [
+        "EOS-016"
+      ],
+      "objective": "Demonstrate creation of the first ordered Execution Queue Issue.",
+      "scope": [
+        "Validate required fields and render one demonstration Issue"
+      ],
+      "out_of_scope": [
+        "Product, Blueprint, Operating Cycle, and workspace changes"
+      ],
+      "deliverables": [
+        "First demonstration GitHub Issue"
+      ],
+      "acceptance_criteria": [
+        "Issue contains every mandatory execution section"
+      ],
+      "required_evidence": [
+        "Created Issue number and URL"
+      ],
+      "dependencies": [],
+      "status": "READY"
+    },
+    {
+      "issue_id": "EOS-017-DEMO-02",
+      "title": "DEMO — EOS-017 Queue Builder — Entry 2",
+      "capability_ids": [
+        "EOS-016"
+      ],
+      "objective": "Demonstrate ordered dependency resolution in the Execution Queue.",
+      "scope": [
+        "Create a second demonstration Issue linked to the first queue entry"
+      ],
+      "out_of_scope": [
+        "Execution of either demonstration Issue"
+      ],
+      "deliverables": [
+        "Second demonstration GitHub Issue with resolved dependency"
+      ],
+      "acceptance_criteria": [
+        "Dependency identifies the first demonstration Issue number"
+      ],
+      "required_evidence": [
+        "Created Issue number, URL, and dependency text"
+      ],
+      "dependencies": [
+        "EOS-017-DEMO-01"
+      ],
+      "status": "READY"
+    }
+  ]
+}
