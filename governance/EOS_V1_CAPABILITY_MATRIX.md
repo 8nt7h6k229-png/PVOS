@@ -58,7 +58,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | EOS-008 | Current AIStudioCore Handover | Handover | PM | Completed |
 | EOS-009 | Workspace Registration | Workspace | PM | In Progress |
 | EOS-010 | Planning Package Governance | Planning | PM | Completed |
-| EOS-011 | Work Order Governance | Work Orders | PM | Not Started |
+| EOS-011 | Work Order Governance | Work Orders | PM | Completed |
 | EOS-012 | Evidence Governance | Evidence | PM | Not Started |
 | EOS-013 | Engineering Knowledge Governance | Engineering Knowledge | Engineering | Not Started |
 | EOS-014 | Blueprint Governance Reference | Blueprint | PM | Not Started |
@@ -239,9 +239,9 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Inputs | Approved planning package; Capability IDs; current handover; rules; evidence requirements. |
 | Outputs | Governed work-order records and review packages mapped to this matrix and their Execution Queue Issues. |
 | Dependencies | EOS-003; EOS-010; EOS-012; EOS-015; EOS-016 |
-| Related Governance Documents | `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_RULES_REGISTRY.md`; `EOS_V1_CAPABILITY_MATRIX.md` |
+| Related Governance Documents | `WORK_ORDER_GOVERNANCE.md`; `EXECUTION_QUEUE_GOVERNANCE.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_RULES_REGISTRY.md`; `EOS_V1_CAPABILITY_MATRIX.md` |
 | Verification Method | Confirm every work order is bounded, mapped to at least one Capability ID, and does not substitute for an authorized GitHub Issue as the execution source. |
-| Current Status | Not Started |
+| Current Status | Completed |
 
 ### EOS-012 — Evidence Governance
 
@@ -360,7 +360,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | EOS-008 |  |  | X |  |
 | EOS-009 |  | X |  |  |
 | EOS-010 |  |  | X |  |
-| EOS-011 | X |  |  |  |
+| EOS-011 |  |  | X |  |
 | EOS-012 | X |  |  |  |
 | EOS-013 | X |  |  |  |
 | EOS-014 | X |  |  |  |
@@ -381,6 +381,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | GitHub Issue #37 | EOS-004 | Qualified historical ADR index with explicit provenance and unresolved gaps | READY_FOR_PM_REVIEW |
 | GitHub Issue #38 | EOS-005, EOS-006, EOS-007, EOS-008 | Completed handover contract, version policy, lifecycle, and current working record | READY_FOR_PM_REVIEW |
 | GitHub Issue #39 | EOS-010 | Formal Planning Package authority, contract, validation gate, and daily success criteria | READY_FOR_PM_REVIEW |
+| GitHub Issue #40 | EOS-011 | Formal Work Order contract, Capability and GitHub Issue traceability, and closing boundaries | READY_FOR_PM_REVIEW |
 
 Coverage indicates which work order established or advances a capability. It does not replace capability verification or daily closing.
 

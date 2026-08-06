@@ -65,7 +65,7 @@ An information domain, domain boundary, ownership assignment, relationship, or g
 - **Owner:** PM
 - **Inputs:** Approved planning package, current handover, governance rules, decisions, and evidence requirements.
 - **Outputs:** PM-authorized GitHub Issues as the sole Codex Execution Source, governed work-order records, and executor review packages.
-- **Related Documents:** [Execution Queue Governance](EXECUTION_QUEUE_GOVERNANCE.md); [PM GitHub Issue Builder](PM_GITHUB_ISSUE_BUILDER.md); [Governance Rules Registry](GOVERNANCE_RULES_REGISTRY.md); [AIStudioCore Handover](AISTUDIOCORE_HANDOVER.md).
+- **Related Documents:** [Work Order Governance](WORK_ORDER_GOVERNANCE.md); [Execution Queue Governance](EXECUTION_QUEUE_GOVERNANCE.md); [PM GitHub Issue Builder](PM_GITHUB_ISSUE_BUILDER.md); [Governance Rules Registry](GOVERNANCE_RULES_REGISTRY.md); [AIStudioCore Handover](AISTUDIOCORE_HANDOVER.md).
 - **Out of Scope:** Self-approval, scope expansion, and governed closing by the executor.
 
 ### Decision
@@ -159,6 +159,7 @@ Execution is authorized only through a PM-authorized GitHub Issue; authorization
 | `EXECUTION_QUEUE_GOVERNANCE.md` | Work Orders |
 | `PM_GITHUB_ISSUE_BUILDER.md` | Work Orders |
 | `PLANNING_PACKAGE_GOVERNANCE.md` | Planning |
+| `WORK_ORDER_GOVERNANCE.md` | Work Orders |
 | `GOVERNANCE_FILE_REGISTRY.md` | Governance |
 | `GOVERNANCE_RULES_REGISTRY.md` | Governance |
 | `ARCHITECTURE_DECISION_REGISTRY.md` | Decision |

@@ -68,6 +68,7 @@ The approved execution source, Issue entry contract, evidence linkage, or PM rev
 
 ## Related Documents
 
+- [Work Order Governance](WORK_ORDER_GOVERNANCE.md)
 - [PM GitHub Issue Builder](PM_GITHUB_ISSUE_BUILDER.md)
 - [EOS v1.0 Capability Matrix](EOS_V1_CAPABILITY_MATRIX.md)
 - [Governance Information Architecture](GOVERNANCE_INFORMATION_ARCHITECTURE.md)
