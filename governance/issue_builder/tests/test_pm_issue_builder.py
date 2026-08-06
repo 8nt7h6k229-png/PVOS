@@ -1,8 +1,10 @@
 import copy
 import importlib.util
 import sys
+import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 
 MODULE_PATH = Path(__file__).parents[1] / "pm_issue_builder.py"
@@ -159,6 +161,51 @@ class QueueTests(unittest.TestCase):
         self.assertFalse(creator_called)
         self.assertTrue(all(item["reused"] for item in queue["issues"]))
         self.assertEqual([201, 202], [item["number"] for item in queue["issues"]])
+
+
+class AutomaticDailyQueueTests(unittest.TestCase):
+    def write_package(self, directory, name="2026-08-06_daily_planning_package.json"):
+        path = Path(directory) / name
+        import json
+
+        path.write_text(json.dumps(valid_package()), encoding="utf-8")
+        return path
+
+    def test_selects_unique_approved_daily_package(self):
+        with tempfile.TemporaryDirectory() as directory:
+            expected = self.write_package(directory)
+            selected, package = BUILDER.select_daily_package(
+                Path(directory), "2026-08-06"
+            )
+        self.assertEqual(expected, selected)
+        self.assertEqual("DPP-TEST-001", package["package_id"])
+
+    def test_auto_rejects_missing_or_ambiguous_package(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with self.assertRaises(BUILDER.ValidationError):
+                BUILDER.select_daily_package(Path(directory), "2026-08-06")
+            self.write_package(directory)
+            self.write_package(directory, "duplicate_daily_planning_package.json")
+            with self.assertRaises(BUILDER.ValidationError):
+                BUILDER.select_daily_package(Path(directory), "2026-08-06")
+
+    def test_auto_publishes_and_writes_queue_ready_evidence(self):
+        with tempfile.TemporaryDirectory() as directory:
+            self.write_package(directory)
+            queue = {
+                "package_id": "DPP-TEST-001",
+                "repository": "example/repo",
+                "status": "QUEUE_READY",
+                "issues": [],
+            }
+            with patch.object(BUILDER, "build_queue", return_value=queue) as builder:
+                result = BUILDER.main(
+                    ["--auto", "--date", "2026-08-06", "--packages-dir", directory]
+                )
+            output = Path(directory) / "2026-08-06_issue_queue_ready.json"
+            self.assertEqual(0, result)
+            self.assertTrue(output.exists())
+            self.assertTrue(builder.call_args.kwargs["publish"])
 
 
 if __name__ == "__main__":

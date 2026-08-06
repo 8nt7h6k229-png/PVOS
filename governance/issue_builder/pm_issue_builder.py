@@ -8,6 +8,7 @@ import json
 import re
 import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 from typing import Any, Callable
 
@@ -255,21 +256,74 @@ def build_queue(
     }
 
 
+def select_daily_package(packages_dir: Path, package_date: str) -> tuple[Path, dict[str, Any]]:
+    """Select exactly one approved Daily Planning Package for a governed date."""
+    if not DATE_PATTERN.fullmatch(package_date):
+        raise ValidationError("automatic date must use YYYY-MM-DD")
+    candidates: list[tuple[Path, dict[str, Any]]] = []
+    for path in sorted(packages_dir.glob("*_daily_planning_package.json")):
+        try:
+            package = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            raise ValidationError(f"cannot read Daily Planning Package {path}: {exc}") from exc
+        if package.get("date") == package_date and package.get("status") == "APPROVED":
+            validate_package(package)
+            candidates.append((path, package))
+    if not candidates:
+        raise ValidationError(
+            f"no approved Daily Planning Package found for {package_date} in {packages_dir}"
+        )
+    if len(candidates) > 1:
+        names = ", ".join(path.name for path, _package in candidates)
+        raise ValidationError(
+            f"multiple approved Daily Planning Packages found for {package_date}: {names}"
+        )
+    return candidates[0]
+
+
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("package", type=Path, help="Approved Daily Planning Package JSON")
+    parser.add_argument("package", nargs="?", type=Path, help="Approved Daily Planning Package JSON")
     parser.add_argument("--repository", help="Must match package.repository when supplied")
     parser.add_argument("--publish", action="store_true", help="Create Issues through GitHub API")
     parser.add_argument("--output", type=Path, help="Write Queue Ready JSON")
+    parser.add_argument(
+        "--auto",
+        action="store_true",
+        help="Select today's unique approved package, publish it, and write Queue Ready evidence",
+    )
+    parser.add_argument("--date", help="Governed date for --auto; defaults to the local date")
+    parser.add_argument(
+        "--packages-dir",
+        type=Path,
+        default=Path(__file__).parent / "packages",
+        help="Directory searched by --auto",
+    )
     return parser.parse_args(argv)
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
     try:
-        package = json.loads(args.package.read_text(encoding="utf-8"))
+        if args.auto and args.package:
+            raise ValidationError("use either PACKAGE.json or --auto, not both")
+        if args.date and not args.auto:
+            raise ValidationError("--date requires --auto")
+        if args.packages_dir != Path(__file__).parent / "packages" and not args.auto:
+            raise ValidationError("--packages-dir requires --auto")
+        if args.auto:
+            governed_date = args.date or date.today().isoformat()
+            _package_path, package = select_daily_package(args.packages_dir, governed_date)
+            publish = True
+            output = args.output or args.packages_dir / f"{governed_date}_issue_queue_ready.json"
+        else:
+            if not args.package:
+                raise ValidationError("PACKAGE.json or --auto is required")
+            package = json.loads(args.package.read_text(encoding="utf-8"))
+            publish = args.publish
+            output = args.output
         validate_package(package, args.repository)
-        queue = build_queue(package, publish=args.publish)
+        queue = build_queue(package, publish=publish)
     except (OSError, json.JSONDecodeError, ValidationError, PublicationError) as exc:
         print(f"QUEUE_NOT_PUBLISHED: {exc}", file=sys.stderr)
         if isinstance(exc, PublicationError) and exc.created:
@@ -277,8 +331,8 @@ def main(argv: list[str] | None = None) -> int:
         return 2
 
     rendered = json.dumps(queue, indent=2, ensure_ascii=False)
-    if args.output:
-        args.output.write_text(rendered + "\n", encoding="utf-8")
+    if output:
+        output.write_text(rendered + "\n", encoding="utf-8")
     print(f"{queue['status']}: {queue['package_id']} ({len(queue['issues'])} Issues)")
     for item in queue["issues"]:
         suffix = f" #{item['number']} {item['url']}" if "number" in item else ""

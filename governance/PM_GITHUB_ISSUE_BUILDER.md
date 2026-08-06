@@ -81,9 +81,23 @@ Before each mutation, the builder searches the target repository for the package
 ```text
 python governance/issue_builder/pm_issue_builder.py PACKAGE.json
 python governance/issue_builder/pm_issue_builder.py PACKAGE.json --publish --output queue-ready.json
+python governance/issue_builder/pm_issue_builder.py --auto
+python governance/issue_builder/pm_issue_builder.py --auto --date YYYY-MM-DD
 ```
 
 Dry-run output contains rendered Issue titles and bodies without Issue numbers. Published output contains Issue numbers and URLs in queue order.
+
+### Automatic Daily Queue Mode
+
+`--auto` performs the complete non-interactive daily publication flow:
+
+1. Uses the local date, or the governed date supplied by `--date`.
+2. Searches `governance/issue_builder/packages/` for `*_daily_planning_package.json`.
+3. Requires exactly one fully valid `APPROVED` Package for that date.
+4. Publishes or idempotently reuses the complete ordered Issue Queue.
+5. Writes `<date>_issue_queue_ready.json` in the Package directory.
+
+Zero or multiple approved Packages stop publication before any GitHub mutation. `--packages-dir` may select another governed Package directory. Automatic mode implies publication and therefore requires authenticated GitHub CLI access; it does not require a chat prompt.
 
 ## Queue Ready Output
 
@@ -100,7 +114,7 @@ Validation is atomic; publication is not. A GitHub API failure after publication
 
 ## Verification
 
-- Unit tests cover approved input, required-field rejection, unapproved input, duplicate IDs, dependency ordering, rendering, dry run, and mocked batch publication.
+- Unit tests cover approved input, required-field rejection, unapproved input, duplicate IDs, dependency ordering, rendering, dry run, mocked batch publication, unique daily Package selection, missing or ambiguous daily Package rejection, and automatic Queue Ready evidence output.
 - Unit tests also cover idempotent retry using an existing Issue ID.
 - A demonstration package provides a two-Issue ordered queue.
 - A live demonstration must use explicitly labeled demonstration Issues and retain their URLs as evidence.
