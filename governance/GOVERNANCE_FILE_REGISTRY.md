@@ -58,6 +58,7 @@ A governance file is added, moved, renamed, superseded, or retired.
 | GF-021 | `governance/WORK_ORDER_GOVERNANCE.md` | Work Orders | Work Order content, traceability, review, and closing contract | Review Pending | Issue #40 |
 | GF-022 | `governance/EVIDENCE_GOVERNANCE.md` | Evidence | Evidence identity, provenance, validation, review, and retention contract | Review Pending | Issue #41 |
 | GF-023 | `governance/ENGINEERING_KNOWLEDGE_GOVERNANCE.md` | Engineering Knowledge | Engineering knowledge identity, classification, provenance, review, and reuse contract | Review Pending | Issue #42 |
+| GF-024 | `governance/BLUEPRINT_GOVERNANCE_REFERENCE.md` | Blueprint | Blueprint identity, integrity, authority classification, and governance relationship reference | Review Pending | Issue #43 |
 
 Repository paths are unique. Generated cache files excluded by GF-015 are not governance assets and must not be persisted.
 

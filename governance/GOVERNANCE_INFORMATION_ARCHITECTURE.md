@@ -55,7 +55,7 @@ An information domain, domain boundary, ownership assignment, relationship, or g
 - **Owner:** PM
 - **Inputs:** Approved product intent and governed baseline decisions.
 - **Outputs:** Authoritative blueprint references for planning and work authorization.
-- **Related Documents:** [Product Blueprint](../PRODUCT/PRODUCT_BLUEPRINT.md); [Governance File Registry](GOVERNANCE_FILE_REGISTRY.md).
+- **Related Documents:** [Blueprint Governance Reference](BLUEPRINT_GOVERNANCE_REFERENCE.md); [Product Blueprint](../PRODUCT/PRODUCT_BLUEPRINT.md); [Governance File Registry](GOVERNANCE_FILE_REGISTRY.md); [Architecture Decision Registry](ARCHITECTURE_DECISION_REGISTRY.md).
 - **Out of Scope:** Blueprint modification, implementation design, and unapproved capability expansion.
 
 ### Work Orders
@@ -162,6 +162,7 @@ Execution is authorized only through a PM-authorized GitHub Issue; authorization
 | `WORK_ORDER_GOVERNANCE.md` | Work Orders |
 | `EVIDENCE_GOVERNANCE.md` | Evidence |
 | `ENGINEERING_KNOWLEDGE_GOVERNANCE.md` | Engineering Knowledge |
+| `BLUEPRINT_GOVERNANCE_REFERENCE.md` | Blueprint |
 | `GOVERNANCE_FILE_REGISTRY.md` | Governance |
 | `GOVERNANCE_RULES_REGISTRY.md` | Governance |
 | `ARCHITECTURE_DECISION_REGISTRY.md` | Decision |
