@@ -60,7 +60,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | EOS-010 | Planning Package Governance | Planning | PM | Completed |
 | EOS-011 | Work Order Governance | Work Orders | PM | Completed |
 | EOS-012 | Evidence Governance | Evidence | PM | Completed |
-| EOS-013 | Engineering Knowledge Governance | Engineering Knowledge | Engineering | Not Started |
+| EOS-013 | Engineering Knowledge Governance | Engineering Knowledge | Engineering | Completed |
 | EOS-014 | Blueprint Governance Reference | Blueprint | PM | Not Started |
 | EOS-015 | EOS Capability Governance | Governance | PM | In Progress |
 | EOS-016 | Execution Queue Governance | Work Orders | PM | Completed |
@@ -271,9 +271,9 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Inputs | Reviewed specifications; implementation notes; validated findings; decisions; evidence. |
 | Outputs | Indexed and traceable engineering-knowledge references. |
 | Dependencies | EOS-001; EOS-004; EOS-012 |
-| Related Governance Documents | `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_RULES_REGISTRY.md`; `PM/PRODUCT_KNOWLEDGE_INDEX.md`; `PM/BRANCH_PRODUCT_KNOWLEDGE_MAP.md` |
+| Related Governance Documents | `ENGINEERING_KNOWLEDGE_GOVERNANCE.md`; `EVIDENCE_GOVERNANCE.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_RULES_REGISTRY.md`; `PM/PRODUCT_KNOWLEDGE_INDEX.md`; `PM/BRANCH_PRODUCT_KNOWLEDGE_MAP.md` |
 | Verification Method | Audit knowledge references for provenance, classification, review status, and duplication. |
-| Current Status | Not Started |
+| Current Status | Completed |
 
 ### EOS-014 — Blueprint Governance Reference
 
@@ -362,7 +362,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | EOS-010 |  |  | X |  |
 | EOS-011 |  |  | X |  |
 | EOS-012 |  |  | X |  |
-| EOS-013 | X |  |  |  |
+| EOS-013 |  |  | X |  |
 | EOS-014 | X |  |  |  |
 | EOS-015 |  | X |  |  |
 | EOS-016 |  |  | X |  |
@@ -383,6 +383,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | GitHub Issue #39 | EOS-010 | Formal Planning Package authority, contract, validation gate, and daily success criteria | READY_FOR_PM_REVIEW |
 | GitHub Issue #40 | EOS-011 | Formal Work Order contract, Capability and GitHub Issue traceability, and closing boundaries | READY_FOR_PM_REVIEW |
 | GitHub Issue #41 | EOS-012 | Formal evidence schema, provenance, validation, review status, and retention controls | READY_FOR_PM_REVIEW |
+| GitHub Issue #42 | EOS-013 | Engineering knowledge classification, precedence, existing-asset map, gaps, and reuse controls | READY_FOR_PM_REVIEW |
 
 Coverage indicates which work order established or advances a capability. It does not replace capability verification or daily closing.
 

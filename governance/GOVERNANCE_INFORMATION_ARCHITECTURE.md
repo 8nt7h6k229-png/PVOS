@@ -95,7 +95,7 @@ An information domain, domain boundary, ownership assignment, relationship, or g
 - **Owner:** Engineering
 - **Inputs:** Reviewed specifications, implementation notes, validated findings, decisions, and evidence.
 - **Outputs:** Indexed, traceable engineering knowledge references.
-- **Related Documents:** [Product Knowledge Index](../PM/PRODUCT_KNOWLEDGE_INDEX.md); [Branch Product Knowledge Map](../PM/BRANCH_PRODUCT_KNOWLEDGE_MAP.md); [Engineering](../ENGINEERING/).
+- **Related Documents:** [Engineering Knowledge Governance](ENGINEERING_KNOWLEDGE_GOVERNANCE.md); [Product Knowledge Index](../PM/PRODUCT_KNOWLEDGE_INDEX.md); [Branch Product Knowledge Map](../PM/BRANCH_PRODUCT_KNOWLEDGE_MAP.md); [Engineering](../ENGINEERING/).
 - **Out of Scope:** Product implementation, unreviewed assumptions as truth, and architecture approval.
 
 ### Workspace
@@ -161,6 +161,7 @@ Execution is authorized only through a PM-authorized GitHub Issue; authorization
 | `PLANNING_PACKAGE_GOVERNANCE.md` | Planning |
 | `WORK_ORDER_GOVERNANCE.md` | Work Orders |
 | `EVIDENCE_GOVERNANCE.md` | Evidence |
+| `ENGINEERING_KNOWLEDGE_GOVERNANCE.md` | Engineering Knowledge |
 | `GOVERNANCE_FILE_REGISTRY.md` | Governance |
 | `GOVERNANCE_RULES_REGISTRY.md` | Governance |
 | `ARCHITECTURE_DECISION_REGISTRY.md` | Decision |

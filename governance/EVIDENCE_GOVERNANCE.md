@@ -114,6 +114,7 @@ The evidence schema, status authority, minimum PM-review package, integrity rule
 
 ## Related Documents
 
+- [Engineering Knowledge Governance](ENGINEERING_KNOWLEDGE_GOVERNANCE.md)
 - [Execution Queue Governance](EXECUTION_QUEUE_GOVERNANCE.md)
 - [Work Order Governance](WORK_ORDER_GOVERNANCE.md)
 - [Handover Standard](HANDOVER_STANDARD.md)
