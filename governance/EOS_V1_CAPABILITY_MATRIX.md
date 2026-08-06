@@ -52,10 +52,10 @@ Only one current status applies to each capability. `Verified` is the final capa
 | EOS-002 | Governance File Registration | Governance | PM | Completed |
 | EOS-003 | Governance Rule Registration | Governance | PM | Completed |
 | EOS-004 | Architecture Decision Registration | Decision | PM | Completed |
-| EOS-005 | Handover Content Standard | Handover | PM | In Progress |
-| EOS-006 | Handover Version Control | Handover | PM | In Progress |
-| EOS-007 | Handover Lifecycle Control | Handover | PM | In Progress |
-| EOS-008 | Current AIStudioCore Handover | Handover | PM | In Progress |
+| EOS-005 | Handover Content Standard | Handover | PM | Completed |
+| EOS-006 | Handover Version Control | Handover | PM | Completed |
+| EOS-007 | Handover Lifecycle Control | Handover | PM | Completed |
+| EOS-008 | Current AIStudioCore Handover | Handover | PM | Completed |
 | EOS-009 | Workspace Registration | Workspace | PM | In Progress |
 | EOS-010 | Planning Package Governance | Planning | PM | Not Started |
 | EOS-011 | Work Order Governance | Work Orders | PM | Not Started |
@@ -145,7 +145,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-001; EOS-012 |
 | Related Governance Documents | `HANDOVER_STANDARD.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md` |
 | Verification Method | Validate the standard against approved required fields and evidence references. |
-| Current Status | In Progress |
+| Current Status | Completed |
 
 ### EOS-006 — Handover Version Control
 
@@ -161,7 +161,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-005; EOS-007 |
 | Related Governance Documents | `HANDOVER_VERSION_POLICY.md`; `HANDOVER_STANDARD.md`; `HANDOVER_LIFECYCLE.md` |
 | Verification Method | Confirm version identifiers, succession, authority, and retention conditions are unambiguous. |
-| Current Status | In Progress |
+| Current Status | Completed |
 
 ### EOS-007 — Handover Lifecycle Control
 
@@ -177,7 +177,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-005; EOS-006 |
 | Related Governance Documents | `HANDOVER_LIFECYCLE.md`; `HANDOVER_STANDARD.md`; `HANDOVER_VERSION_POLICY.md` |
 | Verification Method | Validate every state and transition against approved entry, exit, review, and closing conditions. |
-| Current Status | In Progress |
+| Current Status | Completed |
 
 ### EOS-008 — Current AIStudioCore Handover
 
@@ -193,7 +193,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-005; EOS-006; EOS-007; EOS-010; EOS-011; EOS-012 |
 | Related Governance Documents | `AISTUDIOCORE_HANDOVER.md`; `HANDOVER_STANDARD.md`; `HANDOVER_VERSION_POLICY.md`; `HANDOVER_LIFECYCLE.md` |
 | Verification Method | Confirm one current record exists and complies with the approved handover controls. |
-| Current Status | In Progress |
+| Current Status | Completed |
 
 ### EOS-009 — Workspace Registration
 
@@ -354,10 +354,10 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | EOS-002 |  |  | X |  |
 | EOS-003 |  |  | X |  |
 | EOS-004 |  |  | X |  |
-| EOS-005 |  | X |  |  |
-| EOS-006 |  | X |  |  |
-| EOS-007 |  | X |  |  |
-| EOS-008 |  | X |  |  |
+| EOS-005 |  |  | X |  |
+| EOS-006 |  |  | X |  |
+| EOS-007 |  |  | X |  |
+| EOS-008 |  |  | X |  |
 | EOS-009 |  | X |  |  |
 | EOS-010 | X |  |  |  |
 | EOS-011 | X |  |  |  |
@@ -379,6 +379,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | GitHub Issue #33 | EOS-016 | `PM_GITHUB_ISSUE_BUILDER.md`, implementation, tests, and Queue demonstration | READY_FOR_PM_REVIEW |
 | GitHub Issue #36 | EOS-002, EOS-015 | Governance asset registry, GIA mapping, and GitHub repository persistence | READY_FOR_PM_REVIEW |
 | GitHub Issue #37 | EOS-004 | Qualified historical ADR index with explicit provenance and unresolved gaps | READY_FOR_PM_REVIEW |
+| GitHub Issue #38 | EOS-005, EOS-006, EOS-007, EOS-008 | Completed handover contract, version policy, lifecycle, and current working record | READY_FOR_PM_REVIEW |
 
 Coverage indicates which work order established or advances a capability. It does not replace capability verification or daily closing.
 
