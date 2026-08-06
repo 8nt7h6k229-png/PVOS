@@ -1,0 +1,135 @@
+{
+  "package_id": "DPP-2026-08-06-EOS-V1-FOUNDATION",
+  "repository": "8nt7h6k229-png/PVOS",
+  "status": "QUEUE_READY",
+  "issues": [
+    {
+      "issue_id": "EOS-007",
+      "title": "EOS-007 — Governance Repository Persistence",
+      "capability_ids": [
+        "EOS-002",
+        "EOS-015"
+      ],
+      "dependencies": [],
+      "body": "## Source\nDPP-2026-08-06-EOS-V1-FOUNDATION — APPROVED — 2026-08-06 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-007\n- Queue Status: READY\n- Order: 1\n\n## Capability\n- EOS-002\n- EOS-015\n\n## Objective\nPersist the approved EOS v1.0 governance foundation as traceable repository state rather than local-only untracked assets.\n\n## Dependencies\n- None\n\n## Scope\n- Inspect all current governance assets and their Git state\n- Confirm governance-file identity and GIA domain mapping before persistence\n- Establish traceable GitHub repository persistence for the approved governance foundation\n- Return persistence evidence without beginning product development\n\n## Out of Scope\n- PVOS product feature or product-code changes\n- Blueprint content changes\n- Operating Cycle changes\n- Workspace restructuring or new repository creation\n- Execution of EOS-008 or later queue items\n\n## Deliverables\n- Governance asset inventory and persistence record\n- Repository-state evidence for the governance foundation\n- Updated governance-file traceability where required\n\n## Acceptance Criteria\n- Approved governance assets are no longer dependent on local-only untracked state\n- Repository persistence is traceable to this GitHub Issue\n- No product, Blueprint, Operating Cycle, or Workspace scope is changed\n- Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs\n\n## Required Evidence\n- Existing Asset Inspection Report\n- Governance files persisted or changed\n- Verification results\n- Git and GitHub repository state\n- Known risks or explicit Blocked, Rejected, or Governance Conflict condition\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 36,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/36",
+      "reused": false
+    },
+    {
+      "issue_id": "EOS-008",
+      "title": "EOS-008 — Architecture Decision Registry Completion",
+      "capability_ids": [
+        "EOS-004"
+      ],
+      "dependencies": [
+        "EOS-007"
+      ],
+      "body": "## Source\nDPP-2026-08-06-EOS-V1-FOUNDATION — APPROVED — 2026-08-06 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-008\n- Queue Status: READY\n- Order: 2\n\n## Capability\n- EOS-004\n\n## Objective\nComplete the formal Architecture Decision Registry without creating or altering architecture decisions.\n\n## Dependencies\n- EOS-007 — #36\n\n## Scope\n- Inspect existing architecture indexes and decision records first\n- Complete the registry schema, unique decision references, status, provenance, and supersession fields\n- Register existing authoritative decision records without promoting unapproved history\n- Preserve evidence gaps explicitly\n\n## Out of Scope\n- New architecture decisions\n- Architecture, Blueprint, product-code, Operating Cycle, or Workspace changes\n- Execution of EOS-009 or later queue items\n\n## Deliverables\n- Completed ARCHITECTURE_DECISION_REGISTRY.md\n- Decision index with unique identifiers and authoritative references\n- Gap and provenance evidence\n\n## Acceptance Criteria\n- Every registered decision reference is unique and traceable\n- No architecture decision is invented or silently approved\n- Registry fields and links pass verification\n- Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs\n\n## Required Evidence\n- Existing Asset Inspection Report\n- Registered decision summary\n- Files changed\n- Verification results\n- Git Working Tree Status and known gaps\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 37,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/37",
+      "reused": false
+    },
+    {
+      "issue_id": "EOS-009",
+      "title": "EOS-009 — Handover System Completion",
+      "capability_ids": [
+        "EOS-005",
+        "EOS-006",
+        "EOS-007",
+        "EOS-008"
+      ],
+      "dependencies": [
+        "EOS-008"
+      ],
+      "body": "## Source\nDPP-2026-08-06-EOS-V1-FOUNDATION — APPROVED — 2026-08-06 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-009\n- Queue Status: READY\n- Order: 3\n\n## Capability\n- EOS-005\n- EOS-006\n- EOS-007\n- EOS-008\n\n## Objective\nComplete the governed AIStudioCore handover standard, version policy, lifecycle, and current handover record.\n\n## Dependencies\n- EOS-008 — #37\n\n## Scope\n- Complete HANDOVER_STANDARD.md, HANDOVER_VERSION_POLICY.md, HANDOVER_LIFECYCLE.md, and AISTUDIOCORE_HANDOVER.md\n- Define non-overlapping responsibilities and traceable handover fields\n- Represent current governed work and pending review states\n- Align handover controls with Daily Governed Closing without changing the Operating Cycle\n\n## Out of Scope\n- Operating Cycle redesign\n- Premature PM, Owner, or Daily Governed Closing\n- Product, Blueprint, Workspace, or repository architecture changes\n- Execution of EOS-010 or later queue items\n\n## Deliverables\n- Completed handover standard\n- Completed handover version policy\n- Completed handover lifecycle\n- Current AIStudioCore handover record\n\n## Acceptance Criteria\n- Four handover documents have unique responsibilities and consistent links\n- Version, lifecycle, evidence, review, and closing boundaries are explicit\n- Current handover does not claim unapproved completion\n- Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs\n\n## Required Evidence\n- Existing Asset Inspection Report\n- Handover document summary\n- Lifecycle and version consistency results\n- Files changed\n- Git Working Tree Status and known risks\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 38,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/38",
+      "reused": false
+    },
+    {
+      "issue_id": "EOS-010",
+      "title": "EOS-010 — Planning Package Governance",
+      "capability_ids": [
+        "EOS-010"
+      ],
+      "dependencies": [
+        "EOS-009"
+      ],
+      "body": "## Source\nDPP-2026-08-06-EOS-V1-FOUNDATION — APPROVED — 2026-08-06 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-010\n- Queue Status: READY\n- Order: 4\n\n## Capability\n- EOS-010\n\n## Objective\nEstablish the formal Daily Planning Package governance contract as the daily Source of Truth.\n\n## Dependencies\n- EOS-009 — #38\n\n## Scope\n- Define Planning Package purpose, authority, mandatory fields, approval, dependencies, queue order, stop conditions, and success criteria\n- Align the contract with the PM GitHub Issue Builder input\n- Preserve GitHub Issue as the sole Codex Execution Source\n- Map Planning governance into the existing GIA\n\n## Out of Scope\n- Operating Cycle changes\n- Autonomous Owner approval\n- Product, Blueprint, Workspace, or repository architecture changes\n- Execution of EOS-011 or later queue items\n\n## Deliverables\n- Planning Package governance definition\n- Mandatory input and approval contract\n- Builder-aligned validation and information-flow references\n\n## Acceptance Criteria\n- Planning Package is explicitly the daily Source of Truth\n- Mandatory fields and approval boundary are unambiguous\n- Incomplete or unapproved packages cannot publish a queue\n- Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs\n\n## Required Evidence\n- Existing Asset Inspection Report\n- Planning Package schema summary\n- Validation tests and results\n- Files changed\n- Git Working Tree Status and known risks\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 39,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/39",
+      "reused": false
+    },
+    {
+      "issue_id": "EOS-011",
+      "title": "EOS-011 — Work Order Governance",
+      "capability_ids": [
+        "EOS-011"
+      ],
+      "dependencies": [
+        "EOS-010"
+      ],
+      "body": "## Source\nDPP-2026-08-06-EOS-V1-FOUNDATION — APPROVED — 2026-08-06 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-011\n- Queue Status: READY\n- Order: 5\n\n## Capability\n- EOS-011\n\n## Objective\nEstablish formal Work Order governance as a bounded governance and coverage record that never replaces the GitHub Issue Execution Source.\n\n## Dependencies\n- EOS-010 — #39\n\n## Scope\n- Define Work Order identity, objective, Capability mapping, scope, repository target, deliverables, evidence, acceptance, status, and closing boundaries\n- Define traceability from Planning Package and Work Order to the authorizing GitHub Issue\n- Align Work Order governance with GIA and EOS-016\n- Preserve PM ownership of review and closing\n\n## Out of Scope\n- Using chat or a Work Order as Codex's execution source\n- Operating Cycle, product, Blueprint, Workspace, or repository architecture changes\n- Execution of EOS-012 or later queue items\n\n## Deliverables\n- Work Order governance definition\n- Required-field and traceability contract\n- Review and closing boundary definition\n\n## Acceptance Criteria\n- Every Work Order maps to at least one Capability ID and one authorizing GitHub Issue\n- Work Order and Execution Source responsibilities do not overlap\n- PM review and closing authority remain explicit\n- Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs\n\n## Required Evidence\n- Existing Asset Inspection Report\n- Work Order field and traceability matrix\n- Files changed\n- Verification results\n- Git Working Tree Status and known risks\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 40,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/40",
+      "reused": false
+    },
+    {
+      "issue_id": "EOS-012",
+      "title": "EOS-012 — Evidence Governance",
+      "capability_ids": [
+        "EOS-012"
+      ],
+      "dependencies": [
+        "EOS-011"
+      ],
+      "body": "## Source\nDPP-2026-08-06-EOS-V1-FOUNDATION — APPROVED — 2026-08-06 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-012\n- Queue Status: READY\n- Order: 6\n\n## Capability\n- EOS-012\n\n## Objective\nEstablish formal evidence governance for claims, execution, decisions, reviews, acceptance, and closing.\n\n## Dependencies\n- EOS-011 — #40\n\n## Scope\n- Define evidence identity, type, provenance, location, producer, related Issue and Capability, verification, review status, and retention references\n- Define minimum evidence required for READY_FOR_PM_REVIEW\n- Align evidence flow with GitHub Issue execution and PM Review\n- Preserve missing evidence as an explicit gap\n\n## Out of Scope\n- Fabricating or self-approving evidence\n- Product, Blueprint, Operating Cycle, Workspace, or repository architecture changes\n- Execution of EOS-013 or later queue items\n\n## Deliverables\n- Evidence governance definition\n- Evidence record schema and status model\n- Execution-to-review evidence linkage\n\n## Acceptance Criteria\n- Every governed evidence record is traceable to source, Issue, and Capability\n- Missing or rejected evidence cannot silently satisfy review\n- Executor and PM verification responsibilities are distinct\n- Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs\n\n## Required Evidence\n- Existing Asset Inspection Report\n- Evidence schema and flow summary\n- Files changed\n- Verification results\n- Git Working Tree Status and known risks\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 41,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/41",
+      "reused": false
+    },
+    {
+      "issue_id": "EOS-013",
+      "title": "EOS-013 — Engineering Knowledge Governance",
+      "capability_ids": [
+        "EOS-013"
+      ],
+      "dependencies": [
+        "EOS-012"
+      ],
+      "body": "## Source\nDPP-2026-08-06-EOS-V1-FOUNDATION — APPROVED — 2026-08-06 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-013\n- Queue Status: READY\n- Order: 7\n\n## Capability\n- EOS-013\n\n## Objective\nEstablish formal governance for discovery, classification, provenance, review, and reuse of engineering knowledge.\n\n## Dependencies\n- EOS-012 — #41\n\n## Scope\n- Inspect existing engineering knowledge indexes and assets first\n- Define engineering-knowledge identity, classification, provenance, authority, lifecycle status, related decisions, evidence, and reuse rules\n- Align Engineering Knowledge with GIA and Evidence Governance\n- Preserve historical or unreviewed knowledge without silently promoting it\n\n## Out of Scope\n- Product implementation or architecture approval\n- Creating unsupported engineering claims\n- Blueprint, Operating Cycle, Workspace, or repository architecture changes\n- Execution of EOS-014 or later queue items\n\n## Deliverables\n- Engineering Knowledge governance definition\n- Knowledge classification and provenance contract\n- Existing knowledge mapping and gap summary\n\n## Acceptance Criteria\n- Engineering knowledge is uniquely identifiable, classified, and traceable\n- Existing knowledge is inspected before equivalent knowledge is created\n- Approval and evidence boundaries are explicit\n- Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs\n\n## Required Evidence\n- Existing Asset Inspection Report\n- Engineering knowledge mapping\n- Files changed\n- Verification results\n- Git Working Tree Status and known gaps\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 42,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/42",
+      "reused": false
+    },
+    {
+      "issue_id": "EOS-014",
+      "title": "EOS-014 — Blueprint Governance Reference",
+      "capability_ids": [
+        "EOS-014"
+      ],
+      "dependencies": [
+        "EOS-013"
+      ],
+      "body": "## Source\nDPP-2026-08-06-EOS-V1-FOUNDATION — APPROVED — 2026-08-06 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-014\n- Queue Status: READY\n- Order: 8\n\n## Capability\n- EOS-014\n\n## Objective\nEstablish the authoritative governance reference to the approved Blueprint without changing Blueprint content.\n\n## Dependencies\n- EOS-013 — #42\n\n## Scope\n- Verify the authoritative Blueprint location and repository status\n- Define Blueprint identity, owner, authority, version reference, related decisions, and planning relationship\n- Register the governance reference and GIA mapping\n- Record ambiguity or missing authority as a gap\n\n## Out of Scope\n- Any Blueprint content modification\n- Product capability, architecture, Operating Cycle, Workspace, or repository architecture changes\n- Execution of EOS-015 before this Issue reaches its required stop state\n\n## Deliverables\n- Blueprint governance reference\n- Authoritative location and traceability evidence\n- Related decision and planning linkage\n\n## Acceptance Criteria\n- The reference resolves to the approved Blueprint\n- Blueprint content remains unchanged\n- Authority, ownership, and planning relationship are explicit\n- Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs\n\n## Required Evidence\n- Existing Asset Inspection Report\n- Blueprint integrity and location evidence\n- Files changed\n- Verification results\n- Git Working Tree Status and known risks\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 43,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/43",
+      "reused": false
+    },
+    {
+      "issue_id": "EOS-015",
+      "title": "EOS-015 — Engineering Operating System v1.0 Final Capability Audit",
+      "capability_ids": [
+        "EOS-015"
+      ],
+      "dependencies": [
+        "EOS-014"
+      ],
+      "body": "## Source\nDPP-2026-08-06-EOS-V1-FOUNDATION — APPROVED — 2026-08-06 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-015\n- Queue Status: READY\n- Order: 9\n\n## Capability\n- EOS-015\n\n## Objective\nPerform the final EOS v1.0 capability audit across EOS-001 through EOS-016 and determine evidence-based readiness for PM Review.\n\n## Dependencies\n- EOS-014 — #43\n\n## Scope\n- Audit all sixteen Capability definitions, implementations, dependencies, governance documents, repository persistence, and work-item coverage\n- Verify the complete flow from Planning Package through GitHub Issue, Codex, Evidence, and PM Review\n- Classify every Capability as Not Started, In Progress, Completed, or Verified using durable evidence\n- Report all gaps, dependency conflicts, and stop conditions without self-approving EOS completion\n\n## Out of Scope\n- Fixing audit findings without a separate authorized Issue\n- Declaring PM Review, Owner Review, or Daily Governed Closing complete\n- Product, Blueprint, Operating Cycle, Workspace, or repository architecture changes\n\n## Deliverables\n- Final EOS v1.0 Capability Audit\n- Capability coverage and status matrix\n- Dependency and governance-consistency results\n- PM Review readiness recommendation and known risks\n\n## Acceptance Criteria\n- EOS-001 through EOS-016 are individually assessed against repository evidence\n- No capability is marked Verified without PM evidence\n- Every unresolved gap is explicit and traceable\n- Result stops at READY_FOR_PM_REVIEW, Blocked, Rejected, or Governance Conflict\n\n## Required Evidence\n- Existing Asset Inspection Report\n- Sixteen-capability audit table\n- Dependency and governance-flow verification\n- Git and GitHub repository state\n- Known risks and PM Review recommendation\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 44,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/44",
+      "reused": false
+    }
+  ]
+}

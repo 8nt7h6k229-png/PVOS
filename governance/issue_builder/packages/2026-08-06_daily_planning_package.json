@@ -1,0 +1,349 @@
+{
+  "package_id": "DPP-2026-08-06-EOS-V1-FOUNDATION",
+  "date": "2026-08-06",
+  "status": "APPROVED",
+  "approved_by": "Owner",
+  "repository": "8nt7h6k229-png/PVOS",
+  "issues": [
+    {
+      "issue_id": "EOS-007",
+      "title": "EOS-007 — Governance Repository Persistence",
+      "capability_ids": ["EOS-002", "EOS-015"],
+      "objective": "Persist the approved EOS v1.0 governance foundation as traceable repository state rather than local-only untracked assets.",
+      "scope": [
+        "Inspect all current governance assets and their Git state",
+        "Confirm governance-file identity and GIA domain mapping before persistence",
+        "Establish traceable GitHub repository persistence for the approved governance foundation",
+        "Return persistence evidence without beginning product development"
+      ],
+      "out_of_scope": [
+        "PVOS product feature or product-code changes",
+        "Blueprint content changes",
+        "Operating Cycle changes",
+        "Workspace restructuring or new repository creation",
+        "Execution of EOS-008 or later queue items"
+      ],
+      "deliverables": [
+        "Governance asset inventory and persistence record",
+        "Repository-state evidence for the governance foundation",
+        "Updated governance-file traceability where required"
+      ],
+      "acceptance_criteria": [
+        "Approved governance assets are no longer dependent on local-only untracked state",
+        "Repository persistence is traceable to this GitHub Issue",
+        "No product, Blueprint, Operating Cycle, or Workspace scope is changed",
+        "Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs"
+      ],
+      "required_evidence": [
+        "Existing Asset Inspection Report",
+        "Governance files persisted or changed",
+        "Verification results",
+        "Git and GitHub repository state",
+        "Known risks or explicit Blocked, Rejected, or Governance Conflict condition"
+      ],
+      "dependencies": [],
+      "status": "READY"
+    },
+    {
+      "issue_id": "EOS-008",
+      "title": "EOS-008 — Architecture Decision Registry Completion",
+      "capability_ids": ["EOS-004"],
+      "objective": "Complete the formal Architecture Decision Registry without creating or altering architecture decisions.",
+      "scope": [
+        "Inspect existing architecture indexes and decision records first",
+        "Complete the registry schema, unique decision references, status, provenance, and supersession fields",
+        "Register existing authoritative decision records without promoting unapproved history",
+        "Preserve evidence gaps explicitly"
+      ],
+      "out_of_scope": [
+        "New architecture decisions",
+        "Architecture, Blueprint, product-code, Operating Cycle, or Workspace changes",
+        "Execution of EOS-009 or later queue items"
+      ],
+      "deliverables": [
+        "Completed ARCHITECTURE_DECISION_REGISTRY.md",
+        "Decision index with unique identifiers and authoritative references",
+        "Gap and provenance evidence"
+      ],
+      "acceptance_criteria": [
+        "Every registered decision reference is unique and traceable",
+        "No architecture decision is invented or silently approved",
+        "Registry fields and links pass verification",
+        "Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs"
+      ],
+      "required_evidence": [
+        "Existing Asset Inspection Report",
+        "Registered decision summary",
+        "Files changed",
+        "Verification results",
+        "Git Working Tree Status and known gaps"
+      ],
+      "dependencies": ["EOS-007"],
+      "status": "READY"
+    },
+    {
+      "issue_id": "EOS-009",
+      "title": "EOS-009 — Handover System Completion",
+      "capability_ids": ["EOS-005", "EOS-006", "EOS-007", "EOS-008"],
+      "objective": "Complete the governed AIStudioCore handover standard, version policy, lifecycle, and current handover record.",
+      "scope": [
+        "Complete HANDOVER_STANDARD.md, HANDOVER_VERSION_POLICY.md, HANDOVER_LIFECYCLE.md, and AISTUDIOCORE_HANDOVER.md",
+        "Define non-overlapping responsibilities and traceable handover fields",
+        "Represent current governed work and pending review states",
+        "Align handover controls with Daily Governed Closing without changing the Operating Cycle"
+      ],
+      "out_of_scope": [
+        "Operating Cycle redesign",
+        "Premature PM, Owner, or Daily Governed Closing",
+        "Product, Blueprint, Workspace, or repository architecture changes",
+        "Execution of EOS-010 or later queue items"
+      ],
+      "deliverables": [
+        "Completed handover standard",
+        "Completed handover version policy",
+        "Completed handover lifecycle",
+        "Current AIStudioCore handover record"
+      ],
+      "acceptance_criteria": [
+        "Four handover documents have unique responsibilities and consistent links",
+        "Version, lifecycle, evidence, review, and closing boundaries are explicit",
+        "Current handover does not claim unapproved completion",
+        "Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs"
+      ],
+      "required_evidence": [
+        "Existing Asset Inspection Report",
+        "Handover document summary",
+        "Lifecycle and version consistency results",
+        "Files changed",
+        "Git Working Tree Status and known risks"
+      ],
+      "dependencies": ["EOS-008"],
+      "status": "READY"
+    },
+    {
+      "issue_id": "EOS-010",
+      "title": "EOS-010 — Planning Package Governance",
+      "capability_ids": ["EOS-010"],
+      "objective": "Establish the formal Daily Planning Package governance contract as the daily Source of Truth.",
+      "scope": [
+        "Define Planning Package purpose, authority, mandatory fields, approval, dependencies, queue order, stop conditions, and success criteria",
+        "Align the contract with the PM GitHub Issue Builder input",
+        "Preserve GitHub Issue as the sole Codex Execution Source",
+        "Map Planning governance into the existing GIA"
+      ],
+      "out_of_scope": [
+        "Operating Cycle changes",
+        "Autonomous Owner approval",
+        "Product, Blueprint, Workspace, or repository architecture changes",
+        "Execution of EOS-011 or later queue items"
+      ],
+      "deliverables": [
+        "Planning Package governance definition",
+        "Mandatory input and approval contract",
+        "Builder-aligned validation and information-flow references"
+      ],
+      "acceptance_criteria": [
+        "Planning Package is explicitly the daily Source of Truth",
+        "Mandatory fields and approval boundary are unambiguous",
+        "Incomplete or unapproved packages cannot publish a queue",
+        "Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs"
+      ],
+      "required_evidence": [
+        "Existing Asset Inspection Report",
+        "Planning Package schema summary",
+        "Validation tests and results",
+        "Files changed",
+        "Git Working Tree Status and known risks"
+      ],
+      "dependencies": ["EOS-009"],
+      "status": "READY"
+    },
+    {
+      "issue_id": "EOS-011",
+      "title": "EOS-011 — Work Order Governance",
+      "capability_ids": ["EOS-011"],
+      "objective": "Establish formal Work Order governance as a bounded governance and coverage record that never replaces the GitHub Issue Execution Source.",
+      "scope": [
+        "Define Work Order identity, objective, Capability mapping, scope, repository target, deliverables, evidence, acceptance, status, and closing boundaries",
+        "Define traceability from Planning Package and Work Order to the authorizing GitHub Issue",
+        "Align Work Order governance with GIA and EOS-016",
+        "Preserve PM ownership of review and closing"
+      ],
+      "out_of_scope": [
+        "Using chat or a Work Order as Codex's execution source",
+        "Operating Cycle, product, Blueprint, Workspace, or repository architecture changes",
+        "Execution of EOS-012 or later queue items"
+      ],
+      "deliverables": [
+        "Work Order governance definition",
+        "Required-field and traceability contract",
+        "Review and closing boundary definition"
+      ],
+      "acceptance_criteria": [
+        "Every Work Order maps to at least one Capability ID and one authorizing GitHub Issue",
+        "Work Order and Execution Source responsibilities do not overlap",
+        "PM review and closing authority remain explicit",
+        "Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs"
+      ],
+      "required_evidence": [
+        "Existing Asset Inspection Report",
+        "Work Order field and traceability matrix",
+        "Files changed",
+        "Verification results",
+        "Git Working Tree Status and known risks"
+      ],
+      "dependencies": ["EOS-010"],
+      "status": "READY"
+    },
+    {
+      "issue_id": "EOS-012",
+      "title": "EOS-012 — Evidence Governance",
+      "capability_ids": ["EOS-012"],
+      "objective": "Establish formal evidence governance for claims, execution, decisions, reviews, acceptance, and closing.",
+      "scope": [
+        "Define evidence identity, type, provenance, location, producer, related Issue and Capability, verification, review status, and retention references",
+        "Define minimum evidence required for READY_FOR_PM_REVIEW",
+        "Align evidence flow with GitHub Issue execution and PM Review",
+        "Preserve missing evidence as an explicit gap"
+      ],
+      "out_of_scope": [
+        "Fabricating or self-approving evidence",
+        "Product, Blueprint, Operating Cycle, Workspace, or repository architecture changes",
+        "Execution of EOS-013 or later queue items"
+      ],
+      "deliverables": [
+        "Evidence governance definition",
+        "Evidence record schema and status model",
+        "Execution-to-review evidence linkage"
+      ],
+      "acceptance_criteria": [
+        "Every governed evidence record is traceable to source, Issue, and Capability",
+        "Missing or rejected evidence cannot silently satisfy review",
+        "Executor and PM verification responsibilities are distinct",
+        "Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs"
+      ],
+      "required_evidence": [
+        "Existing Asset Inspection Report",
+        "Evidence schema and flow summary",
+        "Files changed",
+        "Verification results",
+        "Git Working Tree Status and known risks"
+      ],
+      "dependencies": ["EOS-011"],
+      "status": "READY"
+    },
+    {
+      "issue_id": "EOS-013",
+      "title": "EOS-013 — Engineering Knowledge Governance",
+      "capability_ids": ["EOS-013"],
+      "objective": "Establish formal governance for discovery, classification, provenance, review, and reuse of engineering knowledge.",
+      "scope": [
+        "Inspect existing engineering knowledge indexes and assets first",
+        "Define engineering-knowledge identity, classification, provenance, authority, lifecycle status, related decisions, evidence, and reuse rules",
+        "Align Engineering Knowledge with GIA and Evidence Governance",
+        "Preserve historical or unreviewed knowledge without silently promoting it"
+      ],
+      "out_of_scope": [
+        "Product implementation or architecture approval",
+        "Creating unsupported engineering claims",
+        "Blueprint, Operating Cycle, Workspace, or repository architecture changes",
+        "Execution of EOS-014 or later queue items"
+      ],
+      "deliverables": [
+        "Engineering Knowledge governance definition",
+        "Knowledge classification and provenance contract",
+        "Existing knowledge mapping and gap summary"
+      ],
+      "acceptance_criteria": [
+        "Engineering knowledge is uniquely identifiable, classified, and traceable",
+        "Existing knowledge is inspected before equivalent knowledge is created",
+        "Approval and evidence boundaries are explicit",
+        "Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs"
+      ],
+      "required_evidence": [
+        "Existing Asset Inspection Report",
+        "Engineering knowledge mapping",
+        "Files changed",
+        "Verification results",
+        "Git Working Tree Status and known gaps"
+      ],
+      "dependencies": ["EOS-012"],
+      "status": "READY"
+    },
+    {
+      "issue_id": "EOS-014",
+      "title": "EOS-014 — Blueprint Governance Reference",
+      "capability_ids": ["EOS-014"],
+      "objective": "Establish the authoritative governance reference to the approved Blueprint without changing Blueprint content.",
+      "scope": [
+        "Verify the authoritative Blueprint location and repository status",
+        "Define Blueprint identity, owner, authority, version reference, related decisions, and planning relationship",
+        "Register the governance reference and GIA mapping",
+        "Record ambiguity or missing authority as a gap"
+      ],
+      "out_of_scope": [
+        "Any Blueprint content modification",
+        "Product capability, architecture, Operating Cycle, Workspace, or repository architecture changes",
+        "Execution of EOS-015 before this Issue reaches its required stop state"
+      ],
+      "deliverables": [
+        "Blueprint governance reference",
+        "Authoritative location and traceability evidence",
+        "Related decision and planning linkage"
+      ],
+      "acceptance_criteria": [
+        "The reference resolves to the approved Blueprint",
+        "Blueprint content remains unchanged",
+        "Authority, ownership, and planning relationship are explicit",
+        "Final executor state is READY_FOR_PM_REVIEW unless a stop condition occurs"
+      ],
+      "required_evidence": [
+        "Existing Asset Inspection Report",
+        "Blueprint integrity and location evidence",
+        "Files changed",
+        "Verification results",
+        "Git Working Tree Status and known risks"
+      ],
+      "dependencies": ["EOS-013"],
+      "status": "READY"
+    },
+    {
+      "issue_id": "EOS-015",
+      "title": "EOS-015 — Engineering Operating System v1.0 Final Capability Audit",
+      "capability_ids": ["EOS-015"],
+      "objective": "Perform the final EOS v1.0 capability audit across EOS-001 through EOS-016 and determine evidence-based readiness for PM Review.",
+      "scope": [
+        "Audit all sixteen Capability definitions, implementations, dependencies, governance documents, repository persistence, and work-item coverage",
+        "Verify the complete flow from Planning Package through GitHub Issue, Codex, Evidence, and PM Review",
+        "Classify every Capability as Not Started, In Progress, Completed, or Verified using durable evidence",
+        "Report all gaps, dependency conflicts, and stop conditions without self-approving EOS completion"
+      ],
+      "out_of_scope": [
+        "Fixing audit findings without a separate authorized Issue",
+        "Declaring PM Review, Owner Review, or Daily Governed Closing complete",
+        "Product, Blueprint, Operating Cycle, Workspace, or repository architecture changes"
+      ],
+      "deliverables": [
+        "Final EOS v1.0 Capability Audit",
+        "Capability coverage and status matrix",
+        "Dependency and governance-consistency results",
+        "PM Review readiness recommendation and known risks"
+      ],
+      "acceptance_criteria": [
+        "EOS-001 through EOS-016 are individually assessed against repository evidence",
+        "No capability is marked Verified without PM evidence",
+        "Every unresolved gap is explicit and traceable",
+        "Result stops at READY_FOR_PM_REVIEW, Blocked, Rejected, or Governance Conflict"
+      ],
+      "required_evidence": [
+        "Existing Asset Inspection Report",
+        "Sixteen-capability audit table",
+        "Dependency and governance-flow verification",
+        "Git and GitHub repository state",
+        "Known risks and PM Review recommendation"
+      ],
+      "dependencies": ["EOS-014"],
+      "status": "READY"
+    }
+  ]
+}
