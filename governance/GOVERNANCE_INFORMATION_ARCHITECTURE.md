@@ -163,6 +163,7 @@ Execution is authorized only through a PM-authorized GitHub Issue; authorization
 | `EVIDENCE_GOVERNANCE.md` | Evidence |
 | `ENGINEERING_KNOWLEDGE_GOVERNANCE.md` | Engineering Knowledge |
 | `BLUEPRINT_GOVERNANCE_REFERENCE.md` | Blueprint |
+| `EOS_V1_FINAL_CAPABILITY_AUDIT.md` | Governance |
 | `GOVERNANCE_FILE_REGISTRY.md` | Governance |
 | `GOVERNANCE_RULES_REGISTRY.md` | Governance |
 | `ARCHITECTURE_DECISION_REGISTRY.md` | Decision |
