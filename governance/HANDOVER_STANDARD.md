@@ -66,6 +66,7 @@ A handover conforms only when all required fields are present, links resolve, it
 
 ## Related Documents
 
+- [Evidence Governance](EVIDENCE_GOVERNANCE.md)
 - [Handover Version Policy](HANDOVER_VERSION_POLICY.md)
 - [Handover Lifecycle](HANDOVER_LIFECYCLE.md)
 - [AIStudioCore Handover](AISTUDIOCORE_HANDOVER.md)

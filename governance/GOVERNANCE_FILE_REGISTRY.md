@@ -56,6 +56,7 @@ A governance file is added, moved, renamed, superseded, or retired.
 | GF-019 | `governance/issue_builder/packages/2026-08-06_issue_queue_ready.json` | Evidence | Published daily Queue Ready evidence | Active | Issues #36-#44 |
 | GF-020 | `governance/PLANNING_PACKAGE_GOVERNANCE.md` | Planning | Daily planning authority and publication contract | Review Pending | Issue #39 |
 | GF-021 | `governance/WORK_ORDER_GOVERNANCE.md` | Work Orders | Work Order content, traceability, review, and closing contract | Review Pending | Issue #40 |
+| GF-022 | `governance/EVIDENCE_GOVERNANCE.md` | Evidence | Evidence identity, provenance, validation, review, and retention contract | Review Pending | Issue #41 |
 
 Repository paths are unique. Generated cache files excluded by GF-015 are not governance assets and must not be persisted.
 

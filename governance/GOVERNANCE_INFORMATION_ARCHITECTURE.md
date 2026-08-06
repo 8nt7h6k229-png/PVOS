@@ -85,7 +85,7 @@ An information domain, domain boundary, ownership assignment, relationship, or g
 - **Owner:** PM
 - **Inputs:** Repository records, execution results, review findings, and governed artifacts.
 - **Outputs:** Traceable evidence references for decision, acceptance, and handover.
-- **Related Documents:** [Gap Analysis](../PM/GAP_ANALYSIS.md); [GitHub Portfolio Asset Inventory](../PM/GITHUB_PORTFOLIO_ASSET_INVENTORY.md); [Governance Rules Registry](GOVERNANCE_RULES_REGISTRY.md).
+- **Related Documents:** [Evidence Governance](EVIDENCE_GOVERNANCE.md); [Gap Analysis](../PM/GAP_ANALYSIS.md); [GitHub Portfolio Asset Inventory](../PM/GITHUB_PORTFOLIO_ASSET_INVENTORY.md); [Governance Rules Registry](GOVERNANCE_RULES_REGISTRY.md).
 - **Out of Scope:** Fabricating evidence, replacing accountable review, and modifying product behavior.
 
 ### Engineering Knowledge
@@ -160,6 +160,7 @@ Execution is authorized only through a PM-authorized GitHub Issue; authorization
 | `PM_GITHUB_ISSUE_BUILDER.md` | Work Orders |
 | `PLANNING_PACKAGE_GOVERNANCE.md` | Planning |
 | `WORK_ORDER_GOVERNANCE.md` | Work Orders |
+| `EVIDENCE_GOVERNANCE.md` | Evidence |
 | `GOVERNANCE_FILE_REGISTRY.md` | Governance |
 | `GOVERNANCE_RULES_REGISTRY.md` | Governance |
 | `ARCHITECTURE_DECISION_REGISTRY.md` | Decision |
