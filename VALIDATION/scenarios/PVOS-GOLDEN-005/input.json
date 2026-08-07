@@ -1,0 +1,10 @@
+{
+  "scenarioId": "PVOS-GOLDEN-005",
+  "provenance": "Sanitized representative concave roof partition; derived from existing LayoutEngineTests.Generate_ConcavePartition_RejectsCrossingCandidatesAndWarnsPartialRow",
+  "requestId": "LAYOUT-REQ-CONCAVE",
+  "roofBoundary": [[0,0],[3000,0],[3000,2000],[2000,2000],[2000,1000],[1000,1000],[1000,2000],[0,2000]],
+  "partitionId": "PART-001",
+  "partitionBoundary": [[0,0],[3000,0],[3000,2000],[2000,2000],[2000,1000],[1000,1000],[1000,2000],[0,2000]],
+  "axisRotationDegrees": 0,
+  "module": {"widthMm":900,"lengthMm":900,"ratedPowerWp":400,"orientation":"WidthAlongLocalX","columnGapMm":100,"rowGapMm":100,"edgeMarginMm":0}
+}

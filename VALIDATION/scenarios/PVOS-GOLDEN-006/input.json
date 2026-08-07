@@ -1,0 +1,10 @@
+{
+  "scenarioId": "PVOS-GOLDEN-006",
+  "provenance": "Sanitized representative partition-selection mismatch; derived from existing LayoutEngineTests.Generate_UnknownSelection_ReturnsRejectedWithoutFallback",
+  "requestId": "LAYOUT-REQ-UNKNOWN-PARTITION",
+  "roofBoundary": [[0,0],[6000,0],[6000,4000],[0,4000]],
+  "availablePartitionId": "PART-001",
+  "selectedPartitionId": "UNKNOWN",
+  "axisPartitionId": "PART-001",
+  "module": {"widthMm":1000,"lengthMm":1500,"ratedPowerWp":500,"orientation":"WidthAlongLocalX","columnGapMm":100,"rowGapMm":100,"edgeMarginMm":200}
+}

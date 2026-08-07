@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "dataset_id": "PVOS-GOLDEN-001",
   "scenario_set_id": "PVOS-GOLDEN-SET-001",
-  "scenario_set_version": "1.1",
+  "scenario_set_version": "2.0",
   "name": "Demo-001 Deterministic Layout",
   "product_boundary": "PVOS Deterministic Layout MVP",
   "evidence_baseline": "e1dbcb075b5adaa38ab4c9c8d289a12e62dd8823",
@@ -46,25 +46,49 @@
       "role": "golden_input",
       "scenario_id": "PVOS-GOLDEN-002",
       "path": "VALIDATION/scenarios/PVOS-GOLDEN-002/input.json",
-      "sha256": "96609C2C1F4479AD12D69A5F2828F05505983EB08AA62400BD4D5AF00A10E1BB"
+      "sha256": "C6F4CB5267D300659675D3A432115DA00D02535A0E6D50190D9691BFD047C209"
     },
     {
       "role": "golden_result_review",
       "scenario_id": "PVOS-GOLDEN-002",
       "path": "VALIDATION/scenarios/PVOS-GOLDEN-002/output.json",
-      "sha256": "A201945F3C04881777E20932BE78980F8C133932390FAF6C5A19D33ED6107E5E"
+      "sha256": "6B37C7D008D01AEA3F55319929E04F2366ECBC49F5280C9D68A414C6FE434E8B"
     },
     {
       "role": "golden_input",
       "scenario_id": "PVOS-GOLDEN-003",
       "path": "VALIDATION/scenarios/PVOS-GOLDEN-003/input.json",
-      "sha256": "C288158C3F3009537C91CB1A003CB69649A2F68E9B0D5CFB5C78A02AAECE6A4B"
+      "sha256": "EDBEAFDE8561AC560312288977E955010391C49952C90B5A1871642B30BFA2F0"
     },
     {
       "role": "golden_result_review",
       "scenario_id": "PVOS-GOLDEN-003",
       "path": "VALIDATION/scenarios/PVOS-GOLDEN-003/output.json",
-      "sha256": "ECAC9FB23928F42B66ED18568C5295189B7B08BAB5030EA639A5CA6AB4C1A4D7"
+      "sha256": "5746200F46B2FC061EF2DFCA29F5E6C984B59F8570E9C6B2DBBD5F098A6091B1"
+    },
+    {
+      "role": "golden_input", "scenario_id": "PVOS-GOLDEN-004",
+      "path": "VALIDATION/scenarios/PVOS-GOLDEN-004/input.json", "sha256": "67E48C5948454CF3C80EEFC047B54B2C5C27136A97BAF0E4BE5794828740C6E5"
+    },
+    {
+      "role": "golden_result_review", "scenario_id": "PVOS-GOLDEN-004",
+      "path": "VALIDATION/scenarios/PVOS-GOLDEN-004/output.json", "sha256": "A145A13FC71F9B96C4140C71B339D1E652234DA3CF015CC854E64463731FFA8C"
+    },
+    {
+      "role": "golden_input", "scenario_id": "PVOS-GOLDEN-005",
+      "path": "VALIDATION/scenarios/PVOS-GOLDEN-005/input.json", "sha256": "6EF22D6EE4F164A3402A01D91A3002584FB573192ECFAF35BD5553651A77455F"
+    },
+    {
+      "role": "golden_result_review", "scenario_id": "PVOS-GOLDEN-005",
+      "path": "VALIDATION/scenarios/PVOS-GOLDEN-005/output.json", "sha256": "41E294D16F2007565C6667736CED1262714B16EA1D7E7C20873D7BFBF2FBB3D0"
+    },
+    {
+      "role": "golden_input", "scenario_id": "PVOS-GOLDEN-006",
+      "path": "VALIDATION/scenarios/PVOS-GOLDEN-006/input.json", "sha256": "A3EA9FFAA7E1F8514D0ABDAA832041BFD2AE4D3EB660569F1C6FD7B7A6C0F746"
+    },
+    {
+      "role": "golden_result_review", "scenario_id": "PVOS-GOLDEN-006",
+      "path": "VALIDATION/scenarios/PVOS-GOLDEN-006/output.json", "sha256": "B5AB42978A7AB63057546BE44F20E342BDCFC869920A88DE806BEC7E6874060A"
     }
   ],
   "scenarios": [
@@ -93,6 +117,33 @@
       "input": "VALIDATION/scenarios/PVOS-GOLDEN-003/input.json",
       "output": "VALIDATION/scenarios/PVOS-GOLDEN-003/output.json",
       "csharp_evidence": "LayoutEngineTests.Generate_InvalidAxisAndModule_ReturnsSpecificationCodes",
+      "comparison": "exact_bounded_result_fields_error_codes_and_order"
+    },
+    {
+      "scenario_id": "PVOS-GOLDEN-004",
+      "claim": "Explicit module orientation changes panel dimensions while preserving deterministic accepted placement",
+      "terminal_state": "accepted_with_panels",
+      "input": "VALIDATION/scenarios/PVOS-GOLDEN-004/input.json",
+      "output": "VALIDATION/scenarios/PVOS-GOLDEN-004/output.json",
+      "csharp_evidence": "LayoutEngineTests.Generate_UsesExplicitModuleOrientation",
+      "comparison": "exact_bounded_result_fields_and_repeatability"
+    },
+    {
+      "scenario_id": "PVOS-GOLDEN-005",
+      "claim": "Concave partition rejects crossing candidates and preserves bounded partial-row warnings",
+      "terminal_state": "accepted_with_panels_and_warnings",
+      "input": "VALIDATION/scenarios/PVOS-GOLDEN-005/input.json",
+      "output": "VALIDATION/scenarios/PVOS-GOLDEN-005/output.json",
+      "csharp_evidence": "LayoutEngineTests.Generate_ConcavePartition_RejectsCrossingCandidatesAndWarnsPartialRow",
+      "comparison": "exact_bounded_result_fields_warning_codes_and_order"
+    },
+    {
+      "scenario_id": "PVOS-GOLDEN-006",
+      "claim": "Unknown selected partition is rejected without fallback",
+      "terminal_state": "rejected_input",
+      "input": "VALIDATION/scenarios/PVOS-GOLDEN-006/input.json",
+      "output": "VALIDATION/scenarios/PVOS-GOLDEN-006/output.json",
+      "csharp_evidence": "LayoutEngineTests.Generate_UnknownSelection_ReturnsRejectedWithoutFallback",
       "comparison": "exact_bounded_result_fields_error_codes_and_order"
     }
   ],
