@@ -1,0 +1,10 @@
+{
+  "scenarioId": "PVOS-GOLDEN-004",
+  "provenance": "Sanitized representative rectangular roof; derived from existing LayoutEngineTests.Generate_UsesExplicitModuleOrientation",
+  "requestId": "LAYOUT-REQ-ORIENTATION",
+  "roofBoundary": [[0,0],[6000,0],[6000,4000],[0,4000]],
+  "partitionId": "PART-001",
+  "partitionBoundary": [[0,0],[6000,0],[6000,4000],[0,4000]],
+  "axisRotationDegrees": 0,
+  "module": {"widthMm":1000,"lengthMm":1500,"ratedPowerWp":500,"orientation":"LengthAlongLocalX","columnGapMm":100,"rowGapMm":100,"edgeMarginMm":200}
+}

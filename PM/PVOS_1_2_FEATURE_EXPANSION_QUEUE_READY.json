@@ -1,0 +1,75 @@
+{
+  "package_id": "PPP-PVOS-1.2-FEATURE-EXPANSION-2026-08-07",
+  "repository": "8nt7h6k229-png/PVOS",
+  "status": "QUEUE_READY",
+  "issues": [
+    {
+      "issue_id": "PVOS-501",
+      "title": "PVOS-501 — Golden Dataset Expansion 2.0",
+      "capability_ids": [
+        "QUA-002"
+      ],
+      "dependencies": [],
+      "body": "## Source\nPPP-PVOS-1.2-FEATURE-EXPANSION-2026-08-07 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: PVOS-501\n- Queue Status: READY\n- Order: 1\n\n## Capability\n- QUA-002\n\n## Objective\nExpand the PVOS Golden Dataset and regression foundation using representative scenarios without adding Product behavior.\n\n## Dependencies\n- None\n\n## Scope\n- Admit sanitized real-world representative scenarios through PM review\n- Cover multiple roof geometry cases and partition variations within existing Product authority\n- Cover bounded layout-constraint scenarios already supported by the C# Mainline\n- Preserve accepted placement, valid no-fit, and rejected-input outcomes\n- Expand C# regression evidence, repeatability, comparison rules, and asset integrity\n\n## Out of Scope\n- New Product behavior, Product Scope, Product Blueprint, EOS, or Governance changes\n- Automatic roof interpretation, shading, Electrical, Construction, UI, Cloud, or PVOS 2.x\n- Legacy Asset promotion or direct customer/confidential data admission\n\n## Deliverables\n- Golden Dataset Expansion 2.0 Package\n\n## Acceptance Criteria\n- Every admitted scenario has provenance, Product authority, one bounded claim, explicit non-claims, and PM admission\n- Every Golden asset has an immutable commit, comparison rules, and matching SHA-256\n- Expanded regressions validate existing C# Product behavior without introducing behavior\n\n## Required Evidence\n- Existing asset inspection and Golden 2.0 scenario registry\n- Golden asset integrity record and C# regression report\n- Changed-file and excluded-scope audit\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 83,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/83",
+      "reused": false
+    },
+    {
+      "issue_id": "PVOS-502",
+      "title": "PVOS-502 — Python Validation Tool v0.1",
+      "capability_ids": [
+        "QUA-002"
+      ],
+      "dependencies": [
+        "PVOS-501"
+      ],
+      "body": "## Source\nPPP-PVOS-1.2-FEATURE-EXPANSION-2026-08-07 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: PVOS-502\n- Queue Status: READY\n- Order: 2\n\n## Capability\n- QUA-002\n\n## Objective\nConsolidate the existing Python Validation Short Track Prototype into a controlled v0.1 Validation Tool.\n\n## Dependencies\n- PVOS-501 — #83\n\n## Scope\n- Validate the PM-admitted Golden manifest and registered assets\n- Produce stable evidence reports with PASS, FAIL, and BLOCKED semantics\n- Perform repeatability, integrity, prerequisite, and negative-case checks\n- Invoke the existing C# CLI externally as the Product behavior authority\n\n## Out of Scope\n- Placement, geometry, capacity, warning, error, or Product result calculation in Python\n- A second PVOS Engine, Runtime, Product adapter, or replacement for C# Mainline\n- Product Scope, Blueprint, EOS, Governance, PVOS 1.1 status, or PVOS 2.x changes\n\n## Deliverables\n- Python Validation Tool v0.1 Evidence Package\n\n## Acceptance Criteria\n- Manifest validation and evidence reports are deterministic and traceable\n- Repeatability and negative checks preserve explicit PASS, FAIL, and BLOCKED outcomes\n- Source and changed-file inspection prove Python performs no Product calculations and does not replace C# Mainline\n\n## Required Evidence\n- Existing Prototype inspection and versioned tool identity\n- Unit, integration, negative, and repeatability results\n- C# Mainline non-replacement and scope-boundary proof\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 84,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/84",
+      "reused": false
+    },
+    {
+      "issue_id": "PVOS-503",
+      "title": "PVOS-503 — Runtime Workflow Enhancement",
+      "capability_ids": [
+        "PLT-001"
+      ],
+      "dependencies": [
+        "PVOS-502"
+      ],
+      "body": "## Source\nPPP-PVOS-1.2-FEATURE-EXPANSION-2026-08-07 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: PVOS-503\n- Queue Status: READY\n- Order: 3\n\n## Capability\n- PLT-001\n\n## Objective\nEnhance the bounded PVOS Runtime workflow from Project Input through Validation to a traceable Result Package.\n\n## Dependencies\n- PVOS-502 — #84\n\n## Scope\n- Define Project Input mapping to the current Runtime Input Contract\n- Define the engineer Runtime workflow and validation sequence\n- Define a traceable Result Package for Runtime-owned results, diagnostics, and evidence\n- Review compatibility with the existing CLI, tests, Golden evidence, and consumers\n\n## Out of Scope\n- Presentation recalculation of placement or any Runtime-owned Product value\n- UI, persistence platform, Cloud, source-specific adapter, or Canonical Project Model implementation\n- Product Scope, Product Blueprint, EOS, Governance, or PVOS 2.x changes\n\n## Deliverables\n- Runtime Workflow Enhancement Package\n\n## Acceptance Criteria\n- Project Input, Runtime, Validation, and Result Package responsibilities are explicit\n- The C# Mainline remains the only creator of Product results\n- Result presentation and packaging preserve membership, ordering, geometry, status, warnings, and errors without recalculation\n\n## Required Evidence\n- Current Runtime contract inspection\n- Input-to-result workflow and compatibility traceability\n- Result lineage and no-recalculation proof\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 85,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/85",
+      "reused": false
+    },
+    {
+      "issue_id": "PVOS-504",
+      "title": "PVOS-504 — Canonical Project Model Review 2",
+      "capability_ids": [
+        "QUA-003"
+      ],
+      "dependencies": [
+        "PVOS-503"
+      ],
+      "body": "## Source\nPPP-PVOS-1.2-FEATURE-EXPANSION-2026-08-07 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: PVOS-504\n- Queue Status: READY\n- Order: 4\n\n## Capability\n- QUA-003\n\n## Objective\nReassess Canonical Project Model Promotion eligibility using factual evidence while preserving the current no-promotion boundary.\n\n## Dependencies\n- PVOS-503 — #85\n\n## Scope\n- Review candidate schema and field semantics\n- Review ownership and separation from Runtime, adapters, presentation, and Legacy evidence\n- Review compatibility and versioning requirements\n- Review migration evidence from current typed request and result contracts\n- Record exactly one allowed eligibility disposition\n\n## Out of Scope\n- Canonical Project Model or Legacy Asset Promotion\n- Product Contract, Product Scope, Product Blueprint, or C# domain model modification\n- Implementation commitment, PVOS 2.x, EOS, or Governance changes\n\n## Deliverables\n- Canonical Project Model Review 2 Recommendation\n\n## Acceptance Criteria\n- Schema, ownership, compatibility, migration, Product need, acceptance, and authority each have evidence or an explicit gap\n- Disposition is NOT_ELIGIBLE, MORE_EVIDENCE_REQUIRED, or ELIGIBLE_FOR_SEPARATE_BASELINE_PROPOSAL\n- No disposition directly promotes an asset or modifies the Product Contract\n\n## Required Evidence\n- Current and historical evidence inventory\n- Condition-by-condition eligibility matrix\n- Disposition, gaps, zero-promotion proof, and changed-file audit\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 86,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/86",
+      "reused": false
+    },
+    {
+      "issue_id": "PVOS-505",
+      "title": "PVOS-505 — Integration Roadmap Review",
+      "capability_ids": [
+        "QUA-003"
+      ],
+      "dependencies": [
+        "PVOS-504"
+      ],
+      "body": "## Source\nPPP-PVOS-1.2-FEATURE-EXPANSION-2026-08-07 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: PVOS-505\n- Queue Status: READY\n- Order: 5\n\n## Capability\n- QUA-003\n\n## Objective\nPrepare a non-binding review of possible future PVOS integration roadmaps.\n\n## Dependencies\n- PVOS-504 — #86\n\n## Scope\n- Review AutoCAD Adapter responsibilities, contracts, dependencies, and validation prerequisites\n- Review future Electrical Roadmap information needs and ownership questions\n- Review future Shading Roadmap inputs, result ownership, and evidence prerequisites\n- Record candidate sequences, open questions, dependencies, and non-claims\n\n## Out of Scope\n- Implementation commitment, delivery date, implementation Issue, or Product acceptance claim\n- Full AutoCAD integration, Electrical implementation, Shading implementation, UI, Cloud, Construction, or AI Design\n- Product Scope, Product Blueprint, PVOS 1.1 status, PVOS 2.x, EOS, Governance, or Legacy Promotion changes\n\n## Deliverables\n- PVOS Integration Roadmap Review\n\n## Acceptance Criteria\n- Each roadmap states responsibilities, dependencies, evidence prerequisites, and explicit non-claims\n- The review creates no implementation commitment or Product Scope authority\n- Excluded implementation areas remain absent from changed files\n\n## Required Evidence\n- Existing integration evidence inspection\n- Review-only roadmap with dependencies and open questions\n- Non-commitment and scope-integrity audit\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 87,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/87",
+      "reused": false
+    }
+  ]
+}

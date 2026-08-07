@@ -1,0 +1,1 @@
+{"scenarioId":"PVOS-GOLDEN-005","requestId":"LAYOUT-REQ-CONCAVE","status":"Accepted","selectedPartitionId":"PART-001","panelCount":5,"installedCapacityKwp":2.0,"placementWarnings":[{"code":"PLC_UNUSED_AREA_REMAINS"},{"code":"PLC_PARTIAL_ROW","row":2}],"errors":[]}

@@ -1,0 +1,1 @@
+{"scenarioId":"PVOS-GOLDEN-006","requestId":"LAYOUT-REQ-UNKNOWN-PARTITION","status":"Rejected","selectedPartitionId":"UNKNOWN","panelCount":0,"installedCapacityKwp":0.0,"placementWarnings":[],"errors":[{"code":"SEL_PARTITION_UNKNOWN"},{"code":"AXS_PARTITION_REFERENCE_MISMATCH"}]}

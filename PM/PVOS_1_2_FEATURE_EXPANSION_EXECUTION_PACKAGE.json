@@ -1,0 +1,161 @@
+{
+  "package_id": "PPP-PVOS-1.2-FEATURE-EXPANSION-2026-08-07",
+  "date": "2026-08-07",
+  "status": "APPROVED",
+  "approved_by": "Owner",
+  "repository": "8nt7h6k229-png/PVOS",
+  "issues": [
+    {
+      "issue_id": "PVOS-501",
+      "title": "PVOS-501 — Golden Dataset Expansion 2.0",
+      "capability_ids": ["QUA-002"],
+      "objective": "Expand the PVOS Golden Dataset and regression foundation using representative scenarios without adding Product behavior.",
+      "scope": [
+        "Admit sanitized real-world representative scenarios through PM review",
+        "Cover multiple roof geometry cases and partition variations within existing Product authority",
+        "Cover bounded layout-constraint scenarios already supported by the C# Mainline",
+        "Preserve accepted placement, valid no-fit, and rejected-input outcomes",
+        "Expand C# regression evidence, repeatability, comparison rules, and asset integrity"
+      ],
+      "out_of_scope": [
+        "New Product behavior, Product Scope, Product Blueprint, EOS, or Governance changes",
+        "Automatic roof interpretation, shading, Electrical, Construction, UI, Cloud, or PVOS 2.x",
+        "Legacy Asset promotion or direct customer/confidential data admission"
+      ],
+      "deliverables": ["Golden Dataset Expansion 2.0 Package"],
+      "acceptance_criteria": [
+        "Every admitted scenario has provenance, Product authority, one bounded claim, explicit non-claims, and PM admission",
+        "Every Golden asset has an immutable commit, comparison rules, and matching SHA-256",
+        "Expanded regressions validate existing C# Product behavior without introducing behavior"
+      ],
+      "required_evidence": [
+        "Existing asset inspection and Golden 2.0 scenario registry",
+        "Golden asset integrity record and C# regression report",
+        "Changed-file and excluded-scope audit"
+      ],
+      "dependencies": [],
+      "status": "READY"
+    },
+    {
+      "issue_id": "PVOS-502",
+      "title": "PVOS-502 — Python Validation Tool v0.1",
+      "capability_ids": ["QUA-002"],
+      "objective": "Consolidate the existing Python Validation Short Track Prototype into a controlled v0.1 Validation Tool.",
+      "scope": [
+        "Validate the PM-admitted Golden manifest and registered assets",
+        "Produce stable evidence reports with PASS, FAIL, and BLOCKED semantics",
+        "Perform repeatability, integrity, prerequisite, and negative-case checks",
+        "Invoke the existing C# CLI externally as the Product behavior authority"
+      ],
+      "out_of_scope": [
+        "Placement, geometry, capacity, warning, error, or Product result calculation in Python",
+        "A second PVOS Engine, Runtime, Product adapter, or replacement for C# Mainline",
+        "Product Scope, Blueprint, EOS, Governance, PVOS 1.1 status, or PVOS 2.x changes"
+      ],
+      "deliverables": ["Python Validation Tool v0.1 Evidence Package"],
+      "acceptance_criteria": [
+        "Manifest validation and evidence reports are deterministic and traceable",
+        "Repeatability and negative checks preserve explicit PASS, FAIL, and BLOCKED outcomes",
+        "Source and changed-file inspection prove Python performs no Product calculations and does not replace C# Mainline"
+      ],
+      "required_evidence": [
+        "Existing Prototype inspection and versioned tool identity",
+        "Unit, integration, negative, and repeatability results",
+        "C# Mainline non-replacement and scope-boundary proof"
+      ],
+      "dependencies": ["PVOS-501"],
+      "status": "READY"
+    },
+    {
+      "issue_id": "PVOS-503",
+      "title": "PVOS-503 — Runtime Workflow Enhancement",
+      "capability_ids": ["PLT-001"],
+      "objective": "Enhance the bounded PVOS Runtime workflow from Project Input through Validation to a traceable Result Package.",
+      "scope": [
+        "Define Project Input mapping to the current Runtime Input Contract",
+        "Define the engineer Runtime workflow and validation sequence",
+        "Define a traceable Result Package for Runtime-owned results, diagnostics, and evidence",
+        "Review compatibility with the existing CLI, tests, Golden evidence, and consumers"
+      ],
+      "out_of_scope": [
+        "Presentation recalculation of placement or any Runtime-owned Product value",
+        "UI, persistence platform, Cloud, source-specific adapter, or Canonical Project Model implementation",
+        "Product Scope, Product Blueprint, EOS, Governance, or PVOS 2.x changes"
+      ],
+      "deliverables": ["Runtime Workflow Enhancement Package"],
+      "acceptance_criteria": [
+        "Project Input, Runtime, Validation, and Result Package responsibilities are explicit",
+        "The C# Mainline remains the only creator of Product results",
+        "Result presentation and packaging preserve membership, ordering, geometry, status, warnings, and errors without recalculation"
+      ],
+      "required_evidence": [
+        "Current Runtime contract inspection",
+        "Input-to-result workflow and compatibility traceability",
+        "Result lineage and no-recalculation proof"
+      ],
+      "dependencies": ["PVOS-502"],
+      "status": "READY"
+    },
+    {
+      "issue_id": "PVOS-504",
+      "title": "PVOS-504 — Canonical Project Model Review 2",
+      "capability_ids": ["QUA-003"],
+      "objective": "Reassess Canonical Project Model Promotion eligibility using factual evidence while preserving the current no-promotion boundary.",
+      "scope": [
+        "Review candidate schema and field semantics",
+        "Review ownership and separation from Runtime, adapters, presentation, and Legacy evidence",
+        "Review compatibility and versioning requirements",
+        "Review migration evidence from current typed request and result contracts",
+        "Record exactly one allowed eligibility disposition"
+      ],
+      "out_of_scope": [
+        "Canonical Project Model or Legacy Asset Promotion",
+        "Product Contract, Product Scope, Product Blueprint, or C# domain model modification",
+        "Implementation commitment, PVOS 2.x, EOS, or Governance changes"
+      ],
+      "deliverables": ["Canonical Project Model Review 2 Recommendation"],
+      "acceptance_criteria": [
+        "Schema, ownership, compatibility, migration, Product need, acceptance, and authority each have evidence or an explicit gap",
+        "Disposition is NOT_ELIGIBLE, MORE_EVIDENCE_REQUIRED, or ELIGIBLE_FOR_SEPARATE_BASELINE_PROPOSAL",
+        "No disposition directly promotes an asset or modifies the Product Contract"
+      ],
+      "required_evidence": [
+        "Current and historical evidence inventory",
+        "Condition-by-condition eligibility matrix",
+        "Disposition, gaps, zero-promotion proof, and changed-file audit"
+      ],
+      "dependencies": ["PVOS-503"],
+      "status": "READY"
+    },
+    {
+      "issue_id": "PVOS-505",
+      "title": "PVOS-505 — Integration Roadmap Review",
+      "capability_ids": ["QUA-003"],
+      "objective": "Prepare a non-binding review of possible future PVOS integration roadmaps.",
+      "scope": [
+        "Review AutoCAD Adapter responsibilities, contracts, dependencies, and validation prerequisites",
+        "Review future Electrical Roadmap information needs and ownership questions",
+        "Review future Shading Roadmap inputs, result ownership, and evidence prerequisites",
+        "Record candidate sequences, open questions, dependencies, and non-claims"
+      ],
+      "out_of_scope": [
+        "Implementation commitment, delivery date, implementation Issue, or Product acceptance claim",
+        "Full AutoCAD integration, Electrical implementation, Shading implementation, UI, Cloud, Construction, or AI Design",
+        "Product Scope, Product Blueprint, PVOS 1.1 status, PVOS 2.x, EOS, Governance, or Legacy Promotion changes"
+      ],
+      "deliverables": ["PVOS Integration Roadmap Review"],
+      "acceptance_criteria": [
+        "Each roadmap states responsibilities, dependencies, evidence prerequisites, and explicit non-claims",
+        "The review creates no implementation commitment or Product Scope authority",
+        "Excluded implementation areas remain absent from changed files"
+      ],
+      "required_evidence": [
+        "Existing integration evidence inspection",
+        "Review-only roadmap with dependencies and open questions",
+        "Non-commitment and scope-integrity audit"
+      ],
+      "dependencies": ["PVOS-504"],
+      "status": "READY"
+    }
+  ]
+}
