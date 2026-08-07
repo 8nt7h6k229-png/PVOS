@@ -1,0 +1,19 @@
+{
+  "artifact_id":"PVOS-GOLDEN-CLAIM-MAPPING-001",
+  "version":"1.0",
+  "product_authority":"C# Mainline Product Owner",
+  "admission_authority":"PM",
+  "manifest":"VALIDATION/golden-dataset-v1.json",
+  "admission_record":"PM/PVOS_CANDIDATE_A_GOLDEN_ADMISSION_RECORD.md",
+  "scenarios":[
+    {"id":"PVOS-GOLDEN-001","admission":"PREVIOUSLY_ACCEPTED"},
+    {"id":"PVOS-GOLDEN-002","admission":"PREVIOUSLY_ACCEPTED"},
+    {"id":"PVOS-GOLDEN-003","admission":"PREVIOUSLY_ACCEPTED"},
+    {"id":"PVOS-GOLDEN-004","admission":"PM_APPROVED_PERSISTED"},
+    {"id":"PVOS-GOLDEN-005","admission":"PM_APPROVED_PERSISTED"},
+    {"id":"PVOS-GOLDEN-006","admission":"PM_APPROVED_PERSISTED"},
+    {"id":"PVOS-GOLDEN-007","admission":"PM_APPROVED_PERSISTED"},
+    {"id":"PVOS-GOLDEN-008","admission":"PM_APPROVED_PERSISTED"}
+  ],
+  "contradiction_policy":"PM/PVOS_CANDIDATE_A_CONTRADICTION_HANDLING_POLICY.md"
+}

@@ -1,0 +1,11 @@
+{
+  "artifact_id":"PVOS-RESULT-LINEAGE-001",
+  "version":"1.0",
+  "owner":"C# Mainline Product Owner",
+  "flow":["Input Identity","C# Product Version Identity","Execution Identity","Result Identity","Evidence Reference"],
+  "logical_result_package_reference":true,
+  "result_fields":["RequestId","PartitionId","Status","Panels","InstalledCapacityKwp","Warnings","Errors","PanelCount"],
+  "excluded":["Canonical Project Model","lifecycle database","API platform","Cloud","UI state","Domain lifecycle semantics"],
+  "update_trigger":"Authorized Phase-1 lineage contract change",
+  "history_policy":"Retain prior lineage versions and evidence references"
+}

@@ -1,0 +1,15 @@
+{
+  "artifact_id": "PVOS-CORE-INVARIANTS-001",
+  "version": "1.0",
+  "owner": "C# Mainline Product Owner",
+  "change_authority": "PM-authorized C# Mainline work",
+  "invariants": [
+    {"id":"INV-001","claim":"Accepted placement is generated only by the C# LayoutEngine","source":"src/PVOS.Layout/LayoutEngine.cs","verification":"LayoutEngineTests and Golden regression"},
+    {"id":"INV-002","claim":"Rejected input returns no panels and zero installed capacity","source":"src/PVOS.Layout/LayoutEngine.cs","verification":"LayoutEngineTests and PVOS-GOLDEN-003"},
+    {"id":"INV-003","claim":"Panel identity and placement order are deterministic","source":"src/PVOS.Layout/LayoutEngine.cs","verification":"repeatability tests and PVOS-GOLDEN-001/004/005/006/007/008"},
+    {"id":"INV-004","claim":"Installed capacity derives from accepted panel count and C# module rated power","source":"src/PVOS.Layout/LayoutEngine.cs","verification":"LayoutEngineTests and Golden bounded fields"},
+    {"id":"INV-005","claim":"Presentation and Python validation do not recalculate placement","source":"PRODUCT/PVOS_RUNTIME_PRESENTATION_BOUNDARY.md","verification":"changed-scope and Python source audit"}
+  ],
+  "update_trigger": "Authorized Product contract or accepted behavior change",
+  "history_policy": "Retain prior version and PM disposition"
+}

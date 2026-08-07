@@ -1,0 +1,17 @@
+{
+  "artifact_id":"PVOS-FAILURE-CONTRACT-001",
+  "version":"1.0",
+  "owner":"C# Mainline Product Owner",
+  "classes":{"A":"controlled Product Contract","B":"stable diagnostic within bounded evidence","C":"non-contract by default"},
+  "items":[
+    {"item":"error and warning machine-readable Code","class":"A","change":"PM-authorized C# contract change plus regression"},
+    {"item":"terminal status and error/warning separation","class":"A","change":"PM-authorized C# contract change plus compatibility review"},
+    {"item":"ordering","class":"B","change":"preserve where bounded Golden comparison requires exact order"},
+    {"item":"PlacementMessage.Row","class":"B","change":"preserve where bounded partial-row evidence applies"},
+    {"item":"human-readable Message","class":"C","change":"not stable Product Contract by default"},
+    {"item":"other exposed diagnostic metadata","class":"C","change":"must receive explicit classification before promotion"}
+  ],
+  "unknown_items_allowed":false,
+  "update_trigger":"Exposed diagnostic surface or accepted claim changes",
+  "history_policy":"Retain classification history and authority disposition"
+}
