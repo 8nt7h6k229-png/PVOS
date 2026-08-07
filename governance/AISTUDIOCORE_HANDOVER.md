@@ -5,7 +5,7 @@
 | Field | Value |
 |---|---|
 | Handover ID | AISTUDIOCORE-HANDOVER |
-| Version | 2026-08-07.1 |
+| Version | 2026-08-07.2 |
 | Lifecycle Status | READY_FOR_PM_REVIEW |
 | Owner | PM |
 | Effective Date | 2026-08-07 |
@@ -16,23 +16,21 @@
 
 - The 2026-08-07 morning Queue deliverables were merged through PR #57 at the recorded Main Commit.
 - EOS-001 through EOS-016 retain their existing completion evidence.
-- PM limited final gap resolution to EOS-004, EOS-008, EOS-013, and EOS-014; the other twelve capabilities are not reopened by this handover.
-- The dependency cycle is governed by the PM-approved disposition used by the final gap-resolution execution.
+- PM final verification passed EOS-004, EOS-008, EOS-013, and EOS-014 without reopening the other twelve capabilities.
+- The dependency cycle is governed by the approved Controlled Coordinated Verification Group disposition.
+- Owner approved Engineering Operating System v1.0 certification after 16/16 capability verification.
 
 ## Current Capability State
 
-- Capability implementation evidence: 16 `Completed`.
-- PM verification reported as passed for twelve capabilities outside the authorized final-gap set.
-- EOS-004, EOS-008, EOS-013, and EOS-014 are prepared for PM final verification in the governed order.
-- Codex has not marked any capability `Verified` and has not certified EOS v1.0.
+- EOS-001 through EOS-016: 16/16 `Verified` by accountable PM records.
+- Engineering Operating System v1.0: `CERTIFIED — OWNER APPROVED`.
+- Certification is bounded to the existing sixteen capabilities and does not certify PVOS Product functionality.
 
 ## Carry Over
 
-1. PM final verification of EOS-004.
-2. PM final verification of EOS-008.
-3. PM final verification of EOS-013.
-4. PM final verification of EOS-014.
-5. PM certification decision only if all sixteen capability records and the approved dependency-cycle disposition satisfy the Verification Framework.
+1. PM review of the persisted certification evidence branch.
+2. Governed merge and local-main synchronization when separately directed.
+3. Daily Governed Closing remains a separate lifecycle action.
 
 ## Next Planning Source
 
@@ -49,7 +47,7 @@
 
 ## Final Verification Boundary
 
-This handover records current evidence and pending accountable actions. It does not create a PM Verification Record, update a Capability Matrix status, perform Owner certification, or execute Daily Governed Closing.
+This handover reflects the persisted PM Verification Records and Owner certification decision. It does not expand EOS scope, certify PVOS, perform Product Acceptance, merge its own review branch, or execute Daily Governed Closing.
 
 ## Closing State
 
@@ -57,10 +55,10 @@ This handover records current evidence and pending accountable actions. It does 
 |---|---|
 | PR #57 Merge | COMPLETE |
 | Local Main Synchronization | COMPLETE |
-| Existing twelve-capability PM verification | NOT REOPENED |
-| EOS-004 Final Verification | PENDING PM |
-| EOS-008 Final Verification | PENDING PM |
-| EOS-013 Final Verification | PENDING PM |
-| EOS-014 Final Verification | PENDING PM |
-| EOS v1.0 Certification | PENDING PM |
+| Existing twelve-capability PM verification | VERIFIED — NOT REOPENED |
+| EOS-004 Final Verification | VERIFIED |
+| EOS-008 Final Verification | VERIFIED |
+| EOS-013 Final Verification | VERIFIED |
+| EOS-014 Final Verification | VERIFIED |
+| EOS v1.0 Certification | CERTIFIED — OWNER APPROVED |
 | Daily Governed Closing | NOT EXECUTED BY THIS HANDOVER |

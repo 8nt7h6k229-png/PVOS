@@ -175,6 +175,8 @@ Execution is authorized only through a PM-authorized GitHub Issue; authorization
 | `issue_builder/packages/2026-08-07_daily_planning_package.json` | Planning |
 | `issue_builder/packages/2026-08-07_issue_queue_ready.json` | Evidence |
 | `EOS_V1_FINAL_CERTIFICATION_AUDIT_2026-08-07.md` | Governance |
+| `EOS_V1_PM_VERIFICATION_PACKAGE_2026-08-07.md` | Governance |
+| `EOS_V1_CERTIFICATION_RECORD_2026-08-07.md` | Governance |
 | `GOVERNANCE_FILE_REGISTRY.md` | Governance |
 | `GOVERNANCE_RULES_REGISTRY.md` | Governance |
 | `ARCHITECTURE_DECISION_REGISTRY.md` | Decision |

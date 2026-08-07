@@ -42,9 +42,9 @@ A governance file is added, moved, renamed, superseded, or retired.
 | GF-005 | `governance/HANDOVER_STANDARD.md` | Handover | Handover content and evidence contract | Review Pending | WO-AISTUDIOCORE-001 |
 | GF-006 | `governance/HANDOVER_VERSION_POLICY.md` | Handover | Handover version-control policy | Review Pending | WO-AISTUDIOCORE-001 |
 | GF-007 | `governance/HANDOVER_LIFECYCLE.md` | Handover | Handover state and transition control | Review Pending | WO-AISTUDIOCORE-001 |
-| GF-008 | `governance/AISTUDIOCORE_HANDOVER.md` | Handover | Current AIStudioCore handover record | Review Pending | WO-AISTUDIOCORE-001 |
+| GF-008 | `governance/AISTUDIOCORE_HANDOVER.md` | Handover | Current AIStudioCore handover record | Active — Certified State | WO-AISTUDIOCORE-001; Owner decision 2026-08-07 |
 | GF-009 | `governance/WORKSPACE_REGISTRY.md` | Workspace | Governed workspace inventory | Review Pending | WO-AISTUDIOCORE-001 |
-| GF-010 | `governance/EOS_V1_CAPABILITY_MATRIX.md` | Governance | EOS v1.0 capability source of truth | Review Pending | WO-AISTUDIOCORE-004 |
+| GF-010 | `governance/EOS_V1_CAPABILITY_MATRIX.md` | Governance | EOS v1.0 capability source of truth | Certified — 16/16 Verified | WO-AISTUDIOCORE-004; Owner decision 2026-08-07 |
 | GF-011 | `governance/EXECUTION_QUEUE_GOVERNANCE.md` | Work Orders | GitHub Issue execution-source control | Review Pending | Issue #32 |
 | GF-012 | `governance/PM_GITHUB_ISSUE_BUILDER.md` | Work Orders | Planning-to-Issue publication contract | Review Pending | Issue #33 |
 | GF-013 | `governance/issue_builder/pm_issue_builder.py` | Work Orders | Validated Issue Queue builder implementation | Review Pending | Issue #33 |
@@ -70,7 +70,9 @@ A governance file is added, moved, renamed, superseded, or retired.
 | GF-033 | `governance/planning/2026-08-07_TOMORROW_PLANNING_PACKAGE.md` | Planning | Owner-approved 2026-08-07 Revision R2 human-readable Planning Package | Active | DPP-2026-08-07-R2 |
 | GF-034 | `governance/issue_builder/packages/2026-08-07_daily_planning_package.json` | Planning | EOS-017 machine-readable DPP-2026-08-07-R2 input | Active | DPP-2026-08-07-R2 |
 | GF-035 | `governance/issue_builder/packages/2026-08-07_issue_queue_ready.json` | Evidence | Published Queue Ready evidence for DPP-2026-08-07-R2 | Active | Issues #46-#56 |
-| GF-036 | `governance/EOS_V1_FINAL_CERTIFICATION_AUDIT_2026-08-07.md` | Governance | EOS v1.0 certification evidence, dependency findings, gaps, and PM recommendation | Review Pending | Issue #51 |
+| GF-036 | `governance/EOS_V1_FINAL_CERTIFICATION_AUDIT_2026-08-07.md` | Governance | Historical pre-certification audit, dependency findings, gaps, and PM recommendation | Superseded Evidence | Issue #51; GF-038 |
+| GF-037 | `governance/EOS_V1_PM_VERIFICATION_PACKAGE_2026-08-07.md` | Governance | Sixteen-capability PM verification evidence and approved dependency-cycle disposition | Verified Evidence | Issue #51; Owner decision 2026-08-07 |
+| GF-038 | `governance/EOS_V1_CERTIFICATION_RECORD_2026-08-07.md` | Governance | Owner-approved EOS v1.0 certification decision and 16/16 Verification Records | Certified | Owner decision 2026-08-07 |
 
 Repository paths are unique. Generated cache files excluded by GF-015 are not governance assets and must not be persisted.
 
