@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "PVOS-GOLDEN-001",
+  "name": "Demo-001 Deterministic Layout",
+  "product_boundary": "PVOS Deterministic Layout MVP",
+  "evidence_baseline": "e1dbcb075b5adaa38ab4c9c8d289a12e62dd8823",
+  "execution_surface": {
+    "type": "external_cli",
+    "project": "src/PVOS.Cli/PVOS.Cli.csproj",
+    "configuration": "Release"
+  },
+  "assets": [
+    {
+      "role": "golden_input",
+      "path": "DEMO/demo-input.json",
+      "sha256": "6CCEFB3867501639F4FD8D1283B9989C472219EB74184B1D71F64C2D3E79D0EC"
+    },
+    {
+      "role": "golden_cli_output",
+      "path": "DEMO/DEMO-001_OUTPUT.txt",
+      "sha256": "2DCF0A369A11DD61EFD719515860812D5CD960228605D242C27C7D9057B3C798"
+    },
+    {
+      "role": "golden_result_review",
+      "path": "DEMO/demo-output.json",
+      "sha256": "FBAC211CB90C3A471B5119FBE421B306E4048BCC6CADB0B6F2E0560F8011A3AD"
+    },
+    {
+      "role": "presentation_review",
+      "path": "DEMO/demo-output.svg",
+      "sha256": "1AA1B9048A19D1E30FA8CD51BFBC25284E1CBD2B6A2804B53CB8AE79B5FBE12A"
+    },
+    {
+      "role": "presentation_review",
+      "path": "DEMO/demo-output.png",
+      "sha256": "543A4597D19A9B1A5B4ABF12450C20830BBF04FE131881ADEF2E5E4B0E740222"
+    },
+    {
+      "role": "presentation_review",
+      "path": "DEMO/demo-summary.md",
+      "sha256": "DA1677553CBA48FE79F983F35C2C89429701F0827F2C052DDCB2B96833B9287B"
+    }
+  ],
+  "expected": {
+    "request_id": "LAYOUT-REQ-001",
+    "status": "Accepted",
+    "selected_partition_id": "PART-001",
+    "panel_count": 10,
+    "installed_capacity_kwp": 5.0,
+    "panel_id_first": "PNL-000001",
+    "panel_id_last": "PNL-000010",
+    "panel_id_count": 10,
+    "placement_warning_count": 0
+  },
+  "comparison": {
+    "cli_output": "exact_after_newline_normalization",
+    "panel_ids": "unique_and_ordered",
+    "asset_integrity": "sha256_exact"
+  },
+  "boundary": {
+    "input_json_is_runtime_input": false,
+    "output_json_is_runtime_output": false,
+    "presentation_assets_are_runtime_ui": false,
+    "may_modify_product_behavior": false
+  }
+}
