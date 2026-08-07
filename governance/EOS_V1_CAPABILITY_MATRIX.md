@@ -56,7 +56,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | EOS-006 | Handover Version Control | Handover | PM | Completed |
 | EOS-007 | Handover Lifecycle Control | Handover | PM | Completed |
 | EOS-008 | Current AIStudioCore Handover | Handover | PM | Completed |
-| EOS-009 | Workspace Registration | Workspace | PM | In Progress |
+| EOS-009 | Workspace Registration | Workspace | PM | Completed |
 | EOS-010 | Planning Package Governance | Planning | PM | Completed |
 | EOS-011 | Work Order Governance | Work Orders | PM | Completed |
 | EOS-012 | Evidence Governance | Evidence | PM | Completed |
@@ -209,7 +209,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-001; EOS-002 |
 | Related Governance Documents | `WORKSPACE_REGISTRY.md`; `GOVERNANCE_FILE_REGISTRY.md` |
 | Verification Method | Compare registered workspaces with approved existing locations and confirm unique identities. |
-| Current Status | In Progress |
+| Current Status | Completed |
 
 ### EOS-010 — Planning Package Governance
 
@@ -358,7 +358,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | EOS-006 |  |  | X |  |
 | EOS-007 |  |  | X |  |
 | EOS-008 |  |  | X |  |
-| EOS-009 |  | X |  |  |
+| EOS-009 |  |  | X |  |
 | EOS-010 |  |  | X |  |
 | EOS-011 |  |  | X |  |
 | EOS-012 |  |  | X |  |
@@ -386,6 +386,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | GitHub Issue #42 | EOS-013 | Engineering knowledge classification, precedence, existing-asset map, gaps, and reuse controls | READY_FOR_PM_REVIEW |
 | GitHub Issue #43 | EOS-014 | Blueprint identity, immutable integrity evidence, authority classification, and explicit approval gap | READY_FOR_PM_REVIEW |
 | GitHub Issue #44 | EOS-015 | Sixteen-capability audit, dependency and governance-flow verification, risks, and PM Review recommendation | READY_FOR_PM_REVIEW |
+| GitHub Issue #46 | EOS-009 | Verified governed workspace identity, repository relationship, owner, status, and local evidence reference | READY_FOR_PM_REVIEW |
 
 Coverage indicates which work order established or advances a capability. It does not replace capability verification or daily closing.
 
