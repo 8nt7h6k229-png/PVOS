@@ -43,6 +43,13 @@ def panel_ids(cli_output: str) -> list[str]:
     return re.findall(r"^\s+(PNL-\d{6})\s+order=", cli_output, re.MULTILINE)
 
 
+def registered_json_paths(manifest: dict[str, Any] | None) -> list[Path]:
+    if manifest is None:
+        return [Path("DEMO/demo-input.json"), Path("DEMO/demo-output.json")]
+    paths = [Path(asset["path"]) for asset in manifest.get("assets", []) if Path(asset["path"]).suffix.lower() == ".json"]
+    return list(dict.fromkeys(paths))
+
+
 def check_record(
     check_id: str,
     result: str,
@@ -216,7 +223,7 @@ def run_validation(repo_root: Path, evidence_commit: str) -> dict[str, Any]:
         )
     checks.append(id_check)
 
-    json_paths = [repo_root / "DEMO/demo-input.json", repo_root / "DEMO/demo-output.json"]
+    json_paths = [repo_root / path for path in registered_json_paths(manifest)]
     json_errors: list[str] = []
     for path in json_paths:
         try:
