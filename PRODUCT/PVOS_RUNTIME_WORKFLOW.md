@@ -127,3 +127,120 @@ LayoutResult returns status, ordered panels, count, kWp, warnings, and errors
 ## Status
 
 READY_FOR_PM_REVIEW — EXISTING RUNTIME WORKFLOW DEFINED — NO NEW RUNTIME IMPLEMENTED
+
+---
+
+## PVOS-302 Runtime Execution Workflow Definition
+
+### Execution Authority
+
+| Field | Value |
+|---|---|
+| Execution Source | GitHub Issue #73 — PVOS-302 |
+| Planning Source | `PPP-PVOS-1.1-RUNTIME-PRODUCTIZATION-2026-08-07` — Owner Approved |
+| Dependency | PVOS-301 / Issue #72 / commit `8740663e35efac61672aa7c1330f5e279497bae3` |
+| Primary Capability | `PLT-001` |
+| Runtime Authority | Existing C# `PVOS.Core` → `PVOS.Layout` → `PVOS.Cli` Mainline |
+
+This extension formalizes the engineer execution workflow already evidenced above. It does not introduce a new Runtime, entry surface, orchestration service, API, UI, adapter, or Product capability.
+
+### Execution Entry Contract
+
+| Entry Element | Requirement | Evidence / Disposition |
+|---|---|---|
+| Actor | Engineer or bounded external validator operating the governed repository | Actor may invoke and observe; it may not calculate Product results |
+| Repository identity | One resolvable immutable Git commit | Record `git rev-parse HEAD`; unavailable identity is BLOCKED |
+| Runtime input | One in-memory `LayoutRequest` satisfying `PVOS_RUNTIME_INPUT_CONTRACT.md` | Invalid input returns a Rejected `LayoutResult` |
+| Mainline | Current C# Core, Layout, and CLI projects | Python remains external and cannot replace Mainline |
+| Build state | Required dependencies restored and Release assemblies available | Restore/build failure is an environment or build failure, not a Product result |
+| Invocation | Direct in-process `LayoutEngine.Generate` by the existing CLI or approved caller | No runtime JSON, network, service, job, or UI entry implied |
+| Evidence baseline | Golden Dataset manifest and expected CLI output for the bounded Demo | Missing evidence is BLOCKED |
+
+### Ordered Workflow Sequence
+
+| Order | Runtime / Engineer Step | Input | Output | Failure Boundary |
+|---:|---|---|---|---|
+| 1 | Resolve repository and evidence identity | Governed checkout | Immutable commit and asset paths | BLOCKED when identity or required evidence is unavailable |
+| 2 | Restore and build existing Mainline | Solution and dependencies | Release assemblies | Build evidence FAIL/BLOCKED; no Product result inferred |
+| 3 | Construct one typed request | Explicit engineer input | `LayoutRequest` | Missing construction dependency stops invocation |
+| 4 | Validate request | `LayoutRequest` | Error collection or valid request | Validation errors produce Rejected result |
+| 5 | Resolve selected partition | Geometry plus selected ID | Exactly one partition | Unknown/non-unique selection produces Rejected result |
+| 6 | Transform boundary to explicit Local Axis | Selected partition and Axis | Local placement boundary | Invalid Axis is rejected during validation |
+| 7 | Derive bounded placement range and pitches | Boundary and Module definition | Deterministic candidate sequence | No optimization or alternative search |
+| 8 | Apply complete containment | Ordered candidates | Accepted panel collection and row decisions | Rejected candidates may produce bounded warnings |
+| 9 | Assign stable order and identifiers | Accepted candidates | `PNL-000001` onward in row-major order | Ordering is owned by Runtime |
+| 10 | Build Runtime result | Panels, power, row decisions | Accepted `LayoutResult`, including valid empty result | Result fields are not recalculated downstream |
+| 11 | Present result | `LayoutResult` | Console or bounded review evidence | Presentation is read-only |
+| 12 | Validate evidence | Actual result, commit, Golden Dataset | PASS, FAIL, BLOCKED, or NOT RUN record | Validation does not perform Product Acceptance |
+
+### Terminal State Model
+
+| Terminal State | Product Status | Panels / Capacity | Messages | Meaning |
+|---|---|---|---|---|
+| Accepted with panels | `Accepted` | One or more ordered panels; capacity from panel count × rated power / 1000 | May include containment/partial-row warnings | Valid Product result |
+| Accepted no-fit | `Accepted` | Zero panels; zero capacity | `PLC_NO_PANEL_FITS`, `PLC_EMPTY_PLACEMENT_RESULT` | Valid deterministic result, not an input error |
+| Rejected input | `Rejected` | Zero panels; zero capacity | One or more validation errors; no warnings | Product request did not meet the current input contract |
+| Execution/build failure | No Product status asserted | No result asserted | Process/build evidence | Toolchain or execution failure; record FAIL or BLOCKED |
+| Evidence unavailable | Existing result not accepted or rejected by this absence | No inference | Missing commit, manifest, or required artifact | Validation BLOCKED |
+
+### Error Handling
+
+| Error Class | Detection Owner | Required Handling | Prohibited Handling |
+|---|---|---|---|
+| Input validation | C# `LayoutEngine.Validate` | Accumulate current bounded errors and return Rejected result | Silent repair, inferred defaults, or exception-to-success conversion |
+| Valid no-fit | C# warning construction | Return Accepted empty result with existing warnings | Treating no-fit as invalid input or adding panels |
+| Containment rejection | C# Layout Engine | Exclude incomplete candidate and retain warning evidence when applicable | Presentation filtering or geometry adjustment |
+| Build/test/CLI process failure | Engineer / validation runner | Record command, exit status, stderr, and FAIL/BLOCKED disposition | Representing infrastructure failure as Product rejection |
+| Missing evidence | Validation runner | Stop affected evidence item as BLOCKED | Regenerating or replacing Golden evidence without approval |
+| Unexpected exception | Invoking surface | Preserve process/error evidence and stop affected path | Fabricating a `LayoutResult` or continuing to PM acceptance |
+
+The current Product engine returns bounded validation errors through `LayoutResult`. This definition does not create an exception taxonomy, retry policy, logging subsystem, telemetry platform, or new error codes.
+
+### Result Handling
+
+| Result Element | Runtime Ownership | Downstream Rule |
+|---|---|---|
+| `RequestId` | Copied from request identity | Preserve exactly for traceability |
+| `PartitionId` | Selected partition for valid input; request selection for rejected input when available | Do not substitute or infer |
+| `Status` | Runtime validation/execution | Display exactly; presentation cannot promote Rejected to Accepted |
+| `Panels` | Runtime placement and ordering | Preserve collection, IDs, order, rows, columns, candidate index, and corners |
+| `PanelCount` | Runtime property derived from panel collection | Display value; presentation does not recount as Product authority |
+| `InstalledCapacityKwp` | Runtime calculation | Display without recalculation |
+| `Warnings` | Runtime bounded warning construction | Preserve code, message, and optional row |
+| `Errors` | Runtime validation result | Preserve code and message; do not suppress or reinterpret |
+
+Result presentation and validation may format or compare values, but only the C# Runtime creates Product results.
+
+### Engineer Evidence Sequence
+
+```text
+Git commit identity
+        ↓
+Restore / Release build
+        ↓
+Existing C# tests
+        ↓
+Existing C# CLI execution
+        ↓
+Golden Dataset and output comparison
+        ↓
+Issue-linked evidence and changed-file scope
+        ↓
+PM review
+```
+
+Every executed command records its actual result. A PASS in one layer cannot conceal a failure or blocker in another layer.
+
+### PVOS-302 Verification
+
+| Check | Result |
+|---|---|
+| Execution entry and prerequisites explicit | PASS |
+| Ordered workflow and terminal states explicit | PASS |
+| Input rejection and valid no-fit distinguished | PASS |
+| Process failure and Product result distinguished | PASS |
+| Result ownership and downstream rules explicit | PASS |
+| C# Mainline changed | No |
+| New Runtime or scope introduced | No |
+
+READY_FOR_PM_REVIEW — RUNTIME EXECUTION WORKFLOW DEFINED — C# MAINLINE PRESERVED
