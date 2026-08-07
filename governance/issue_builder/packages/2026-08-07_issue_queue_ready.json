@@ -1,0 +1,165 @@
+{
+  "package_id": "DPP-2026-08-07-R2",
+  "repository": "8nt7h6k229-png/PVOS",
+  "status": "QUEUE_READY",
+  "issues": [
+    {
+      "issue_id": "EOS-018",
+      "title": "EOS-018 — Workspace Registry Completion",
+      "capability_ids": [
+        "EOS-009"
+      ],
+      "dependencies": [],
+      "body": "## Source\nDPP-2026-08-07-R2 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-018\n- Queue Status: READY\n- Order: 1\n\n## Capability\n- EOS-009\n\n## Objective\nComplete the existing Workspace Registry using verified existing workspace identities and locations without changing workspace architecture.\n\n## Dependencies\n- None\n\n## Scope\n- Inspect existing workspace evidence first\n- Populate the existing Workspace Registry with unique governed workspace records\n- Verify identity, location, repository relationship, owner, and status\n\n## Out of Scope\n- Creating or moving repositories\n- Workspace restructuring\n- Product code, Blueprint, or Operating Cycle changes\n\n## Deliverables\n- Completed Workspace Registry\n- Workspace evidence and uniqueness results\n\n## Acceptance Criteria\n- Every registered workspace has one unique identity and verified location\n- No workspace or repository architecture is changed\n- EOS-009 has evidence suitable for PM verification\n\n## Required Evidence\n- Existing Asset Inspection Report\n- Workspace registry summary\n- Verification results\n- Files changed and Git status\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 46,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/46",
+      "reused": false
+    },
+    {
+      "issue_id": "EOS-019",
+      "title": "EOS-019 — PM Verification Framework",
+      "capability_ids": [
+        "EOS-015"
+      ],
+      "dependencies": [
+        "EOS-018"
+      ],
+      "body": "## Source\nDPP-2026-08-07-R2 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-019\n- Queue Status: READY\n- Order: 2\n\n## Capability\n- EOS-015\n\n## Objective\nEstablish an evidence-based PM Verification Framework for capability review without transferring PM authority to the executor.\n\n## Dependencies\n- EOS-018 — #46\n\n## Scope\n- Define verification inputs, checks, results, accountable actor, and status transitions\n- Map capability evidence to PM review outcomes\n- Preserve Completed and Verified as distinct states\n\n## Out of Scope\n- Self-verifying capabilities\n- Owner approval or Daily Closing\n- Product, Blueprint, Operating Cycle, or Workspace changes\n\n## Deliverables\n- PM Verification Framework\n- Verification result schema and review flow\n\n## Acceptance Criteria\n- Verification requires durable evidence and explicit PM disposition\n- No capability becomes Verified through executor action alone\n- Framework aligns with all sixteen EOS capabilities\n\n## Required Evidence\n- Existing Asset Inspection Report\n- Verification framework summary\n- Capability mapping\n- Validation results and Git status\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 47,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/47",
+      "reused": false
+    },
+    {
+      "issue_id": "EOS-020",
+      "title": "EOS-020 — PM Closing Builder",
+      "capability_ids": [
+        "EOS-008",
+        "EOS-015"
+      ],
+      "dependencies": [
+        "EOS-019"
+      ],
+      "body": "## Source\nDPP-2026-08-07-R2 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-020\n- Queue Status: READY\n- Order: 3\n\n## Capability\n- EOS-008\n- EOS-015\n\n## Objective\nEstablish a PM Closing Builder that assembles reviewable daily closing evidence without performing approval or closing.\n\n## Dependencies\n- EOS-019 — #47\n\n## Scope\n- Define required closing inputs and validation gates\n- Generate a deterministic closing package for PM review\n- Report missing evidence and stop conditions\n\n## Out of Scope\n- Executing Daily Governed Closing\n- PM or Owner approval\n- Product, Blueprint, Operating Cycle, or Workspace changes\n\n## Deliverables\n- PM Closing Builder\n- Closing package schema\n- Automated validation tests\n\n## Acceptance Criteria\n- Builder produces a complete review package from valid inputs\n- Missing mandatory evidence stops generation\n- Builder never advances closing state by itself\n\n## Required Evidence\n- Existing Asset Inspection Report\n- Builder design and implementation summary\n- Tests and results\n- Generated example and Git status\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 48,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/48",
+      "reused": false
+    },
+    {
+      "issue_id": "EOS-021",
+      "title": "EOS-021 — Daily Improvement Loop (GVR-010) Implementation",
+      "capability_ids": [
+        "EOS-003",
+        "EOS-015"
+      ],
+      "dependencies": [
+        "EOS-020"
+      ],
+      "body": "## Source\nDPP-2026-08-07-R2 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-021\n- Queue Status: READY\n- Order: 4\n\n## Capability\n- EOS-003\n- EOS-015\n\n## Objective\nImplement the Owner-approved Daily Improvement Loop rule GVR-010 within the existing governance architecture.\n\n## Dependencies\n- EOS-020 — #48\n\n## Scope\n- Verify the approved GVR-010 source and boundary\n- Implement the daily evidence-to-improvement feedback loop\n- Define traceability, review, and carry-over controls\n\n## Out of Scope\n- Inventing additional governance rules\n- Changing the Operating Cycle\n- Product, Blueprint, or Workspace changes\n\n## Deliverables\n- GVR-010 implementation\n- Improvement-loop evidence and traceability controls\n\n## Acceptance Criteria\n- Implementation traces to the approved rule\n- Improvement findings cannot silently expand scope\n- Carry-over and accountable review are explicit\n\n## Required Evidence\n- Approved rule source\n- Existing Asset Inspection Report\n- Implementation summary\n- Verification results and Git status\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 49,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/49",
+      "reused": false
+    },
+    {
+      "issue_id": "EOS-022",
+      "title": "EOS-022 — Today's Planning Package Registry",
+      "capability_ids": [
+        "EOS-010",
+        "EOS-015"
+      ],
+      "dependencies": [
+        "EOS-021"
+      ],
+      "body": "## Source\nDPP-2026-08-07-R2 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-022\n- Queue Status: READY\n- Order: 5\n\n## Capability\n- EOS-010\n- EOS-015\n\n## Objective\nEstablish Today's Planning Package Registry as the persistent authoritative input to EOS-017, Issue Queue source, and Daily Closing comparison baseline.\n\n## Dependencies\n- EOS-021 — #49\n\n## Scope\n- Extend existing planning assets first\n- Record mandatory Planning Package identity, status, objective, queue, success criteria, carry-over, approver, and timestamps\n- Define one authoritative current daily package and lifecycle traceability\n\n## Out of Scope\n- Creating a new planning decision\n- Publishing an Issue Queue without instruction\n- Product, Blueprint, Operating Cycle, or Workspace changes\n\n## Deliverables\n- Today's Planning Package Registry\n- EOS-017 input and closing-baseline linkage\n\n## Acceptance Criteria\n- Registry identifies one authoritative daily Planning Package\n- EOS-017 input and Daily Closing baseline are traceable to the same package\n- Mandatory fields and status transitions are verifiable\n\n## Required Evidence\n- Existing Asset Inspection Report\n- Registry schema and current record\n- EOS-017 linkage validation\n- Files changed and Git status\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 50,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/50",
+      "reused": false
+    },
+    {
+      "issue_id": "EOS-V1-FINAL-CERTIFICATION",
+      "title": "EOS v1.0 Final Certification",
+      "capability_ids": [
+        "EOS-015"
+      ],
+      "dependencies": [
+        "EOS-022"
+      ],
+      "body": "## Source\nDPP-2026-08-07-R2 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: EOS-V1-FINAL-CERTIFICATION\n- Queue Status: READY\n- Order: 6\n\n## Capability\n- EOS-015\n\n## Objective\nAudit final EOS v1.0 evidence and produce an accountable certification recommendation without self-certifying the system.\n\n## Dependencies\n- EOS-022 — #50\n\n## Scope\n- Audit EOS-001 through EOS-016 after morning Queue execution\n- Verify capability evidence, dependencies, repository persistence, and PM verification readiness\n- Report certification recommendation and all unresolved gaps\n\n## Out of Scope\n- Self-approving certification\n- PM or Owner approval\n- Product development or Daily Governed Closing\n\n## Deliverables\n- EOS v1.0 Final Certification Audit\n- Capability certification matrix\n- PM recommendation and known risks\n\n## Acceptance Criteria\n- All sixteen capabilities are assessed\n- No capability is Verified without PM evidence\n- Every gap and stop condition is explicit\n\n## Required Evidence\n- Capability audit table\n- Dependency and flow verification\n- Repository state\n- PM certification recommendation\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 51,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/51",
+      "reused": false
+    },
+    {
+      "issue_id": "PVOS-PA-001",
+      "title": "PVOS 1.0 — Product Baseline Review",
+      "capability_ids": [
+        "QUA-003"
+      ],
+      "dependencies": [
+        "EOS-V1-FINAL-CERTIFICATION"
+      ],
+      "body": "## Source\nDPP-2026-08-07-R2 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: PVOS-PA-001\n- Queue Status: READY\n- Order: 7\n\n## Capability\n- QUA-003\n\n## Objective\nReview the current PVOS 1.0 Product Baseline against durable repository evidence without changing product scope.\n\n## Dependencies\n- EOS-V1-FINAL-CERTIFICATION — #51\n\n## Scope\n- Inspect approved Product and PM assets\n- Reconcile existing, specified, planned, deferred, and not-evidenced capabilities\n- Report baseline gaps for Product Acceptance\n\n## Out of Scope\n- Product implementation\n- Blueprint or baseline modification\n- Promoting branch-only evidence\n\n## Deliverables\n- Product Baseline Review\n- Capability status and gap summary\n\n## Acceptance Criteria\n- Every baseline claim is evidence-linked\n- Excluded capabilities remain excluded\n- Review is ready for PM Product Acceptance flow\n\n## Required Evidence\n- Existing Asset Inspection Report\n- Baseline comparison\n- Product risks\n- Git status\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 52,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/52",
+      "reused": false
+    },
+    {
+      "issue_id": "PVOS-PA-002",
+      "title": "PVOS 1.0 — Demo-001 Revalidation",
+      "capability_ids": [
+        "VIS-001",
+        "QUA-001",
+        "QUA-002"
+      ],
+      "dependencies": [
+        "PVOS-PA-001"
+      ],
+      "body": "## Source\nDPP-2026-08-07-R2 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: PVOS-PA-002\n- Queue Status: READY\n- Order: 8\n\n## Capability\n- VIS-001\n- QUA-001\n- QUA-002\n\n## Objective\nRevalidate Demo-001 against the current PVOS 1.0 deterministic layout baseline and recorded expected result.\n\n## Dependencies\n- PVOS-PA-001 — #52\n\n## Scope\n- Inspect immutable Demo-001 input and expected output\n- Run the approved build, tests, and CLI demonstration where safe\n- Compare geometry, ordering, count, capacity, status, and warnings\n\n## Out of Scope\n- Changing product behavior\n- Adding UI, adapters, or showcase features\n- Changing Demo-001 acceptance expectations\n\n## Deliverables\n- Demo-001 Revalidation Report\n- Repeatability and result comparison evidence\n\n## Acceptance Criteria\n- Demo execution matches approved evidence or every difference is reported\n- Deterministic result is tested\n- Repository remains free of unapproved changes\n\n## Required Evidence\n- Commands and results\n- Test summary\n- Demo comparison\n- Git status\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 53,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/53",
+      "reused": false
+    },
+    {
+      "issue_id": "PVOS-PA-003",
+      "title": "PVOS 1.0 — Issue-to-Evidence Mapping",
+      "capability_ids": [
+        "QUA-002",
+        "QUA-003"
+      ],
+      "dependencies": [
+        "PVOS-PA-002"
+      ],
+      "body": "## Source\nDPP-2026-08-07-R2 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: PVOS-PA-003\n- Queue Status: READY\n- Order: 9\n\n## Capability\n- QUA-002\n- QUA-003\n\n## Objective\nMap every PVOS 1.0 acceptance capability and governed work item to durable Issue, commit, test, and demonstration evidence.\n\n## Dependencies\n- PVOS-PA-002 — #53\n\n## Scope\n- Map included PVOS 1.0 capabilities\n- Identify missing, conflicting, or branch-only evidence\n- Produce a reviewable acceptance evidence matrix\n\n## Out of Scope\n- Creating missing implementation\n- Changing Blueprint, Baseline, or release scope\n- Approving Product Acceptance\n\n## Deliverables\n- PVOS 1.0 Issue-to-Evidence Matrix\n- Explicit evidence gaps\n\n## Acceptance Criteria\n- Every included capability has a traceable evidence result\n- Missing evidence remains explicit\n- No branch-only evidence is represented as merged baseline\n\n## Required Evidence\n- Capability mapping table\n- Issue and commit references\n- Test and Demo references\n- Known gaps\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 54,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/54",
+      "reused": false
+    },
+    {
+      "issue_id": "PVOS-PA-004",
+      "title": "PVOS 1.0 — PM Product Acceptance",
+      "capability_ids": [
+        "QUA-003"
+      ],
+      "dependencies": [
+        "PVOS-PA-003"
+      ],
+      "body": "## Source\nDPP-2026-08-07-R2 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: PVOS-PA-004\n- Queue Status: READY\n- Order: 10\n\n## Capability\n- QUA-003\n\n## Objective\nPrepare and record the accountable PM Product Acceptance disposition from the reviewed PVOS 1.0 evidence package.\n\n## Dependencies\n- PVOS-PA-003 — #54\n\n## Scope\n- Review baseline, Demo, and Issue-to-Evidence results\n- Record PM acceptance, rejection, or blocked disposition\n- Carry unresolved gaps forward explicitly\n\n## Out of Scope\n- Executor self-approval\n- Owner Product Acceptance\n- Product implementation or scope expansion\n\n## Deliverables\n- PM Product Acceptance Record\n- PM findings and recommendation for Owner review\n\n## Acceptance Criteria\n- Disposition references complete evidence\n- Accountable PM action is distinct from executor preparation\n- Unresolved risks remain visible\n\n## Required Evidence\n- Reviewed acceptance package\n- PM disposition\n- Open gaps\n- Repository state\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 55,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/55",
+      "reused": false
+    },
+    {
+      "issue_id": "PVOS-PA-005",
+      "title": "PVOS 1.0 — Owner Product Acceptance",
+      "capability_ids": [
+        "QUA-003"
+      ],
+      "dependencies": [
+        "PVOS-PA-004"
+      ],
+      "body": "## Source\nDPP-2026-08-07-R2 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: PVOS-PA-005\n- Queue Status: READY\n- Order: 11\n\n## Capability\n- QUA-003\n\n## Objective\nPresent the PM-reviewed PVOS 1.0 acceptance package for accountable Owner Product Acceptance disposition.\n\n## Dependencies\n- PVOS-PA-004 — #55\n\n## Scope\n- Present PM disposition and supporting evidence\n- Record Owner acceptance, rejection, or blocked result\n- Preserve all conditions and follow-up requirements\n\n## Out of Scope\n- Codex or PM acting as Owner\n- Automatic release closing\n- Product implementation or scope change\n\n## Deliverables\n- Owner Product Acceptance Record\n- Final disposition and conditions\n\n## Acceptance Criteria\n- Owner decision is explicit and evidence-linked\n- No acceptance is inferred from elapsed time or merge state\n- Closing remains separately governed\n\n## Required Evidence\n- PM Product Acceptance Record\n- Owner disposition\n- Conditions and unresolved gaps\n- Final repository state\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 56,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/56",
+      "reused": false
+    }
+  ]
+}

@@ -66,6 +66,10 @@ A governance file is added, moved, renamed, superseded, or retired.
 | GF-029 | `governance/closing_builder/tests/test_pm_closing_builder.py` | Evidence | PM Closing Builder verification suite | Review Pending | Issue #48 |
 | GF-030 | `governance/closing_builder/.gitignore` | Governance | Exclusion of generated Closing Builder cache files | Active Support | Issue #48 |
 | GF-031 | `governance/DAILY_IMPROVEMENT_LOOP.md` | Governance | GVR-010 evidence-to-improvement classification, review, carry-over, and closure controls | Review Pending | Issue #49 |
+| GF-032 | `governance/TODAYS_PLANNING_PACKAGE_REGISTRY.md` | Planning | Unique current daily Planning Package identity, lifecycle, input, Queue, and closing baseline | Review Pending | Issue #50 |
+| GF-033 | `governance/planning/2026-08-07_TOMORROW_PLANNING_PACKAGE.md` | Planning | Owner-approved 2026-08-07 Revision R2 human-readable Planning Package | Active | DPP-2026-08-07-R2 |
+| GF-034 | `governance/issue_builder/packages/2026-08-07_daily_planning_package.json` | Planning | EOS-017 machine-readable DPP-2026-08-07-R2 input | Active | DPP-2026-08-07-R2 |
+| GF-035 | `governance/issue_builder/packages/2026-08-07_issue_queue_ready.json` | Evidence | Published Queue Ready evidence for DPP-2026-08-07-R2 | Active | Issues #46-#56 |
 
 Repository paths are unique. Generated cache files excluded by GF-015 are not governance assets and must not be persisted.
 
