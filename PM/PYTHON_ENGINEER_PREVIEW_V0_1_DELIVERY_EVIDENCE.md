@@ -9,6 +9,7 @@
 | Queue | PEP-401 → PEP-406 |
 | Status | READY_FOR_PM_ENGINEER_PREVIEW_ACCEPTANCE |
 | Product authority | C#/.NET Mainline only |
+| Delivery PR | #101 — Draft; PM acceptance pending |
 
 ## Implementation Summary
 
@@ -51,8 +52,10 @@ No `src/` Product file, Product contract, Golden asset or manifest was changed.
 | Launcher usability | PASS — no manual command construction; console pauses; paths printed |
 | Repeatability | PASS — 3/3 identical fingerprints |
 | Implementation evidence commit | `4ffc785` |
+| Final branch validation commit | `2b7d271` |
+| Final validator fingerprint | `402B09D1147FF5A070F6115B9CF484B55D971EE71C3DB88CFE0F05CE63A680AF` |
 
-The final immutable fingerprint is recorded by the PR validation run. Generated reports under `ENGINEER_PREVIEW_OUTPUT` are local run evidence and intentionally ignored.
+Generated reports under `ENGINEER_PREVIEW_OUTPUT` are local run evidence and intentionally ignored.
 
 ## Acceptance Criteria
 
