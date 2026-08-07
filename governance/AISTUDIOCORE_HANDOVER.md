@@ -5,37 +5,34 @@
 | Field | Value |
 |---|---|
 | Handover ID | AISTUDIOCORE-HANDOVER |
-| Version | 2026-08-06.3 |
-| Lifecycle Status | CLOSED — READY FOR NEXT PLANNING |
+| Version | 2026-08-07.1 |
+| Lifecycle Status | READY_FOR_PM_REVIEW |
 | Owner | PM |
-| Effective Date | 2026-08-06 |
+| Effective Date | 2026-08-07 |
 | Repository | `8nt7h6k229-png/PVOS` |
-| Main Commit | `080884108334570320310749d78c0125a8897f05` |
+| Main Commit | `a47c7a2e22f9cded8e9062b6fd8dcc3c1662e2ac` |
 
 ## Today Completed
 
-- EOS governance foundation merged through PR #45.
-- GitHub Issue established as the sole Codex Execution Source.
-- Issues #36 through #44 executed through the one-pass queue.
-- EOS-017 PM GitHub Issue Builder completed with 14/14 tests passing.
-- Daily Closing Package persisted at `closing/2026-08-06_DAILY_CLOSING_PACKAGE.md`.
+- The 2026-08-07 morning Queue deliverables were merged through PR #57 at the recorded Main Commit.
+- EOS-001 through EOS-016 retain their existing completion evidence.
+- PM limited final gap resolution to EOS-004, EOS-008, EOS-013, and EOS-014; the other twelve capabilities are not reopened by this handover.
+- The dependency cycle is governed by the PM-approved disposition used by the final gap-resolution execution.
 
 ## Current Capability State
 
-- Foundation capabilities completed: 15.
-- EOS-009 remains incomplete because Workspace Registry is still a skeleton.
-- Formal PM Verification coverage remains incomplete.
-- EOS v1.0 is not yet certified 100% complete.
+- Capability implementation evidence: 16 `Completed`.
+- PM verification reported as passed for twelve capabilities outside the authorized final-gap set.
+- EOS-004, EOS-008, EOS-013, and EOS-014 are prepared for PM final verification in the governed order.
+- Codex has not marked any capability `Verified` and has not certified EOS v1.0.
 
 ## Carry Over
 
-1. EOS-022 — Today's Planning Package Registry.
-2. EOS-018 — Workspace Registry Completion.
-3. EOS-019 — PM Verification Framework.
-4. EOS-020 — PM Closing Builder.
-5. EOS-021 — Daily Improvement Loop (GVR-010) Implementation.
-6. Governed disposition of the ten-capability dependency cycle.
-7. EOS v1.0 Final Certification Audit.
+1. PM final verification of EOS-004.
+2. PM final verification of EOS-008.
+3. PM final verification of EOS-013.
+4. PM final verification of EOS-014.
+5. PM certification decision only if all sixteen capability records and the approved dependency-cycle disposition satisfy the Verification Framework.
 
 ## Next Planning Source
 
@@ -46,22 +43,24 @@
 - Planning Package is the daily Source of Truth.
 - GitHub Issue is the sole Codex Execution Source.
 - EOS-017 publishes the approved daily Issue Queue.
-- Codex executes the queue continuously unless Blocked, Rejected, or Governance Conflict occurs.
+- Codex executes the Queue continuously unless Blocked, Rejected, or Governance Conflict occurs.
 - Each workday has one PM Deliverable, one Owner Review, and one Daily Governed Closing.
 - Daily Closing includes GitHub Sync, Daily Achievement Report, Daily Improvement Loop, Engineering Knowledge update, Handover update, and Tomorrow Planning Package.
+
+## Final Verification Boundary
+
+This handover records current evidence and pending accountable actions. It does not create a PM Verification Record, update a Capability Matrix status, perform Owner certification, or execute Daily Governed Closing.
 
 ## Closing State
 
 | Gate | Status |
 |---|---|
-| PM Review | PASS |
-| PM Deliverable v1 | COMPLETE |
-| Owner Review | APPROVED |
-| PR #45 Merge | COMPLETE |
-| GitHub Sync | COMPLETE |
-| Daily Achievement Report | COMPLETE |
-| Daily Improvement Loop | COMPLETE |
-| Engineering Knowledge Update | COMPLETE |
-| Handover Update | COMPLETE |
-| Tomorrow Planning Package | COMPLETE |
-| Daily Governed Closing | COMPLETE |
+| PR #57 Merge | COMPLETE |
+| Local Main Synchronization | COMPLETE |
+| Existing twelve-capability PM verification | NOT REOPENED |
+| EOS-004 Final Verification | PENDING PM |
+| EOS-008 Final Verification | PENDING PM |
+| EOS-013 Final Verification | PENDING PM |
+| EOS-014 Final Verification | PENDING PM |
+| EOS v1.0 Certification | PENDING PM |
+| Daily Governed Closing | NOT EXECUTED BY THIS HANDOVER |

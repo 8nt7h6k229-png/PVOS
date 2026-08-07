@@ -90,6 +90,12 @@ Qualification resolves registry identity only. It does not merge, approve, super
 - No current PVOS-repository ADR file exists on the inspected branch.
 - Repository ownership across PVOS and PvLayoutPlugin remains `GAP-012` and requires a separate accountable decision.
 
+## Verification Boundary
+
+EOS-004 verifies architecture-decision **registration**, not approval of the registered historical decisions. The qualified Decision IDs, immutable source commits, explicit `HISTORICAL_BRANCH_ONLY` status, and `Not evidenced` authority fields prevent unsupported promotion while preserving provenance. The gaps above are controlled registry findings, not missing registry fields and not permission to infer approval, effective dates, supersession, ownership, or current Product architecture.
+
+PM final verification may assess EOS-004 against this bounded registration responsibility without resolving or promoting the historical decisions themselves.
+
 ## Related Documents
 
 - [Governance Rules Registry](GOVERNANCE_RULES_REGISTRY.md)

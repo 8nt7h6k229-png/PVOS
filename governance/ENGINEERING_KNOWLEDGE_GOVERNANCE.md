@@ -70,6 +70,10 @@ Classification describes evidence status. It does not approve product capability
 | EK-PM-002 | `PM/BRANCH_PRODUCT_KNOWLEDGE_MAP.md` | Index | BASELINE | Issue #4 recovery evidence and snapshot date | Locate branch knowledge while preserving branch status |
 | EK-PM-003 | `PM/BRANCH_RECOVERY_INDEX.md` | Index | BASELINE | Recovery disposition and immutable commit references | Guide recovery priority; not deletion authority |
 | EK-PM-004 | `PM/ARCHITECTURE_INDEX.md` | Index | BASELINE | Architecture-family and ADR source references | Discover architecture evidence; Decision Registry governs decision identity |
+| EK-AISC-001 | `ENGINEERING/PLATFORM_PRODUCT_SEPARATION_DECISION_2026-08-06.md` | Decision | CANDIDATE_FOR_PM_REVIEW | Owner-approved 2026-08-06 decision persisted as Engineering Knowledge; final-verification review branch | Use only for Platform/Product responsibility separation; does not approve a Product or modify Product scope |
+| EK-PVOS-007 | `ENGINEERING/PVOS_PRODUCT_DISCOVERY_KNOWLEDGE_2026-08-06.md` | Index | CANDIDATE_FOR_PM_REVIEW | 2026-08-06 Product Asset Review conclusions; final-verification review branch | Treat PVOS as an existing MVP awaiting Product Acceptance; does not establish Product Acceptance |
+
+`CANDIDATE_FOR_PM_REVIEW` records are durable review inputs once committed on the review branch, but they do not become accepted architecture or Product authority without the accountable PM result required by this governance contract.
 
 ## Existing Gap Summary
 
@@ -111,4 +115,4 @@ Engineering knowledge is added, reclassified, reviewed, superseded, recovered, o
 
 ## Status
 
-Formal engineering-knowledge governance established — awaiting PM review.
+Formal engineering-knowledge governance established; final EOS-013 evidence prepared for PM review.

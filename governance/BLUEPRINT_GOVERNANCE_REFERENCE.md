@@ -59,6 +59,12 @@ The repository path is the authoritative location of the referenced document. Th
 - The Blueprint's recorded status remains `Proposed for PM approval`.
 - Until approved authority is registered, governance consumers must treat it as a proposed reference and preserve this gap.
 
+## Verification Boundary
+
+EOS-014 verifies the identity, integrity, authority classification, and governance relationship of the Blueprint reference. It does not require or imply approval of Blueprint content. The recorded `Proposed for PM approval` status, immutable hash and blob evidence, authoritative repository path, and explicit prohibition on silent promotion provide the required controlled reference.
+
+The open Blueprint approval state is preserved as an authority classification rather than treated as missing reference evidence. Any later Blueprint approval remains a separate accountable Product-governance decision outside this capability verification.
+
 ## Verification Method
 
 1. Resolve the repository path and confirm it identifies one tracked file.
@@ -86,4 +92,4 @@ The Blueprint path, content hash, recorded approval status, authoritative decisi
 
 ## Status
 
-Reference established — awaiting PM review.
+Reference and authority boundary established; final EOS-014 evidence prepared for PM review.
