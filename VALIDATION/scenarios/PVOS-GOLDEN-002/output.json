@@ -1,0 +1,20 @@
+{
+  "scenarioId": "PVOS-GOLDEN-002",
+  "requestId": "LAYOUT-REQ-NOFIT",
+  "status": "Accepted",
+  "selectedPartitionId": "PART-001",
+  "panels": [],
+  "panelCount": 0,
+  "installedCapacityKwp": 0.0,
+  "placementWarnings": [
+    {
+      "code": "PLC_NO_PANEL_FITS",
+      "message": "No panel fits placement request 'LAYOUT-REQ-NOFIT'."
+    },
+    {
+      "code": "PLC_EMPTY_PLACEMENT_RESULT",
+      "message": "Placement request 'LAYOUT-REQ-NOFIT' has an empty panel collection."
+    }
+  ],
+  "errors": []
+}

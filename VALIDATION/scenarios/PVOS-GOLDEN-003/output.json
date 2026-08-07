@@ -1,0 +1,20 @@
+{
+  "scenarioId": "PVOS-GOLDEN-003",
+  "requestId": "LAYOUT-REQ-INVALID-MODULE",
+  "status": "Rejected",
+  "selectedPartitionId": "PART-001",
+  "panels": [],
+  "panelCount": 0,
+  "installedCapacityKwp": 0.0,
+  "placementWarnings": [],
+  "errors": [
+    {
+      "code": "MOD_WIDTH_INVALID",
+      "message": "Module physical width must be finite and positive."
+    },
+    {
+      "code": "MOD_COLUMN_GAP_INVALID",
+      "message": "Column gap must be finite and non-negative."
+    }
+  ]
+}
