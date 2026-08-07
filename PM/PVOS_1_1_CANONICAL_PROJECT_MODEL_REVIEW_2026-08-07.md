@@ -90,7 +90,7 @@ READY_FOR_PM_IMPLEMENTATION_REVIEW — CANONICAL PROJECT MODEL REVIEWED — LEGA
 | Field | Value |
 |---|---|
 | Execution Source | GitHub Issue #80 — PVOS-404 |
-| Dependency | PVOS-403 / commit `50ccf203a38b70140cc1356f7760f4293236ca2c` |
+| Dependency | PVOS-403 / commit `50ccf2069ee04edb2bbf0f33f114745a68dda942` |
 | Review Scope | Promotion eligibility review only |
 | Product Contract | `PRODUCT/PVOS_RUNTIME_INPUT_CONTRACT.md` |
 
