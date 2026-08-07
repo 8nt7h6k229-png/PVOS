@@ -164,6 +164,17 @@ Execution is authorized only through a PM-authorized GitHub Issue; authorization
 | `ENGINEERING_KNOWLEDGE_GOVERNANCE.md` | Engineering Knowledge |
 | `BLUEPRINT_GOVERNANCE_REFERENCE.md` | Blueprint |
 | `EOS_V1_FINAL_CAPABILITY_AUDIT.md` | Governance |
+| `PM_VERIFICATION_FRAMEWORK.md` | Governance |
+| `PM_CLOSING_BUILDER.md` | Handover |
+| `closing_builder/pm_closing_builder.py` | Handover |
+| `closing_builder/tests/test_pm_closing_builder.py` | Evidence |
+| `closing_builder/.gitignore` | Governance |
+| `DAILY_IMPROVEMENT_LOOP.md` | Governance |
+| `TODAYS_PLANNING_PACKAGE_REGISTRY.md` | Planning |
+| `planning/2026-08-07_TOMORROW_PLANNING_PACKAGE.md` | Planning |
+| `issue_builder/packages/2026-08-07_daily_planning_package.json` | Planning |
+| `issue_builder/packages/2026-08-07_issue_queue_ready.json` | Evidence |
+| `EOS_V1_FINAL_CERTIFICATION_AUDIT_2026-08-07.md` | Governance |
 | `GOVERNANCE_FILE_REGISTRY.md` | Governance |
 | `GOVERNANCE_RULES_REGISTRY.md` | Governance |
 | `ARCHITECTURE_DECISION_REGISTRY.md` | Decision |

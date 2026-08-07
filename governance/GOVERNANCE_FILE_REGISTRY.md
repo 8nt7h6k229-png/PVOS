@@ -60,6 +60,17 @@ A governance file is added, moved, renamed, superseded, or retired.
 | GF-023 | `governance/ENGINEERING_KNOWLEDGE_GOVERNANCE.md` | Engineering Knowledge | Engineering knowledge identity, classification, provenance, review, and reuse contract | Review Pending | Issue #42 |
 | GF-024 | `governance/BLUEPRINT_GOVERNANCE_REFERENCE.md` | Blueprint | Blueprint identity, integrity, authority classification, and governance relationship reference | Review Pending | Issue #43 |
 | GF-025 | `governance/EOS_V1_FINAL_CAPABILITY_AUDIT.md` | Governance | Final evidence-based EOS v1.0 capability, dependency, coverage, and readiness audit | Review Pending | Issue #44 |
+| GF-026 | `governance/PM_VERIFICATION_FRAMEWORK.md` | Governance | Evidence-based PM capability verification checks, records, results, and authority boundary | Review Pending | Issue #47 |
+| GF-027 | `governance/PM_CLOSING_BUILDER.md` | Handover | PM closing input, validation, output, and authority-boundary contract | Review Pending | Issue #48 |
+| GF-028 | `governance/closing_builder/pm_closing_builder.py` | Handover | Deterministic PM Closing Package generator | Review Pending | Issue #48 |
+| GF-029 | `governance/closing_builder/tests/test_pm_closing_builder.py` | Evidence | PM Closing Builder verification suite | Review Pending | Issue #48 |
+| GF-030 | `governance/closing_builder/.gitignore` | Governance | Exclusion of generated Closing Builder cache files | Active Support | Issue #48 |
+| GF-031 | `governance/DAILY_IMPROVEMENT_LOOP.md` | Governance | GVR-010 evidence-to-improvement classification, review, carry-over, and closure controls | Review Pending | Issue #49 |
+| GF-032 | `governance/TODAYS_PLANNING_PACKAGE_REGISTRY.md` | Planning | Unique current daily Planning Package identity, lifecycle, input, Queue, and closing baseline | Review Pending | Issue #50 |
+| GF-033 | `governance/planning/2026-08-07_TOMORROW_PLANNING_PACKAGE.md` | Planning | Owner-approved 2026-08-07 Revision R2 human-readable Planning Package | Active | DPP-2026-08-07-R2 |
+| GF-034 | `governance/issue_builder/packages/2026-08-07_daily_planning_package.json` | Planning | EOS-017 machine-readable DPP-2026-08-07-R2 input | Active | DPP-2026-08-07-R2 |
+| GF-035 | `governance/issue_builder/packages/2026-08-07_issue_queue_ready.json` | Evidence | Published Queue Ready evidence for DPP-2026-08-07-R2 | Active | Issues #46-#56 |
+| GF-036 | `governance/EOS_V1_FINAL_CERTIFICATION_AUDIT_2026-08-07.md` | Governance | EOS v1.0 certification evidence, dependency findings, gaps, and PM recommendation | Review Pending | Issue #51 |
 
 Repository paths are unique. Generated cache files excluded by GF-015 are not governance assets and must not be persisted.
 
