@@ -1,0 +1,7 @@
+# Golden 004-008 were admitted and registered from LF Git blobs. Preserve
+# those exact bytes on every platform so SHA-256 evidence is checkout-stable.
+VALIDATION/scenarios/PVOS-GOLDEN-004/*.json text eol=lf
+VALIDATION/scenarios/PVOS-GOLDEN-005/*.json text eol=lf
+VALIDATION/scenarios/PVOS-GOLDEN-006/*.json text eol=lf
+VALIDATION/scenarios/PVOS-GOLDEN-007/*.json text eol=lf
+VALIDATION/scenarios/PVOS-GOLDEN-008/*.json text eol=lf
