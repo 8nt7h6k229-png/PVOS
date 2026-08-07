@@ -48,22 +48,22 @@ Only one current status applies to each capability. `Verified` is the final capa
 
 | Capability ID | Capability Name | Information Domain | Owner | Current Status |
 |---|---|---|---|---|
-| EOS-001 | Governance Information Architecture | Governance | PM | Completed |
-| EOS-002 | Governance File Registration | Governance | PM | Completed |
-| EOS-003 | Governance Rule Registration | Governance | PM | Completed |
-| EOS-004 | Architecture Decision Registration | Decision | PM | Completed |
-| EOS-005 | Handover Content Standard | Handover | PM | Completed |
-| EOS-006 | Handover Version Control | Handover | PM | Completed |
-| EOS-007 | Handover Lifecycle Control | Handover | PM | Completed |
-| EOS-008 | Current AIStudioCore Handover | Handover | PM | Completed |
-| EOS-009 | Workspace Registration | Workspace | PM | Completed |
-| EOS-010 | Planning Package Governance | Planning | PM | Completed |
-| EOS-011 | Work Order Governance | Work Orders | PM | Completed |
-| EOS-012 | Evidence Governance | Evidence | PM | Completed |
-| EOS-013 | Engineering Knowledge Governance | Engineering Knowledge | Engineering | Completed |
-| EOS-014 | Blueprint Governance Reference | Blueprint | PM | Completed |
-| EOS-015 | EOS Capability Governance | Governance | PM | Completed |
-| EOS-016 | Execution Queue Governance | Work Orders | PM | Completed |
+| EOS-001 | Governance Information Architecture | Governance | PM | Verified |
+| EOS-002 | Governance File Registration | Governance | PM | Verified |
+| EOS-003 | Governance Rule Registration | Governance | PM | Verified |
+| EOS-004 | Architecture Decision Registration | Decision | PM | Verified |
+| EOS-005 | Handover Content Standard | Handover | PM | Verified |
+| EOS-006 | Handover Version Control | Handover | PM | Verified |
+| EOS-007 | Handover Lifecycle Control | Handover | PM | Verified |
+| EOS-008 | Current AIStudioCore Handover | Handover | PM | Verified |
+| EOS-009 | Workspace Registration | Workspace | PM | Verified |
+| EOS-010 | Planning Package Governance | Planning | PM | Verified |
+| EOS-011 | Work Order Governance | Work Orders | PM | Verified |
+| EOS-012 | Evidence Governance | Evidence | PM | Verified |
+| EOS-013 | Engineering Knowledge Governance | Engineering Knowledge | Engineering | Verified |
+| EOS-014 | Blueprint Governance Reference | Blueprint | PM | Verified |
+| EOS-015 | EOS Capability Governance | Governance | PM | Verified |
+| EOS-016 | Execution Queue Governance | Work Orders | PM | Verified |
 
 ## Capability Definitions
 
@@ -81,7 +81,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | None. |
 | Related Governance Documents | `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `PROJECT_CHARTER.md`; `DEVELOPMENT_CONSTITUTION.md` |
 | Verification Method | Confirm all approved domains, owners, relationships, flows, and file mappings are present and non-duplicative. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-002 — Governance File Registration
 
@@ -97,7 +97,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-001 |
 | Related Governance Documents | `GOVERNANCE_FILE_REGISTRY.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md` |
 | Verification Method | Compare the registry against repository governance files and confirm unique, complete mappings. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-003 — Governance Rule Registration
 
@@ -113,7 +113,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-001 |
 | Related Governance Documents | `GOVERNANCE_RULES_REGISTRY.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md` |
 | Verification Method | Validate unique Rule IDs, required fields, source traceability, approval, and index-to-record correspondence. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-004 — Architecture Decision Registration
 
@@ -129,7 +129,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-001; EOS-012 |
 | Related Governance Documents | `ARCHITECTURE_DECISION_REGISTRY.md`; `PM/ARCHITECTURE_INDEX.md` |
 | Verification Method | Confirm unique decision references, valid status, evidence linkage, and authoritative record location. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-005 — Handover Content Standard
 
@@ -145,7 +145,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-001; EOS-012 |
 | Related Governance Documents | `HANDOVER_STANDARD.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md` |
 | Verification Method | Validate the standard against approved required fields and evidence references. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-006 — Handover Version Control
 
@@ -161,7 +161,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-005; EOS-007 |
 | Related Governance Documents | `HANDOVER_VERSION_POLICY.md`; `HANDOVER_STANDARD.md`; `HANDOVER_LIFECYCLE.md` |
 | Verification Method | Confirm version identifiers, succession, authority, and retention conditions are unambiguous. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-007 — Handover Lifecycle Control
 
@@ -177,7 +177,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-005; EOS-006 |
 | Related Governance Documents | `HANDOVER_LIFECYCLE.md`; `HANDOVER_STANDARD.md`; `HANDOVER_VERSION_POLICY.md` |
 | Verification Method | Validate every state and transition against approved entry, exit, review, and closing conditions. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-008 — Current AIStudioCore Handover
 
@@ -193,7 +193,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-005; EOS-006; EOS-007; EOS-010; EOS-011; EOS-012 |
 | Related Governance Documents | `AISTUDIOCORE_HANDOVER.md`; `HANDOVER_STANDARD.md`; `HANDOVER_VERSION_POLICY.md`; `HANDOVER_LIFECYCLE.md` |
 | Verification Method | Confirm one current record exists and complies with the approved handover controls. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-009 — Workspace Registration
 
@@ -209,7 +209,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-001; EOS-002 |
 | Related Governance Documents | `WORKSPACE_REGISTRY.md`; `GOVERNANCE_FILE_REGISTRY.md` |
 | Verification Method | Compare registered workspaces with approved existing locations and confirm unique identities. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-010 — Planning Package Governance
 
@@ -225,7 +225,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-001; EOS-008; EOS-012; EOS-014 |
 | Related Governance Documents | `PLANNING_PACKAGE_GOVERNANCE.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_RULES_REGISTRY.md`; `AISTUDIOCORE_HANDOVER.md` |
 | Verification Method | Validate required planning inputs, owner approval, priorities, dependencies, and readiness references. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-011 — Work Order Governance
 
@@ -241,7 +241,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-003; EOS-010; EOS-012; EOS-015; EOS-016 |
 | Related Governance Documents | `WORK_ORDER_GOVERNANCE.md`; `EXECUTION_QUEUE_GOVERNANCE.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_RULES_REGISTRY.md`; `EOS_V1_CAPABILITY_MATRIX.md` |
 | Verification Method | Confirm every work order is bounded, mapped to at least one Capability ID, and does not substitute for an authorized GitHub Issue as the execution source. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-012 — Evidence Governance
 
@@ -257,7 +257,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-001; EOS-003; EOS-016 |
 | Related Governance Documents | `EVIDENCE_GOVERNANCE.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_RULES_REGISTRY.md`; `PM/GAP_ANALYSIS.md`; `PM/GITHUB_PORTFOLIO_ASSET_INVENTORY.md` |
 | Verification Method | Trace each governed claim to durable evidence and confirm provenance and review status. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-013 — Engineering Knowledge Governance
 
@@ -273,7 +273,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-001; EOS-004; EOS-012 |
 | Related Governance Documents | `ENGINEERING_KNOWLEDGE_GOVERNANCE.md`; `EVIDENCE_GOVERNANCE.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_RULES_REGISTRY.md`; `PM/PRODUCT_KNOWLEDGE_INDEX.md`; `PM/BRANCH_PRODUCT_KNOWLEDGE_MAP.md` |
 | Verification Method | Audit knowledge references for provenance, classification, review status, and duplication. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-014 — Blueprint Governance Reference
 
@@ -289,7 +289,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-001; EOS-002; EOS-004 |
 | Related Governance Documents | `BLUEPRINT_GOVERNANCE_REFERENCE.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_FILE_REGISTRY.md`; `PRODUCT/PRODUCT_BLUEPRINT.md` |
 | Verification Method | Confirm the reference resolves to the approved Blueprint and no Blueprint content was modified. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-015 — EOS Capability Governance
 
@@ -305,7 +305,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-001; EOS-003 |
 | Related Governance Documents | `PM_VERIFICATION_FRAMEWORK.md`; `EOS_V1_FINAL_CAPABILITY_AUDIT.md`; `EXECUTION_QUEUE_GOVERNANCE.md`; `PM_GITHUB_ISSUE_BUILDER.md`; `EOS_V1_CAPABILITY_MATRIX.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_RULES_REGISTRY.md` |
 | Verification Method | Validate unique IDs, complete definitions, acyclic or explicitly controlled dependencies, status validity, and complete work-order coverage. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ### EOS-016 — Execution Queue Governance
 
@@ -321,7 +321,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Dependencies | EOS-003; EOS-010; EOS-015 |
 | Related Governance Documents | `EXECUTION_QUEUE_GOVERNANCE.md`; `EOS_V1_CAPABILITY_MATRIX.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_RULES_REGISTRY.md` |
 | Verification Method | Confirm every Codex execution traces to one PM-authorized GitHub Issue and that the Issue links its Planning Package authority, Capability ID, evidence, and PM review state. |
-| Current Status | Completed |
+| Current Status | Verified |
 
 ## Capability Dependency Map
 
@@ -350,22 +350,22 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 
 | Capability ID | Not Started | In Progress | Completed | Verified |
 |---|:---:|:---:|:---:|:---:|
-| EOS-001 |  |  | X |  |
-| EOS-002 |  |  | X |  |
-| EOS-003 |  |  | X |  |
-| EOS-004 |  |  | X |  |
-| EOS-005 |  |  | X |  |
-| EOS-006 |  |  | X |  |
-| EOS-007 |  |  | X |  |
-| EOS-008 |  |  | X |  |
-| EOS-009 |  |  | X |  |
-| EOS-010 |  |  | X |  |
-| EOS-011 |  |  | X |  |
-| EOS-012 |  |  | X |  |
-| EOS-013 |  |  | X |  |
-| EOS-014 |  |  | X |  |
-| EOS-015 |  |  | X |  |
-| EOS-016 |  |  | X |  |
+| EOS-001 |  |  |  | X |
+| EOS-002 |  |  |  | X |
+| EOS-003 |  |  |  | X |
+| EOS-004 |  |  |  | X |
+| EOS-005 |  |  |  | X |
+| EOS-006 |  |  |  | X |
+| EOS-007 |  |  |  | X |
+| EOS-008 |  |  |  | X |
+| EOS-009 |  |  |  | X |
+| EOS-010 |  |  |  | X |
+| EOS-011 |  |  |  | X |
+| EOS-012 |  |  |  | X |
+| EOS-013 |  |  |  | X |
+| EOS-014 |  |  |  | X |
+| EOS-015 |  |  |  | X |
+| EOS-016 |  |  |  | X |
 
 ## Coverage Mapping
 
@@ -374,7 +374,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | WO-AISTUDIOCORE-001 | EOS-002, EOS-004, EOS-005, EOS-006, EOS-007, EOS-008, EOS-009 | Eight governance skeletons under `governance/` | Completed — Pending Daily Closing |
 | WO-AISTUDIOCORE-002 | EOS-001 | `GOVERNANCE_INFORMATION_ARCHITECTURE.md` and domain alignment updates | Completed — Pending Daily Closing |
 | WO-AISTUDIOCORE-003 | EOS-003 | Formal index and nine approved rule registrations in `GOVERNANCE_RULES_REGISTRY.md` | Completed — Pending Daily Closing |
-| WO-AISTUDIOCORE-004 | EOS-015, EOS-016 | `EOS_V1_CAPABILITY_MATRIX.md` and approved R1 execution-source revision | In Progress — Pending PM Review |
+| WO-AISTUDIOCORE-004 | EOS-015, EOS-016 | `EOS_V1_CAPABILITY_MATRIX.md`, approved R1 execution-source revision, and Owner certification record | Verified — Certification Persisted |
 | GitHub Issue #32 | EOS-016 | `EXECUTION_QUEUE_GOVERNANCE.md` and aligned governance documents | READY_FOR_PM_REVIEW |
 | GitHub Issue #33 | EOS-016 | `PM_GITHUB_ISSUE_BUILDER.md`, implementation, tests, and Queue demonstration | READY_FOR_PM_REVIEW |
 | GitHub Issue #36 | EOS-002, EOS-015 | Governance asset registry, GIA mapping, and GitHub repository persistence | READY_FOR_PM_REVIEW |
@@ -391,7 +391,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | GitHub Issue #48 | EOS-008, EOS-015 | Deterministic evidence-gated PM Closing Package Builder, contract, and automated tests | READY_FOR_PM_REVIEW |
 | GitHub Issue #49 | EOS-003, EOS-015 | GVR-010 registration and evidence-to-improvement review, carry-over, and closure controls | READY_FOR_PM_REVIEW |
 | GitHub Issue #50 | EOS-010, EOS-015 | Current R2 registry, EOS-017 input, published Queue evidence, integrity, and closing-baseline traceability | READY_FOR_PM_REVIEW |
-| GitHub Issue #51 | EOS-015 | Sixteen-capability certification audit, dependency findings, retained gaps, and PM recommendation | READY_FOR_PM_REVIEW — NOT CERTIFIED |
+| GitHub Issue #51 | EOS-001–EOS-016 | Final certification audit, 16/16 PM Verification Records, approved dependency disposition, and Owner certification decision | CERTIFIED — OWNER APPROVED |
 
 Coverage indicates which work order established or advances a capability. It does not replace capability verification or daily closing.
 
@@ -407,4 +407,4 @@ Coverage indicates which work order established or advances a capability. It doe
 
 ## Status
 
-Foundation established — EOS v1.0 is not declared complete; awaiting PM review and daily closing.
+EOS-001 through EOS-016 are Verified under `EOS_V1_CERTIFICATION_RECORD_2026-08-07.md`. Engineering Operating System v1.0 is Owner-approved and Certified; Daily Governed Closing remains a separate lifecycle action.

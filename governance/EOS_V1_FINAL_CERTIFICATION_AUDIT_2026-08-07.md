@@ -1,5 +1,7 @@
 # EOS v1.0 Final Certification Audit — 2026-08-07
 
+> Historical audit snapshot. Its pending findings were resolved by the accepted PM Verification Package and superseded by `EOS_V1_CERTIFICATION_RECORD_2026-08-07.md`. The original findings below are retained as pre-certification evidence.
+
 ## Audit Result
 
 **Executor package: READY_FOR_PM_REVIEW. EOS v1.0 certification: NOT YET CERTIFIABLE.**
@@ -63,4 +65,4 @@ PM may begin capability verification using `PM_VERIFICATION_FRAMEWORK.md`. EOS v
 
 ## Status
 
-READY_FOR_PM_REVIEW — NOT CERTIFIED — PENDING PM VERIFICATION
+HISTORICAL PRE-CERTIFICATION AUDIT — SUPERSEDED BY OWNER-APPROVED CERTIFICATION RECORD
