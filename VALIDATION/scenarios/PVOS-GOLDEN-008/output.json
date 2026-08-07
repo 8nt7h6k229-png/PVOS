@@ -1,0 +1,1 @@
+{"scenarioId":"PVOS-GOLDEN-008","requestId":"LAYOUT-REQ-INVALID-GEOMETRY","status":"Rejected","selectedPartitionId":"PART-001","panelCount":0,"installedCapacityKwp":0.0,"placementWarnings":[],"errors":[{"code":"GEO_AREA_INVALID"},{"code":"GEO_POLYGON_NOT_SIMPLE"},{"code":"GEO_AREA_INVALID"},{"code":"GEO_POLYGON_NOT_SIMPLE"}]}
