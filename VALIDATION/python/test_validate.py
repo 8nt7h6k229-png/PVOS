@@ -25,6 +25,13 @@ class ValidatorUnitTests(unittest.TestCase):
         self.assertEqual("BLOCKED", validate.overall_result([{"result": "PASS"}, {"result": "BLOCKED"}]))
         self.assertEqual("FAIL", validate.overall_result([{"result": "BLOCKED"}, {"result": "FAIL"}]))
 
+    def test_report_fingerprint_ignores_timestamps_but_detects_evidence_change(self) -> None:
+        report = {"started_at": "one", "finished_at": "two", "result": "PASS", "checks": [{"result": "PASS"}]}
+        changed_time = {**report, "started_at": "three", "finished_at": "four"}
+        changed_evidence = {**report, "result": "FAIL"}
+        self.assertEqual(validate.report_fingerprint(report), validate.report_fingerprint(changed_time))
+        self.assertNotEqual(validate.report_fingerprint(report), validate.report_fingerprint(changed_evidence))
+
     def test_registered_json_paths_include_expanded_scenarios(self) -> None:
         manifest = json.loads((REPO_ROOT / "VALIDATION" / "golden-dataset-v1.json").read_text(encoding="utf-8"))
         paths = validate.registered_json_paths(manifest)
@@ -34,6 +41,9 @@ class ValidatorUnitTests(unittest.TestCase):
         self.assertIn(Path("VALIDATION/scenarios/PVOS-GOLDEN-002/output.json"), paths)
         self.assertIn(Path("VALIDATION/scenarios/PVOS-GOLDEN-003/input.json"), paths)
         self.assertIn(Path("VALIDATION/scenarios/PVOS-GOLDEN-003/output.json"), paths)
+        self.assertIn(Path("VALIDATION/scenarios/PVOS-GOLDEN-004/input.json"), paths)
+        self.assertIn(Path("VALIDATION/scenarios/PVOS-GOLDEN-005/output.json"), paths)
+        self.assertIn(Path("VALIDATION/scenarios/PVOS-GOLDEN-006/output.json"), paths)
 
     def test_missing_repository_dependencies_are_blocked(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

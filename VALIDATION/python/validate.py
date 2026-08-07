@@ -75,13 +75,19 @@ def overall_result(checks: list[dict[str, Any]]) -> str:
     return "PASS"
 
 
+def report_fingerprint(report: dict[str, Any]) -> str:
+    stable = {key: value for key, value in report.items() if key not in {"started_at", "finished_at", "report_fingerprint"}}
+    payload = json.dumps(stable, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest().upper()
+
+
 def run_validation(repo_root: Path, evidence_commit: str) -> dict[str, Any]:
     started_at = utc_now()
     repo_root = repo_root.resolve()
     manifest_file = repo_root / MANIFEST_PATH
     checks: list[dict[str, Any]] = []
     risks = [
-        "Demo-001 covers one bounded deterministic scenario only.",
+        "The registered Golden set covers six bounded scenarios only.",
         "Static JSON and presentation assets are review evidence, not runtime adapters or UI.",
         "PASS is validation evidence and does not perform PM Product Acceptance.",
     ]
@@ -275,7 +281,7 @@ def run_validation(repo_root: Path, evidence_commit: str) -> dict[str, Any]:
     if tuple(check["check_id"] for check in checks) != CHECK_IDS:
         raise RuntimeError("validator check order changed")
 
-    return {
+    report = {
         "validation_product": "PVOS Python Validation Product",
         "version": "0.1",
         "evidence_commit": evidence_commit,
@@ -285,6 +291,8 @@ def run_validation(repo_root: Path, evidence_commit: str) -> dict[str, Any]:
         "checks": checks,
         "risks": risks,
     }
+    report["report_fingerprint"] = report_fingerprint(report)
+    return report
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
