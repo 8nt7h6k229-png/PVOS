@@ -303,7 +303,7 @@ Only one current status applies to each capability. `Verified` is the final capa
 | Inputs | Owner capability directive; Governance Information Architecture; work-order coverage; verification outcomes. |
 | Outputs | Current EOS v1.0 Capability Matrix. |
 | Dependencies | EOS-001; EOS-003 |
-| Related Governance Documents | `EOS_V1_FINAL_CAPABILITY_AUDIT.md`; `EXECUTION_QUEUE_GOVERNANCE.md`; `PM_GITHUB_ISSUE_BUILDER.md`; `EOS_V1_CAPABILITY_MATRIX.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_RULES_REGISTRY.md` |
+| Related Governance Documents | `PM_VERIFICATION_FRAMEWORK.md`; `EOS_V1_FINAL_CAPABILITY_AUDIT.md`; `EXECUTION_QUEUE_GOVERNANCE.md`; `PM_GITHUB_ISSUE_BUILDER.md`; `EOS_V1_CAPABILITY_MATRIX.md`; `GOVERNANCE_INFORMATION_ARCHITECTURE.md`; `GOVERNANCE_RULES_REGISTRY.md` |
 | Verification Method | Validate unique IDs, complete definitions, acyclic or explicitly controlled dependencies, status validity, and complete work-order coverage. |
 | Current Status | Completed |
 
@@ -387,6 +387,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | GitHub Issue #43 | EOS-014 | Blueprint identity, immutable integrity evidence, authority classification, and explicit approval gap | READY_FOR_PM_REVIEW |
 | GitHub Issue #44 | EOS-015 | Sixteen-capability audit, dependency and governance-flow verification, risks, and PM Review recommendation | READY_FOR_PM_REVIEW |
 | GitHub Issue #46 | EOS-009 | Verified governed workspace identity, repository relationship, owner, status, and local evidence reference | READY_FOR_PM_REVIEW |
+| GitHub Issue #47 | EOS-015 | PM verification inputs, checks, results, authority boundary, records, and sixteen-capability coverage | READY_FOR_PM_REVIEW |
 
 Coverage indicates which work order established or advances a capability. It does not replace capability verification or daily closing.
 

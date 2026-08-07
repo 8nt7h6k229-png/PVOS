@@ -60,6 +60,7 @@ A governance file is added, moved, renamed, superseded, or retired.
 | GF-023 | `governance/ENGINEERING_KNOWLEDGE_GOVERNANCE.md` | Engineering Knowledge | Engineering knowledge identity, classification, provenance, review, and reuse contract | Review Pending | Issue #42 |
 | GF-024 | `governance/BLUEPRINT_GOVERNANCE_REFERENCE.md` | Blueprint | Blueprint identity, integrity, authority classification, and governance relationship reference | Review Pending | Issue #43 |
 | GF-025 | `governance/EOS_V1_FINAL_CAPABILITY_AUDIT.md` | Governance | Final evidence-based EOS v1.0 capability, dependency, coverage, and readiness audit | Review Pending | Issue #44 |
+| GF-026 | `governance/PM_VERIFICATION_FRAMEWORK.md` | Governance | Evidence-based PM capability verification checks, records, results, and authority boundary | Review Pending | Issue #47 |
 
 Repository paths are unique. Generated cache files excluded by GF-015 are not governance assets and must not be persisted.
 
