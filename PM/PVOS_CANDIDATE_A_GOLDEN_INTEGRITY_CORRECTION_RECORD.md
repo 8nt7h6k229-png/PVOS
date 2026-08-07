@@ -7,7 +7,7 @@
 | Authority | Owner / PM Governance Stop Recovery |
 | Affected Golden IDs | PVOS-GOLDEN-004 through PVOS-GOLDEN-008 |
 | Recovery classification | D — line-ending normalization |
-| Status | CONTROLLED CORRECTION APPLIED; VALIDATION PENDING |
+| Status | RECOVERY VALIDATED — READY TO RESUME CLOSING |
 | Admission record | `PM/PVOS_CANDIDATE_A_GOLDEN_ADMISSION_RECORD.md` |
 | Merged evidence commit | `917ea7242d5da62c292beb5a155a07ca78c17e6b` |
 
@@ -59,3 +59,20 @@ The correction adds targeted `.gitattributes` rules fixing only Golden 004–008
 ## Retained Boundary
 
 C#/.NET remains Product Behavior Authority. Python validates only. No expected result, Product behavior, Domain capability, Legacy/Canonical asset, API, UI, Cloud, or PVOS Scope is introduced.
+
+## Final Validation
+
+| Check | Result |
+|---|---|
+| Release Build | PASS — 0 warnings, 0 errors |
+| C# tests | PASS — 27/27 |
+| Python tests | PASS — 9/9 |
+| Golden 001–008 | PASS — all registered asset hashes and bounded C# regression results match |
+| Repeatability | PASS — 3/3 identical fingerprints |
+| Repeatability fingerprint | `488C0D2AB5748FD9B1FB5909E0EBB5AD1D7730E1AFFAD468C4C04FDAAC2805A6` |
+| Result Lineage | PASS — Candidate A integrity test included in 27/27 |
+| Failure Identity | PASS — Candidate A integrity test included in 27/27 |
+
+Validation evidence commit: `75c18575bb8a470a34965a805874e7fb9034cf70`.
+
+Final recommendation: `RESUME_CANDIDATE_A_CLOSING`.
