@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "dataset_id": "PVOS-GOLDEN-001",
   "scenario_set_id": "PVOS-GOLDEN-SET-001",
-  "scenario_set_version": "2.0",
+  "scenario_set_version": "3.0",
   "name": "Demo-001 Deterministic Layout",
   "product_boundary": "PVOS Deterministic Layout MVP",
   "evidence_baseline": "e1dbcb075b5adaa38ab4c9c8d289a12e62dd8823",
@@ -89,6 +89,18 @@
     {
       "role": "golden_result_review", "scenario_id": "PVOS-GOLDEN-006",
       "path": "VALIDATION/scenarios/PVOS-GOLDEN-006/output.json", "sha256": "B5AB42978A7AB63057546BE44F20E342BDCFC869920A88DE806BEC7E6874060A"
+    },
+    {
+      "role":"golden_input","scenario_id":"PVOS-GOLDEN-007","path":"VALIDATION/scenarios/PVOS-GOLDEN-007/input.json","sha256":"C66A656840614764A40574AF490A05E9BD8785F64FF8D59E8584B5C243C4931E"
+    },
+    {
+      "role":"golden_result_review","scenario_id":"PVOS-GOLDEN-007","path":"VALIDATION/scenarios/PVOS-GOLDEN-007/output.json","sha256":"8E9A23C11537AA5199AE38D41502C2E06D69EAD40FEEE6254CD6A9FDBE921626"
+    },
+    {
+      "role":"golden_input","scenario_id":"PVOS-GOLDEN-008","path":"VALIDATION/scenarios/PVOS-GOLDEN-008/input.json","sha256":"76951BD19A8712BE574501196AB89E9A3EA40BFA1CDBCC2826C1ECC2F351DDC3"
+    },
+    {
+      "role":"golden_result_review","scenario_id":"PVOS-GOLDEN-008","path":"VALIDATION/scenarios/PVOS-GOLDEN-008/output.json","sha256":"C6E6A847957433E5F655766DE6816E88118FC674495C5D31235306A4B21DAA4C"
     }
   ],
   "scenarios": [
@@ -145,6 +157,24 @@
       "output": "VALIDATION/scenarios/PVOS-GOLDEN-006/output.json",
       "csharp_evidence": "LayoutEngineTests.Generate_UnknownSelection_ReturnsRejectedWithoutFallback",
       "comparison": "exact_bounded_result_fields_error_codes_and_order"
+    },
+    {
+      "scenario_id":"PVOS-GOLDEN-007",
+      "claim":"Complete boundary contact is accepted without warnings",
+      "terminal_state":"accepted_with_panels",
+      "input":"VALIDATION/scenarios/PVOS-GOLDEN-007/input.json",
+      "output":"VALIDATION/scenarios/PVOS-GOLDEN-007/output.json",
+      "csharp_evidence":"LayoutEngineTests.Generate_BoundaryContact_IsAccepted",
+      "comparison":"exact_bounded_result_fields_and_repeatability"
+    },
+    {
+      "scenario_id":"PVOS-GOLDEN-008",
+      "claim":"Self-intersecting roof and partition geometry is rejected with stable geometry errors",
+      "terminal_state":"rejected_input",
+      "input":"VALIDATION/scenarios/PVOS-GOLDEN-008/input.json",
+      "output":"VALIDATION/scenarios/PVOS-GOLDEN-008/output.json",
+      "csharp_evidence":"LayoutEngineTests.Generate_InvalidGeometry_ReturnsStableRejectedResult",
+      "comparison":"exact_bounded_result_fields_error_codes_and_order"
     }
   ],
   "expected": {

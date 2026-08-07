@@ -12,6 +12,32 @@ public sealed class ProductionReadinessRegressionTests
         AppContext.BaseDirectory, "..", "..", "..", "..", ".."));
 
     [Fact]
+    public void Golden007_BoundaryContact_MatchesRuntimeResultAndIsRepeatable()
+    {
+        using var expected = LoadScenarioOutput("PVOS-GOLDEN-007");
+        var boundary = new Polygon2D([new Point2D(0,0), new Point2D(2_000,0), new Point2D(2_000,1_000), new Point2D(0,1_000)]);
+        var request = CreateRequest("LAYOUT-REQ-BOUNDARY-CONTACT", new ModuleDefinition(
+            "MOD-REQ-007", "MOD-007", 1_000, 1_000, 500, ModuleOrientation.WidthAlongLocalX, 0, 0, 0), boundary);
+        var engine = new LayoutEngine();
+        var first = engine.Generate(request);
+        AssertMatchesExpected(first, expected.RootElement);
+        Assert.Equal(Signature(first), Signature(engine.Generate(request)));
+    }
+
+    [Fact]
+    public void Golden008_InvalidGeometry_MatchesRuntimeResultAndIsRepeatable()
+    {
+        using var expected = LoadScenarioOutput("PVOS-GOLDEN-008");
+        var boundary = new Polygon2D([new Point2D(0,0), new Point2D(2_000,2_000), new Point2D(0,2_000), new Point2D(2_000,0)]);
+        var request = CreateRequest("LAYOUT-REQ-INVALID-GEOMETRY", new ModuleDefinition(
+            "MOD-REQ-008", "MOD-008", 1_000, 1_500, 500, ModuleOrientation.WidthAlongLocalX, 100, 100, 200), boundary);
+        var engine = new LayoutEngine();
+        var first = engine.Generate(request);
+        AssertMatchesExpected(first, expected.RootElement);
+        Assert.Equal(Signature(first), Signature(engine.Generate(request)));
+    }
+
+    [Fact]
     public void Golden004_ExplicitOrientation_MatchesRuntimeResultAndIsRepeatable()
     {
         using var expected = LoadScenarioOutput("PVOS-GOLDEN-004");
@@ -133,10 +159,10 @@ public sealed class ProductionReadinessRegressionTests
         using var manifest = JsonDocument.Parse(File.ReadAllText(manifestPath));
         var root = manifest.RootElement;
 
-        Assert.Equal("1.2", root.GetProperty("schema_version").GetString());
+        Assert.Equal("1.3", root.GetProperty("schema_version").GetString());
         Assert.Equal("PVOS-GOLDEN-SET-001", root.GetProperty("scenario_set_id").GetString());
         Assert.Equal(
-            ["PVOS-GOLDEN-001", "PVOS-GOLDEN-002", "PVOS-GOLDEN-003", "PVOS-GOLDEN-004", "PVOS-GOLDEN-005", "PVOS-GOLDEN-006"],
+            ["PVOS-GOLDEN-001", "PVOS-GOLDEN-002", "PVOS-GOLDEN-003", "PVOS-GOLDEN-004", "PVOS-GOLDEN-005", "PVOS-GOLDEN-006", "PVOS-GOLDEN-007", "PVOS-GOLDEN-008"],
             root.GetProperty("scenarios").EnumerateArray()
                 .Select(item => item.GetProperty("scenario_id").GetString()));
 

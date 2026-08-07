@@ -1,0 +1,47 @@
+{
+  "package_id": "PPP-PVOS-POST-ACCEPTANCE-EVOLUTION-2026-08-07",
+  "repository": "8nt7h6k229-png/PVOS",
+  "status": "QUEUE_READY",
+  "issues": [
+    {
+      "issue_id": "PVOS-601",
+      "title": "PVOS-601 — Python Validation Tool Evolution",
+      "capability_ids": [
+        "QUA-002"
+      ],
+      "dependencies": [],
+      "body": "## Source\nPPP-PVOS-POST-ACCEPTANCE-EVOLUTION-2026-08-07 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: PVOS-601\n- Queue Status: READY\n- Order: 1\n\n## Capability\n- QUA-002\n\n## Objective\nEvolve the existing Python v0.1 Validation / Support Track into a repeatable engineering validation tool without gaining Product authority.\n\n## Dependencies\n- None\n\n## Scope\n- Improve the validation workflow and documented entry path\n- Enhance evidence reports while preserving stable check identities and fingerprints\n- Verify repeatability across equivalent evidence runs\n- Refine usage workflow, prerequisites, roles, and maintenance boundaries\n\n## Out of Scope\n- Product placement, geometry, capacity, warning, error, or result calculation in Python\n- Replacement of C# Mainline or creation of a second PVOS Engine or Runtime\n- PVOS 2.x, Product Scope, Blueprint, PVOS 1.1/1.2 status, EOS, Governance, Canonical or Legacy Promotion\n\n## Deliverables\n- Python Validation Tool Evolution Evidence Package\n\n## Acceptance Criteria\n- One repeatable usage workflow identifies prerequisites, immutable input, report output, and failure semantics\n- Equivalent evidence produces equivalent findings and deterministic report identity\n- Source and execution inspection prove Python remains Validation / Support Track only\n\n## Required Evidence\n- Existing tool inspection and usage workflow\n- Evidence report, repeatability, unit, integration, and negative results\n- Team usage, maintenance boundary, C# non-replacement, and changed-file proof\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 89,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/89",
+      "reused": false
+    },
+    {
+      "issue_id": "PVOS-602",
+      "title": "PVOS-602 — Golden Dataset Expansion Next Phase",
+      "capability_ids": [
+        "QUA-002"
+      ],
+      "dependencies": [
+        "PVOS-601"
+      ],
+      "body": "## Source\nPPP-PVOS-POST-ACCEPTANCE-EVOLUTION-2026-08-07 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: PVOS-602\n- Queue Status: READY\n- Order: 2\n\n## Capability\n- QUA-002\n\n## Objective\nExpand the PVOS Golden Dataset with additional admitted bounded scenarios and improved regression coverage.\n\n## Dependencies\n- PVOS-601 — #89\n\n## Scope\n- Review and admit additional bounded scenarios with factual provenance\n- Improve regression coverage for approved boundary cases and roof variations\n- Apply one explicit scenario admission process before Golden authority is assigned\n- Register immutable inputs, outputs, comparison rules, hashes, and non-claims\n\n## Out of Scope\n- Introduction of unapproved Product behavior or silent Product Scope change\n- Confidential data admission, automatic roof interpretation, UI, Cloud, Electrical, Construction, or PVOS 2.x\n- Product Blueprint, PVOS 1.1/1.2 status, EOS, Governance, Canonical or Legacy Promotion\n\n## Deliverables\n- Golden Dataset Next Phase Evidence Package\n\n## Acceptance Criteria\n- Every admitted scenario has provenance, Product authority, bounded claim, non-claims, and PM admission\n- Every admitted asset has immutable identity, comparison rules, and matching SHA-256\n- C# regressions validate existing Product behavior and isolate failures by scenario\n\n## Required Evidence\n- Existing scenario inspection and admission matrix\n- Golden asset registry and C# regression results\n- Integrity, repeatability, changed-file, and excluded-scope audit\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 90,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/90",
+      "reused": false
+    },
+    {
+      "issue_id": "PVOS-603",
+      "title": "PVOS-603 — Runtime Result Package Evolution",
+      "capability_ids": [
+        "RES-001"
+      ],
+      "dependencies": [
+        "PVOS-602"
+      ],
+      "body": "## Source\nPPP-PVOS-POST-ACCEPTANCE-EVOLUTION-2026-08-07 — APPROVED — 2026-08-07 — Approved by Owner\n\n## Queue Identity\n- Issue ID: PVOS-603\n- Queue Status: READY\n- Order: 3\n\n## Capability\n- RES-001\n\n## Objective\nEvaluate and evolve the Runtime Result Package evidence boundary without creating an unapproved delivery surface.\n\n## Dependencies\n- PVOS-602 — #90\n\n## Scope\n- Review the Result Package structure and field lineage\n- Review evidence packaging and immutable references\n- Consider versioning and change classification\n- Review compatibility with current C# contracts, CLI, validation evidence, and read-only consumers\n\n## Out of Scope\n- API, serialization, database, service, UI, or Cloud commitment or implementation\n- Recalculation, repair, reinterpretation, or replacement of Runtime-owned Product results\n- PVOS 2.x, Product Blueprint, PVOS 1.1/1.2 status, EOS, Governance, Canonical or Legacy Promotion\n\n## Deliverables\n- Runtime Result Package Evolution Review\n\n## Acceptance Criteria\n- Every candidate Result Package field has a traceable Runtime or evidence source\n- Versioning and compatibility considerations are explicit without committing an API or format\n- Consumer rules preserve Product result membership, order, geometry, status, warnings, errors, count, and capacity without recalculation\n\n## Required Evidence\n- Current Result Package and Runtime contract inspection\n- Field lineage, evidence packaging, versioning, and compatibility review\n- No-API, no-UI, no-Cloud, no-recalculation, and changed-file proof\n\n## Execution Control\nThis GitHub Issue is the sole Execution Source for Codex. Stop at `READY_FOR_PM_REVIEW`; PM owns review and closing.\n",
+      "number": 91,
+      "url": "https://github.com/8nt7h6k229-png/PVOS/issues/91",
+      "reused": false
+    }
+  ]
+}

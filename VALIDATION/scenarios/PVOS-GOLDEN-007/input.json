@@ -1,0 +1,10 @@
+{
+  "scenarioId":"PVOS-GOLDEN-007",
+  "provenance":"Sanitized boundary-contact roof case derived from LayoutEngineTests.Generate_BoundaryContact_IsAccepted",
+  "requestId":"LAYOUT-REQ-BOUNDARY-CONTACT",
+  "roofBoundary":[[0,0],[2000,0],[2000,1000],[0,1000]],
+  "partitionId":"PART-001",
+  "partitionBoundary":[[0,0],[2000,0],[2000,1000],[0,1000]],
+  "axisRotationDegrees":0,
+  "module":{"widthMm":1000,"lengthMm":1000,"ratedPowerWp":500,"orientation":"WidthAlongLocalX","columnGapMm":0,"rowGapMm":0,"edgeMarginMm":0}
+}

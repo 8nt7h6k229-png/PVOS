@@ -1,0 +1,10 @@
+{
+  "scenarioId":"PVOS-GOLDEN-008",
+  "provenance":"Sanitized self-intersecting roof case derived from LayoutEngineTests.Generate_InvalidGeometry_ReturnsStableRejectedResult",
+  "requestId":"LAYOUT-REQ-INVALID-GEOMETRY",
+  "roofBoundary":[[0,0],[2000,2000],[0,2000],[2000,0]],
+  "partitionId":"PART-001",
+  "partitionBoundary":[[0,0],[2000,2000],[0,2000],[2000,0]],
+  "axisRotationDegrees":0,
+  "module":{"widthMm":1000,"lengthMm":1500,"ratedPowerWp":500,"orientation":"WidthAlongLocalX","columnGapMm":100,"rowGapMm":100,"edgeMarginMm":200}
+}
