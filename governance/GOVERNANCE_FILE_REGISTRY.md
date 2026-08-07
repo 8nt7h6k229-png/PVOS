@@ -65,6 +65,7 @@ A governance file is added, moved, renamed, superseded, or retired.
 | GF-028 | `governance/closing_builder/pm_closing_builder.py` | Handover | Deterministic PM Closing Package generator | Review Pending | Issue #48 |
 | GF-029 | `governance/closing_builder/tests/test_pm_closing_builder.py` | Evidence | PM Closing Builder verification suite | Review Pending | Issue #48 |
 | GF-030 | `governance/closing_builder/.gitignore` | Governance | Exclusion of generated Closing Builder cache files | Active Support | Issue #48 |
+| GF-031 | `governance/DAILY_IMPROVEMENT_LOOP.md` | Governance | GVR-010 evidence-to-improvement classification, review, carry-over, and closure controls | Review Pending | Issue #49 |
 
 Repository paths are unique. Generated cache files excluded by GF-015 are not governance assets and must not be persisted.
 

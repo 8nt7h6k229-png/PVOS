@@ -389,6 +389,7 @@ Mutual dependencies among EOS-006/EOS-007 and EOS-008/EOS-010 represent coordina
 | GitHub Issue #46 | EOS-009 | Verified governed workspace identity, repository relationship, owner, status, and local evidence reference | READY_FOR_PM_REVIEW |
 | GitHub Issue #47 | EOS-015 | PM verification inputs, checks, results, authority boundary, records, and sixteen-capability coverage | READY_FOR_PM_REVIEW |
 | GitHub Issue #48 | EOS-008, EOS-015 | Deterministic evidence-gated PM Closing Package Builder, contract, and automated tests | READY_FOR_PM_REVIEW |
+| GitHub Issue #49 | EOS-003, EOS-015 | GVR-010 registration and evidence-to-improvement review, carry-over, and closure controls | READY_FOR_PM_REVIEW |
 
 Coverage indicates which work order established or advances a capability. It does not replace capability verification or daily closing.
 

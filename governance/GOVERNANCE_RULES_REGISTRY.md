@@ -49,6 +49,7 @@ Every registered rule contains:
 | GVR-007 | Evidence First | APPROVED | 2026-08-06 |
 | GVR-008 | No Scope Expansion | APPROVED | 2026-08-06 |
 | GVR-009 | One Closed Loop at a Time | APPROVED | 2026-08-06 |
+| GVR-010 | Daily Improvement Loop | APPROVED | 2026-08-07 |
 
 ## Registered Rules
 
@@ -195,6 +196,22 @@ Every registered rule contains:
 | Affected Documents | `HANDOVER_LIFECYCLE.md`; `AISTUDIOCORE_HANDOVER.md`; `GOVERNANCE_RULES_REGISTRY.md` |
 | Related Decisions | None registered. |
 | Revision History | 2026-08-06 — Initial approved registration. |
+
+### GVR-010 — Daily Improvement Loop
+
+| Field | Registration |
+|---|---|
+| Rule ID | GVR-010 |
+| Rule Name | Daily Improvement Loop |
+| Status | APPROVED |
+| Purpose | Convert daily execution and closing evidence into governed improvement carry-over. |
+| Description | Completed work, gaps, incidents, review findings, and closing evidence are inventoried and classified as Keep, Problem, or Improve. Proposed actions require accountable review and an approved Planning Package before execution; findings never silently change governance or expand scope. |
+| Source | Owner-approved DPP-2026-08-07-R2; GitHub Issue #49; `DEVELOPMENT_CONSTITUTION.md` §12; 2026-08-06 Daily Closing Package |
+| Approved By | Owner |
+| Effective Date | 2026-08-07 |
+| Affected Documents | `DAILY_IMPROVEMENT_LOOP.md`; `GOVERNANCE_RULES_REGISTRY.md`; `PLANNING_PACKAGE_GOVERNANCE.md`; `PM_CLOSING_BUILDER.md` |
+| Related Decisions | None registered. |
+| Revision History | 2026-08-07 — Initial approved registration and implementation by Issue #49. |
 
 ## Related Documents
 

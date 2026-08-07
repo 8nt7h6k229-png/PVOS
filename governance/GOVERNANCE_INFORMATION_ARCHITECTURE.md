@@ -169,6 +169,7 @@ Execution is authorized only through a PM-authorized GitHub Issue; authorization
 | `closing_builder/pm_closing_builder.py` | Handover |
 | `closing_builder/tests/test_pm_closing_builder.py` | Evidence |
 | `closing_builder/.gitignore` | Governance |
+| `DAILY_IMPROVEMENT_LOOP.md` | Governance |
 | `GOVERNANCE_FILE_REGISTRY.md` | Governance |
 | `GOVERNANCE_RULES_REGISTRY.md` | Governance |
 | `ARCHITECTURE_DECISION_REGISTRY.md` | Decision |
