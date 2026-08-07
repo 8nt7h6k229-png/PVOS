@@ -32,6 +32,14 @@ class ValidatorUnitTests(unittest.TestCase):
         self.assertEqual(validate.report_fingerprint(report), validate.report_fingerprint(changed_time))
         self.assertNotEqual(validate.report_fingerprint(report), validate.report_fingerprint(changed_evidence))
 
+    def test_repeatability_summary_requires_identical_fingerprints(self) -> None:
+        passed = validate.repeatability_summary([{"report_fingerprint": "A"}, {"report_fingerprint": "A"}])
+        failed = validate.repeatability_summary([{"report_fingerprint": "A"}, {"report_fingerprint": "B"}])
+        self.assertEqual("PASS", passed["result"])
+        self.assertTrue(passed["all_fingerprints_match"])
+        self.assertEqual("FAIL", failed["result"])
+        self.assertFalse(failed["all_fingerprints_match"])
+
     def test_registered_json_paths_include_expanded_scenarios(self) -> None:
         manifest = json.loads((REPO_ROOT / "VALIDATION" / "golden-dataset-v1.json").read_text(encoding="utf-8"))
         paths = validate.registered_json_paths(manifest)

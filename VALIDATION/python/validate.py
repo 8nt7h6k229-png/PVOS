@@ -81,6 +81,17 @@ def report_fingerprint(report: dict[str, Any]) -> str:
     return hashlib.sha256(payload).hexdigest().upper()
 
 
+def repeatability_summary(reports: list[dict[str, Any]]) -> dict[str, Any]:
+    fingerprints = [report["report_fingerprint"] for report in reports]
+    matches = len(set(fingerprints)) == 1
+    return {
+        "runs": len(reports),
+        "result": "PASS" if matches else "FAIL",
+        "fingerprints": fingerprints,
+        "all_fingerprints_match": matches,
+    }
+
+
 def run_validation(repo_root: Path, evidence_commit: str) -> dict[str, Any]:
     started_at = utc_now()
     repo_root = repo_root.resolve()
@@ -300,12 +311,20 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--repo-root", type=Path, required=True, help="Governed PVOS repository root")
     parser.add_argument("--evidence-commit", required=True, help="Immutable Git commit to record")
     parser.add_argument("--output", type=Path, help="Optional JSON report path; stdout is always emitted")
+    parser.add_argument("--repeatability-runs", type=int, default=1, help="Run validation N times and require identical evidence fingerprints")
     return parser.parse_args(argv)
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(sys.argv[1:] if argv is None else argv)
-    report = run_validation(args.repo_root, args.evidence_commit)
+    if args.repeatability_runs < 1:
+        raise SystemExit("--repeatability-runs must be at least 1")
+    reports = [run_validation(args.repo_root, args.evidence_commit) for _ in range(args.repeatability_runs)]
+    report = reports[-1]
+    repeatability = repeatability_summary(reports)
+    report["repeatability"] = repeatability
+    if repeatability["result"] == "FAIL":
+        report["result"] = "FAIL"
     rendered = json.dumps(report, ensure_ascii=False, indent=2) + "\n"
     if args.output is not None:
         args.output.parent.mkdir(parents=True, exist_ok=True)
