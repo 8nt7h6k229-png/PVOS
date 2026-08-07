@@ -61,6 +61,10 @@ A governance file is added, moved, renamed, superseded, or retired.
 | GF-024 | `governance/BLUEPRINT_GOVERNANCE_REFERENCE.md` | Blueprint | Blueprint identity, integrity, authority classification, and governance relationship reference | Review Pending | Issue #43 |
 | GF-025 | `governance/EOS_V1_FINAL_CAPABILITY_AUDIT.md` | Governance | Final evidence-based EOS v1.0 capability, dependency, coverage, and readiness audit | Review Pending | Issue #44 |
 | GF-026 | `governance/PM_VERIFICATION_FRAMEWORK.md` | Governance | Evidence-based PM capability verification checks, records, results, and authority boundary | Review Pending | Issue #47 |
+| GF-027 | `governance/PM_CLOSING_BUILDER.md` | Handover | PM closing input, validation, output, and authority-boundary contract | Review Pending | Issue #48 |
+| GF-028 | `governance/closing_builder/pm_closing_builder.py` | Handover | Deterministic PM Closing Package generator | Review Pending | Issue #48 |
+| GF-029 | `governance/closing_builder/tests/test_pm_closing_builder.py` | Evidence | PM Closing Builder verification suite | Review Pending | Issue #48 |
+| GF-030 | `governance/closing_builder/.gitignore` | Governance | Exclusion of generated Closing Builder cache files | Active Support | Issue #48 |
 
 Repository paths are unique. Generated cache files excluded by GF-015 are not governance assets and must not be persisted.
 

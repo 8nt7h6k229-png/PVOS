@@ -165,6 +165,10 @@ Execution is authorized only through a PM-authorized GitHub Issue; authorization
 | `BLUEPRINT_GOVERNANCE_REFERENCE.md` | Blueprint |
 | `EOS_V1_FINAL_CAPABILITY_AUDIT.md` | Governance |
 | `PM_VERIFICATION_FRAMEWORK.md` | Governance |
+| `PM_CLOSING_BUILDER.md` | Handover |
+| `closing_builder/pm_closing_builder.py` | Handover |
+| `closing_builder/tests/test_pm_closing_builder.py` | Evidence |
+| `closing_builder/.gitignore` | Governance |
 | `GOVERNANCE_FILE_REGISTRY.md` | Governance |
 | `GOVERNANCE_RULES_REGISTRY.md` | Governance |
 | `ARCHITECTURE_DECISION_REGISTRY.md` | Decision |
