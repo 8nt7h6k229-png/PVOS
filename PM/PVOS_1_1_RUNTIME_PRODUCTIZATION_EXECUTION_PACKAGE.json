@@ -1,0 +1,151 @@
+{
+  "package_id": "PPP-PVOS-1.1-RUNTIME-PRODUCTIZATION-2026-08-07",
+  "date": "2026-08-07",
+  "status": "APPROVED",
+  "approved_by": "Owner",
+  "repository": "8nt7h6k229-png/PVOS",
+  "issues": [
+    {
+      "issue_id": "PVOS-301",
+      "title": "PVOS-301 — Runtime Input Contract",
+      "capability_ids": [
+        "LAY-001"
+      ],
+      "objective": "Define the bounded PVOS Runtime input contract without changing Product Scope or creating a new Product model.",
+      "scope": [
+        "Review and define the existing Project Data Boundary for one deterministic layout operation",
+        "Define the existing Module Parameters boundary",
+        "Define the existing Layout Parameters boundary",
+        "Define the Validation Input Contract and required input evidence"
+      ],
+      "out_of_scope": [
+        "Product Scope, Product Blueprint, Capability status, EOS, or Governance changes",
+        "Canonical Project Model or Legacy Asset promotion",
+        "Runtime JSON, UI, Cloud, full AutoCAD integration, Electrical, Construction, or PVOS 2.x implementation"
+      ],
+      "deliverables": [
+        "Runtime Input Contract Definition"
+      ],
+      "acceptance_criteria": [
+        "Input structure, Project Data Boundary, Module Parameters, Layout Parameters, and validation inputs are explicit",
+        "Every input maps to an existing Product capability and current C# Mainline boundary",
+        "No new serialization contract, Product model, or Product Scope is introduced"
+      ],
+      "required_evidence": [
+        "Existing asset inspection and input field inventory",
+        "Capability and validation mapping",
+        "Changed-file and excluded-scope verification"
+      ],
+      "dependencies": [],
+      "status": "READY"
+    },
+    {
+      "issue_id": "PVOS-302",
+      "title": "PVOS-302 — Runtime Execution Workflow",
+      "capability_ids": [
+        "PLT-001"
+      ],
+      "objective": "Define the repeatable engineer execution workflow for the existing C# PVOS Runtime.",
+      "scope": [
+        "Define the Execution Entry and prerequisites",
+        "Define the ordered Workflow Sequence",
+        "Define bounded Error Handling and blocker dispositions",
+        "Define Result Handling and transfer to presentation and validation evidence"
+      ],
+      "out_of_scope": [
+        "New Runtime engine, orchestration service, UI, Cloud, or network API",
+        "Full AutoCAD integration, Electrical, Construction, or PVOS 2.x work",
+        "Product Scope, EOS, Governance, or Legacy Asset promotion"
+      ],
+      "deliverables": [
+        "Runtime Workflow Definition"
+      ],
+      "acceptance_criteria": [
+        "Execution entry, actors, prerequisites, ordered steps, and terminal states are unambiguous",
+        "Errors, valid no-fit warnings, environment blockers, and successful results remain distinguishable",
+        "The C# Core → Layout → CLI Mainline remains authoritative"
+      ],
+      "required_evidence": [
+        "Runtime workflow and terminal-state matrix",
+        "Existing build, tests, CLI, and Golden Dataset references",
+        "Changed-file and scope-boundary verification"
+      ],
+      "dependencies": [
+        "PVOS-301"
+      ],
+      "status": "READY"
+    },
+    {
+      "issue_id": "PVOS-303",
+      "title": "PVOS-303 — Runtime Result Presentation Boundary",
+      "capability_ids": [
+        "VIS-001"
+      ],
+      "objective": "Define the deterministic Product integrity boundary between Runtime results, presentation, and evidence output.",
+      "scope": [
+        "Define Result Presentation Rules for existing LayoutResult fields",
+        "Define Evidence Output Rules and traceability",
+        "Require presentation to preserve Runtime ordering, identifiers, warnings, and errors",
+        "Prohibit presentation from recalculating placement or Product summary values"
+      ],
+      "out_of_scope": [
+        "UI implementation, rendering framework, interaction design, or delivery channel",
+        "New placement, optimization, or result-calculation behavior",
+        "Cloud, full AutoCAD integration, Electrical, Construction, PVOS 2.x, Product Scope, EOS, or Governance changes"
+      ],
+      "deliverables": [
+        "Presentation Boundary Specification"
+      ],
+      "acceptance_criteria": [
+        "Every presented Product field traces to LayoutResult or immutable validation metadata",
+        "Presentation does not move, filter, score, or recalculate placement",
+        "Presentation does not recalculate count, installed capacity, warnings, or errors"
+      ],
+      "required_evidence": [
+        "Result-to-presentation traceability matrix",
+        "No-recalculation verification",
+        "Evidence output and excluded-scope review"
+      ],
+      "dependencies": [
+        "PVOS-302"
+      ],
+      "status": "READY"
+    },
+    {
+      "issue_id": "PVOS-304",
+      "title": "PVOS-304 — Runtime Acceptance Criteria",
+      "capability_ids": [
+        "QUA-002"
+      ],
+      "objective": "Establish the evidence-gated Runtime Acceptance framework for PM review.",
+      "scope": [
+        "Define Runtime Validation Criteria for input, execution, results, and presentation",
+        "Define deterministic Regression Requirements against the Golden Dataset",
+        "Define Evidence Requirements, result semantics, and PM acceptance gate",
+        "Preserve item-level PASS, FAIL, BLOCKED, and NOT RUN dispositions"
+      ],
+      "out_of_scope": [
+        "Executor self-acceptance or automatic Product acceptance",
+        "UI, Cloud, full AutoCAD integration, Electrical, Construction, or PVOS 2.x development",
+        "Product Scope, EOS, Governance, Capability status, release allocation, or Legacy Asset promotion"
+      ],
+      "deliverables": [
+        "Runtime Acceptance Framework"
+      ],
+      "acceptance_criteria": [
+        "Every Runtime criterion has a validation method, expected result, required evidence, and PM gate",
+        "Regression requires immutable commit identity, C# tests, CLI execution, and Golden Dataset evidence",
+        "PASS remains evidence for PM review and does not perform Product Acceptance"
+      ],
+      "required_evidence": [
+        "Runtime acceptance criteria matrix",
+        "Regression and evidence requirements",
+        "Scope-integrity verification and PM review record requirements"
+      ],
+      "dependencies": [
+        "PVOS-303"
+      ],
+      "status": "READY"
+    }
+  ]
+}
