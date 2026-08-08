@@ -1,0 +1,36 @@
+{
+  "caseId": "OWNER_TO_SUPPLY_DEIDENTIFIED_CASE_ID",
+  "linearUnit": "mm",
+  "inputAcquisition": {
+    "sourceType": "OPERATOR_SUPPLIED_JSON",
+    "provenance": "OWNER_TO_SUPPLY_LAWFUL_SOURCE",
+    "deidentification": "OWNER_TO_CONFIRM_DEIDENTIFICATION",
+    "referenceMethod": "OWNER_TO_SUPPLY_MANUAL_OR_CAD_REFERENCE"
+  },
+  "partitions": [
+    {
+      "partitionId": "OWNER_TO_SUPPLY_PARTITION_ID",
+      "boundary": [
+        { "x": 0, "y": 0 },
+        { "x": 0, "y": 0 },
+        { "x": 0, "y": 0 }
+      ],
+      "localAxis": {
+        "origin": { "x": 0, "y": 0 },
+        "rotationDegrees": 0
+      },
+      "module": {
+        "physicalWidthMm": 0,
+        "physicalLengthMm": 0,
+        "orientation": "WidthAlongLocalX",
+        "gapXmm": 0,
+        "gapYmm": 0
+      },
+      "manualOrCadReference": {
+        "expectedModuleCount": "OWNER_TO_SUPPLY",
+        "expectedOrientation": "OWNER_TO_SUPPLY",
+        "notes": "OWNER_TO_SUPPLY"
+      }
+    }
+  ]
+}

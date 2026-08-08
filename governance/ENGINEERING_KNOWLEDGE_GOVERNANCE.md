@@ -70,6 +70,7 @@ Classification describes evidence status. It does not approve product capability
 | EK-PM-002 | `PM/BRANCH_PRODUCT_KNOWLEDGE_MAP.md` | Index | BASELINE | Issue #4 recovery evidence and snapshot date | Locate branch knowledge while preserving branch status |
 | EK-PM-003 | `PM/BRANCH_RECOVERY_INDEX.md` | Index | BASELINE | Recovery disposition and immutable commit references | Guide recovery priority; not deletion authority |
 | EK-PM-004 | `PM/ARCHITECTURE_INDEX.md` | Index | BASELINE | Architecture-family and ADR source references | Discover architecture evidence; Decision Registry governs decision identity |
+| EK-GAP-017 | `PM/GAP_ANALYSIS.md` — `GAP-017` | Gap | GAP | PVOS default-branch contracts and implementation explicitly have no governed Engineering Input Acquisition pipeline; confirmed 2026-08-08 | Use to govern experimental input acquisition work; does not establish a permanent adapter architecture or Product behavior |
 
 ## Existing Gap Summary
 
@@ -77,6 +78,7 @@ Classification describes evidence status. It does not approve product capability
 - Two ADR namespaces overlap and remain branch-only; qualified identities are recorded without approval promotion.
 - Several engineering domains have multiple generations across baseline, tags, and branches.
 - DXF Import and DXF Export remain unverified knowledge gaps in the existing Product Knowledge Index.
+- Governed Engineering Input Acquisition is missing as `GAP-017`; no CAD-to-JSON, DWG/DXF import, or real-project input pipeline is established.
 - Branch-only knowledge requires accountable recovery or baseline decisions before use as current product truth.
 
 ## Engineering Knowledge First Control
@@ -111,4 +113,4 @@ Engineering knowledge is added, reclassified, reviewed, superseded, recovered, o
 
 ## Status
 
-Formal engineering-knowledge governance established — awaiting PM review.
+Formal engineering-knowledge governance established on the governed default branch. Individual knowledge records retain their own review status and authority.

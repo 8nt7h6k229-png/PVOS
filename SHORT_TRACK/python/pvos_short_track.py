@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-VERSION="0.1"; EPS=1e-9; ORIENTATIONS={"WidthAlongLocalX","LengthAlongLocalX"}
+VERSION="0.1.1"; EPS=1e-9; ORIENTATIONS={"WidthAlongLocalX","LengthAlongLocalX"}
 class InputBlocked(Exception): pass
 @dataclass(frozen=True)
 class Point: x: float; y: float
@@ -93,13 +93,18 @@ def calculate(doc:Any,commit="UNKNOWN"):
     if doc.get("linearUnit")!="mm": raise InputBlocked("input.linearUnit must be 'mm'")
     raw=doc.get("partitions")
     if not isinstance(raw,list) or not raw: raise InputBlocked("input.partitions requires at least one partition")
+    acquisition=doc.get("inputAcquisition",{})
+    if not isinstance(acquisition,dict): raise InputBlocked("input.inputAcquisition must be an object when supplied")
+    source_type=acquisition.get("sourceType","OPERATOR_SUPPLIED_JSON")
+    if source_type != "OPERATOR_SUPPLIED_JSON": raise InputBlocked("input.inputAcquisition.sourceType must be 'OPERATOR_SUPPLIED_JSON'")
     results=[partition(v,i) for i,v in enumerate(raw)]; ids=[v["partitionId"] for v in results]
     if len(ids)!=len(set(ids)): raise InputBlocked("partitionId values must be unique")
     digest=hashlib.sha256(json.dumps(doc,sort_keys=True,separators=(",",":")).encode()).hexdigest()
-    return {"schemaVersion":"pvos-python-short-track-result-v0.1","pythonStatus":"ENGINEERING PREVIEW / SHORT TRACK","csharpMainlineAuthority":"PRESERVED","caseId":case,"result":"PASS","validationStatus":"PASS","partitionResults":results,"totalModuleCount":sum(v["placementCount"] for v in results),"warnings":[w for v in results for w in v["warnings"]],"blockedReasons":[],"evidence":{"toolVersion":VERSION,"sourceCommit":commit,"inputSha256":digest,"ruleSources":["src/PVOS.Core/AxisTransform.cs","src/PVOS.Core/Geometry2D.cs","src/PVOS.Core/Domain.cs","src/PVOS.Layout/LayoutEngine.cs","ENGINEERING/PE-LAY-002_SPEC.md"],"authorityBoundary":"Python preview re-expression; C# Mainline remains formal Product behavior authority."}}
+    return {"schemaVersion":"pvos-python-short-track-result-v0.1","pythonStatus":"ENGINEERING PREVIEW / SHORT TRACK","csharpMainlineAuthority":"PRESERVED","caseId":case,"inputAcquisition":{"method":"EXPERIMENTAL_OPERATOR_JSON_ADAPTER","sourceType":source_type,"provenance":acquisition.get("provenance","NOT_SUPPLIED"),"deidentification":acquisition.get("deidentification","NOT_SUPPLIED"),"referenceMethod":acquisition.get("referenceMethod","NOT_SUPPLIED")},"result":"PASS","validationStatus":"PASS","partitionResults":results,"totalModuleCount":sum(v["placementCount"] for v in results),"warnings":[w for v in results for w in v["warnings"]],"blockedReasons":[],"evidence":{"toolVersion":VERSION,"sourceCommit":commit,"inputSha256":digest,"knowledgeGap":"GAP-017","ruleSources":["src/PVOS.Core/AxisTransform.cs","src/PVOS.Core/Geometry2D.cs","src/PVOS.Core/Domain.cs","src/PVOS.Layout/LayoutEngine.cs","ENGINEERING/PE-LAY-002_SPEC.md"],"authorityBoundary":"Experimental operator JSON adapter and Python preview re-expression; C# Mainline remains formal Product behavior authority."}}
 def blocked(case,message,commit): return {"schemaVersion":"pvos-python-short-track-result-v0.1","pythonStatus":"ENGINEERING PREVIEW / SHORT TRACK","csharpMainlineAuthority":"PRESERVED","caseId":case,"result":"BLOCKED","validationStatus":"BLOCKED","partitionResults":[],"totalModuleCount":0,"warnings":[],"blockedReasons":[{"code":"INPUT_BLOCKED","message":message}],"evidence":{"toolVersion":VERSION,"sourceCommit":commit,"authorityBoundary":"No Product result was produced."}}
 def report(r):
     lines=[f"# PVOS Python Short-Track v0.1 — {r['caseId']}","",f"- Result: **{r['result']}**",f"- Status: {r['pythonStatus']}",f"- C# Mainline authority: {r['csharpMainlineAuthority']}",f"- Total modules: **{r['totalModuleCount']}**",""]
+    if "inputAcquisition" in r: lines += ["## Input acquisition","",f"- Method: {r['inputAcquisition']['method']}",f"- Provenance: {r['inputAcquisition']['provenance']}",f"- De-identification: {r['inputAcquisition']['deidentification']}",f"- Reference method: {r['inputAcquisition']['referenceMethod']}",""]
     for p in r["partitionResults"]: lines += [f"## Partition {p['partitionId']}","",f"- Placement count: **{p['placementCount']}**",f"- Local Axis rotation: {p['localAxis']['rotationDegrees']}°",f"- Orientation: {p['module']['orientation']}",f"- X/Y gap: {p['module']['gapXmm']} / {p['module']['gapYmm']} mm",""]
     if r["blockedReasons"]: lines += ["## Blocked reasons",""]+[f"- `{x['code']}` — {x['message']}" for x in r["blockedReasons"]]+[""]
     return "\n".join(lines+["## Engineering boundary","","This output is Engineering Preview evidence. It does not establish or replace formal C# PVOS Product behavior.","",f"Evidence source commit: `{r['evidence']['sourceCommit']}`",""])

@@ -29,3 +29,7 @@ One input case contains one or more explicit partitions. Each partition owns its
 ## Real-case admission gate
 
 Final acceptance requires a lawful real or legitimately de-identified case with provenance, partition polygon(s), explicit axis data, module/gap values and a manual or CAD reference. Golden/demo/test fixtures cannot satisfy this gate.
+
+## Input acquisition completion amendment
+
+`GAP-017` records that PVOS has no governed Engineering Input Acquisition pipeline. v0.1 therefore uses the smallest bounded method: a copy-and-fill operator JSON template consumed by an experimental Short-Track adapter. This is not a permanent Product input architecture and introduces no CAD-to-JSON or DXF/DWG claim.
