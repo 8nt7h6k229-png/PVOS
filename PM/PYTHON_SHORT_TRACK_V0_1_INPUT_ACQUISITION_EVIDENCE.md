@@ -2,7 +2,7 @@
 
 ## Status
 
-`IMPLEMENTATION_READY — REAL_CASE_SOURCE_REQUIRED`
+`IMPLEMENTATION_READY — REAL_CASE SOURCE REGISTERED; OPERATOR EXTRACTION REQUIRED`
 
 ## Governed knowledge
 
@@ -51,6 +51,6 @@ The operator does not edit Python, validator, Golden, or internal evidence files
 
 ## Acceptance boundary
 
-No legitimate real project data is stored in this branch. Golden, Demo, and tests were not used as real-case evidence. Completion remains gated by `REAL_CASE_SOURCE_REQUIRED`.
+A lawful Owner-supplied real DWG is registered under `PVOS-ST-REAL-001`; its customer/site name and bytes remain outside the repository. Because the Linux environment cannot reliably parse DWG entities, completion is gated by the bounded AutoCAD operator extraction documented in `PM/PVOS_ST_REAL_001_SOURCE_AND_ACQUISITION_RECORD.md`. Golden, Demo, and tests were not used as real-case evidence.
 
 Python remains `ENGINEERING PREVIEW / SHORT TRACK`; C# Mainline authority is preserved. Promotion requires real project use, evidence, PM review, Mainline candidacy, and separately authorized C# implementation.

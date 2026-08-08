@@ -8,6 +8,20 @@
 4. Review `SHORT_TRACK_OUTPUT/LATEST.md` and `LATEST.json`.
 5. Confirm each partition's Local Axis, orientation, count and corners against the manual/CAD reference before submitting evidence.
 
+## PVOS-ST-REAL-001 bounded DWG acquisition
+
+The source DWG stays outside Git. In AutoCAD:
+
+1. Open the Owner-supplied source and confirm drawing units are millimetres.
+2. Run `APPLOAD` and load `SHORT_TRACK/acquisition/PVOS-ST-REAL-001-EXPORT.lsp`.
+3. Run `PVOSSTEXPORT001`.
+4. Select one representative closed, flat, non-bulged partition `LWPOLYLINE`.
+5. Select its Local Axis reference `LINE` or the applicable straight polyline segment.
+6. Enter module dimensions, orientation, X/Y gaps, explicit edge margin (0 when none), and the CAD/manual count visible for that same partition.
+7. Save the generated file as `PVOS-ST-REAL-001-project-input.json`, then drag it onto the Windows launcher.
+
+The command exports vertices and axis coordinates directly, so the operator does not transcribe CAD geometry. If the partition is not a suitable closed polyline, the axis is ambiguous, or the reference count cannot be established, stop and do not approximate.
+
 ## Limitations
 
 No DWG/DXF parser, axis inference, geometry repair, obstacles, walkways, shading, electrical, structural, optimization, UI or formal Product result. Concave boundaries are supported only through complete rectangle containment. Edge margin is explicit, not derived. Python is a rapid experiment; C# remains authority.
